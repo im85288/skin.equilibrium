@@ -1,0 +1,284 @@
+					<fonts>
+					<fontset id="Default" unicode="true">
+
+
+					<!-- BOLD -->
+
+					<font>
+					<name>Condensed-100-B</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>100</size>
+					<style>bold</style>
+					</font>
+					
+					<font>
+					<name>Condensed-68-B</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>68</size>
+					<style>bold</style>
+					</font>
+					
+					<font>
+					<name>Condensed-52-B</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>52</size>
+					<style>bold</style>
+					</font>
+
+					<font>
+					<name>Condensed-46-B</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>46</size>
+					<style>bold</style>
+					</font>
+					
+					<font>
+					<name>Condensed-40-B</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>40</size>
+					<style>bold</style>
+					</font>
+					
+					<font>
+					<name>Condensed-36-B</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>36</size>
+					<style>bold</style>
+					</font>
+					
+					<font>
+					<name>Condensed-32-B</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>32</size>
+					<style>bold</style>
+					</font>
+					
+					<font>
+					<name>Condensed-30-B</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>30</size>
+					<style>bold</style>
+					</font>
+					
+
+					<!-- NORMAL -->
+
+					<font>
+					<name>Condensed-68</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>68</size>
+					</font>
+					
+					<font>
+					<name>Condensed-62</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>62</size>
+					</font>
+					
+					<font>
+					<name>Condensed-52</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>52</size>
+					</font>
+
+					
+					<font>
+					<name>Condensed-46</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>46</size>
+					</font>
+					
+					<font>
+					<name>Condensed-40</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>40</size>
+					</font>
+
+					
+					<font>
+					<name>Condensed-36</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>36</size>
+					</font>
+
+					<font>
+					<name>Condensed-32</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>32</size>
+					</font>
+
+					<font>
+					<name>Condensed-30</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>30</size>
+					</font>
+
+					<!-- Grouplist Flags -->
+
+					<font>
+					<name>Condensed-24</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>24</size>
+					</font>
+
+					<!-- Grouplist Flags1 -->
+
+					<font>
+					<name>Condensed-35</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>35</size>
+					</font>
+
+					<!-- Grouplist Flags2 -->
+
+					<font>
+					<name>Condensed-38</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>38</size>
+					</font>
+
+					<!-- NORMAL WITH LINE SPACE -->
+
+					<font>
+					<name>Condensed-60-LS</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>60</size>
+					<linespacing>0.75</linespacing>
+					</font>
+					
+					<font>
+					<name>Condensed-52-LS</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>52</size>
+					<linespacing>0.75</linespacing>
+					</font>
+					
+					<font>
+					<name>Condensed-32-LS</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>32</size>
+					<linespacing>0.75</linespacing>
+					</font>
+
+					<font>
+					<name>Condensed-32-LS085</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>32</size>
+					<linespacing>0.85</linespacing>
+					</font>
+					
+					<font>
+					<name>Condensed-36-LS085</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>36</size>
+					<linespacing>0.85</linespacing>
+					</font>
+					
+					<font>
+					<name>Condensed-40-LS085</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>40</size>
+					<linespacing>0.85</linespacing>
+					</font>
+
+
+					<font>
+					<name>Condensed-28-LS09</name>
+					<filename>OpenSansCond.ttf</filename>
+					<size>28</size>
+					<linespacing>0.9</linespacing>
+					</font>
+
+
+					<!-- CONFLUENCE FONTS REFERENCE FOR ADDON COMPATIBILITY -->
+					
+					
+					<font>
+					<name>font10</name>
+					<filename>Roboto-Regular.ttf</filename>
+					<size>21</size>
+					</font>
+					<font>
+					<name>font12</name>
+					<filename>Roboto-Regular.ttf</filename>
+					<size>25</size>
+					</font>
+					<font>
+					<name>font13</name>
+					<filename>Roboto-Regular.ttf</filename>
+					<size>30</size>
+					</font>
+					<font>
+					<name>font14</name>
+					<filename>Roboto-Regular.ttf</filename>
+					<size>33</size>
+					</font>
+					<font>
+					<name>font16</name>
+					<filename>Roboto-Regular.ttf</filename>
+					<size>37</size>
+					</font>
+					<font>
+					<name>font30</name>
+					<filename>Roboto-Regular.ttf</filename>
+					<size>45</size>
+					</font>
+					<font>
+					<name>fontContextMenu</name>
+					<filename>Roboto-Regular.ttf</filename>
+					<size>18</size>
+					</font>
+					<font>
+					<name>font10_title</name>
+					<filename>Roboto-Bold.ttf</filename>
+					<size>27</size>
+					</font>
+					<font>
+					<name>font12_title</name>
+					<filename>Roboto-Bold.ttf</filename>
+					<size>25</size>
+					</font>
+					<font>
+					<name>font13_title</name>
+					<filename>Roboto-Bold.ttf</filename>
+					<size>30</size>
+					</font>
+					<font>
+					<name>font24_title</name>
+					<filename>Roboto-Bold.ttf</filename>
+					<size>36</size>
+					</font>
+					<font>
+					<name>font28_title</name>
+					<filename>Roboto-Bold.ttf</filename>
+					<size>42</size>
+					</font>
+					<font>
+					<name>font30_title</name>
+					<filename>Roboto-Bold.ttf</filename>
+					<size>45</size>
+					</font>
+					<font>
+					<name>font35_title</name>
+					<filename>Roboto-Bold.ttf</filename>
+					<size>52</size>
+					</font>
+					<font>
+					<name>font45caps_title</name>
+					<filename>Roboto-Bold.ttf</filename>
+					<size>67</size>
+					</font>
+					<font>
+					<name>font_MainMenu</name>
+					<filename>DejaVuSans-Bold-Caps.ttf</filename>
+					<size>52</size>
+					</font>
+					<font>
+					<name>WeatherTemp</name>
+					<filename>Roboto-Bold.ttf</filename>
+					<size>120</size>
+					</font>
+
+
+					</fontset>
+					</fonts>

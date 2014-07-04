@@ -1,0 +1,1218 @@
+					<includes>
+
+					<include name="SkinWidgetsSystem">
+
+					<control type="group" id="8100">
+					<visible>!Container(300).HasFocus(8)</visible>
+					<posx>-250</posx>
+					<posy>120</posy>
+					<animation effect="slide" start="0,0" end="0,40" time="200" reversible="true" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+					<animation effect="slide" start="0,40" end="0,0" time="300" reversible="true" condition="!ControlGroup(9001).HasFocus">Conditional</animation>
+					
+					<include>Window_Fade_In_Out_Widgets_Top</include>
+					
+					<!-- SYSTEM -->
+
+					
+					<control type="wraplist" id="8101">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>300</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<visible>Container(300).Hasfocus(11)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					
+					<!-- System ITEM 1 -->
+					
+					<item id="1">
+					<description>File Manager</description>
+					<label>7</label>
+					<onclick>ActivateWindow(FileManager)</onclick>
+					<icon>icons/home/files.png</icon>
+					</item>
+					
+					<!-- System ITEM 2 -->
+					
+					<item id="2">
+					<description>Profiles</description>
+					<label>13200</label>
+					<onclick>ActivateWindow(Profiles)</onclick>
+					<icon>icons/home/profiles.png</icon>
+					</item>
+					
+					<!-- System ITEM 3 -->
+					
+					<item id="3">
+					<description>System Info</description>
+					<label>130</label>
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+					<icon>icons/home/sysinfo.png</icon>
+					</item>
+					
+					<!-- System ITEM 4 -->
+					
+					<item id="4">
+					<description>Skin Settings</description>
+					<label>32077</label>
+					<onclick>ActivateWindow(SkinSettings)</onclick>
+					<icon>icons/home/skinsettings.png</icon>
+					</item>
+					
+					<!-- System ITEM 5 -->
+					
+					<item id="5">
+					<description>Appearance Settings</description>
+					<label>$LOCALIZE[480] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					<icon>icons/home/appearancesettings.png</icon>
+					</item>
+					
+					<!-- System ITEM 6 -->
+					
+					<item id="6">
+					<description>Video Settings</description>
+					<label>$LOCALIZE[31953] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(VideosSettings)</onclick>
+					<icon>icons/home/videossettings.png</icon>
+					</item>
+					
+					<!-- System ITEM 7 -->
+					
+					<item id="7">
+					<description>Audio Settings</description>
+					<label>$LOCALIZE[292] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(MusicSettings)</onclick>
+					<icon>icons/home/ausiosettings.png</icon>
+					</item>
+					
+					<!-- System ITEM 8 -->
+					
+					<item id="8">
+					<description>Addons Settings</description>
+					<label>$LOCALIZE[32177]</label>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
+					<icon>icons/home/addonssettings.png</icon>
+					</item>
+					
+					<!-- System ITEM 9 -->
+					
+					<item id="9">
+					<description>Live TV Settings</description>
+					<label>$LOCALIZE[31502] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(PVRSettings)</onclick>
+					<icon>icons/home/pvrsettings.png</icon>
+					</item>
+					
+					<!-- System ITEM 10 -->
+					
+					<item id="10">
+					<description>Network Settings</description>
+					<label>$LOCALIZE[14036]</label>
+					<onclick>ActivateWindow(NetworkSettings)</onclick>
+					<icon>icons/home/services.png</icon>
+					</item>
+					
+					<!-- System ITEM 11 -->
+					
+					<item id="11">
+					<description>Weather Settings</description>
+					<label>$LOCALIZE[31950] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(WeatherSettings)</onclick>
+					<icon>icons/home/weathersettings.png</icon>
+					</item>
+					
+					<!-- System ITEM 12 -->
+					
+					<item id="12">
+					<description>Picture Settings</description>
+					<label>$LOCALIZE[31951] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(PicturesSettings)</onclick>
+					<icon>icons/home/picturesettings.png</icon>
+					</item>
+					
+					
+					
+					
+					</content>
+					</control>
+					</control>
+					
+					<include>InfoWidgetsPanelSystem</include>
+					
+					<!-- WIDGETS BOTTOM -->
+					
+					<control type="group" id="8010">
+					<posx>-250</posx>
+					<posy>200</posy>
+					<include>Window_Fade_In_Out_Widgets_Bottom</include>
+					
+					<control type="group">
+					<posx>5</posx>
+					<posy>15</posy>
+					
+					<!-- LABELS -->
+					
+					<control type="label">
+					<posx>340</posx>
+					<posy>410</posy>
+					<label>138</label>
+					<width>700</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(11)</visible>
+					<include>widgets_animation_label_bottom1</include>
+					</control>
+					
+					<control type="label">
+					<posx>1045</posx>
+					<posy>410</posy>
+					<label>$INFO[System.ProfileName]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(11)</visible>
+					<include>widgets_animation_label_bottom2</include>
+					</control>
+					
+					<control type="label">
+					<posx>1395</posx>
+					<posy>410</posy>
+					<label>32171</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(11)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<control type="label">
+					<posx>1745</posx>
+					<posy>410</posy>
+					<label>705</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(11)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					</control>
+					
+					
+					<!-- SYSTEM INFO -->
+					
+					
+					<control type="panel" id="8002">
+					<posx>340</posx>
+					<posy>480</posy>
+					<width>704</width>
+					<height>550</height>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(11)</visible>
+				    <include>widgets_fade_animation_bottom1</include>
+					<include>widgets_animation_bottom1</include>
+					<itemlayout width="704" height="280">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>684</width>
+					<height>280</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>-7</posy>
+					<width>100</width>
+					<height>100</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>15</posx>
+					<posy>58</posy>
+					<width>70</width>
+					<height>70</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(Res)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>110</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(hdd)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>160</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(os)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>210</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(net)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="group">
+					<control type="label">
+					<posx>290</posx>
+					<posy>150</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-68</font>
+					<textcolor>clearblue</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>20</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(XBMCVersion)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>70</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Resolution)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>120</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Storage)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>170</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(OperatingSystem)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>220</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Internet)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					</control>
+					
+					</itemlayout>
+					<focusedlayout width="255" height="255">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>684</width>
+					<height>280</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>-7</posy>
+					<width>100</width>
+					<height>100</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>15</posx>
+					<posy>58</posy>
+					<width>70</width>
+					<height>70</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(Res)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>110</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(hdd)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>160</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(os)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>210</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(net)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="group">
+					<control type="label">
+					<posx>290</posx>
+					<posy>150</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-68</font>
+					<textcolor>clearblue</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>20</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(XBMCVersion)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>70</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Resolution)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>120</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Storage)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>170</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(OperatingSystem)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>220</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Internet)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Sys Info</description> 
+					<property name="Resolution">$INFO[System.ScreenResolution]</property>
+					<property name="XBMCVersion">$INFO[System.BuildVersion]  [COLOR=clearblue]$INFO[System.BuildDate][/COLOR]</property>
+					<property name="Storage">$INFO[System.TotalSpace]  [COLOR=clearblue]$INFO[System.FreeSpace][/COLOR]</property>
+					<property name="OperatingSystem">$INFO[System.KernelVersion]</property>
+					<property name="Internet">$INFO[System.InternetState]</property>
+					<property name="Res">icons/home/resolution.png</property>
+					<property name="hdd">icons/home/hdd.png</property>
+					<property name="os">icons/home/os.png</property>
+					<property name="net">icons/home/internet.png</property>
+					<onclick>noop</onclick>
+					<icon>icons/home/xbmc.png</icon>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- USER -->
+
+					<control type="panel" id="8003">
+					<posx>1044</posx>
+					<posy>480</posy>
+					<width>352</width>
+					<height>510</height>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(11)</visible>
+					<include>widgets_fade_animation_bottom2</include>
+					<include>widgets_animation_bottom2</include>
+					
+					<itemlayout width="352" height="350">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>332</width>
+					<height>280</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>185</width>
+					<height>185</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$INFO[ListItem.Property(ProfileThumb)]</texture>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>20</posx>
+					<posy>215</posy>
+					<width>320</width>
+					<height>200</height>
+					<label>32172</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					</control>
+				
+					</itemlayout>
+					
+					<focusedlayout width="352" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>332</width>
+					<height>280</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>185</width>
+					<height>185</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>$INFO[ListItem.Property(ProfileThumb)]</texture>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>20</posx>
+					<posy>215</posy>
+					<width>320</width>
+					<height>200</height>
+					<label>32172</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Provider</description>
+					<onclick>noop</onclick> 
+					<icon>-</icon>
+					<label>-</label>
+					<property name="ProfileThumb">$INFO[System.ProfileThumb]</property>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- PERFORMANCE -->
+					
+					<control type="panel" id="8004">
+					<posx>1396</posx>
+					<posy>480</posy>
+					<width>352</width>
+					<height>550</height>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(11)</visible>
+				    <include>widgets_fade_animation_bottom3</include>
+					<include>widgets_animation_bottom3</include>
+					<itemlayout width="352" height="280">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>332</width>
+					<height>280</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>15</posx>
+					<posy>5</posy>
+					<width>70</width>
+					<height>70</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(cpu)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>100</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(ram)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>185</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(power)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="group">
+					
+					<control type="label">
+					<posx>90</posx>
+					<posy>20</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(SystemCPU)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>90</posx>
+					<posy>110</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Memory)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>90</posx>
+					<posy>200</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Battery)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="progress">
+					<description>Progressbar</description>
+					<posx>35</posx>
+					<posy>80</posy>
+					<width>260</width>
+					<height>5</height>
+					<info>System.CPUUsage</info>
+					<texturebg colordiffuse="grey-light2">white.png</texturebg>
+					<midtexture colordiffuse="clearblue">white.png</midtexture>
+					</control>
+					
+					<control type="progress">
+					<description>Progressbar</description>
+					<posx>35</posx>
+					<posy>170</posy>
+					<width>260</width>
+					<height>5</height>
+					<info>system.memory(used)</info>
+					<texturebg colordiffuse="grey-light2">white.png</texturebg>
+					<midtexture colordiffuse="clearblue">white.png</midtexture>
+					</control>
+					
+					<control type="progress">
+					<description>Progressbar</description>
+					<posx>35</posx>
+					<posy>255</posy>
+					<width>260</width>
+					<height>5</height>
+					<info>System.BatteryLevel</info>
+					<texturebg colordiffuse="grey-light2">white.png</texturebg>
+					<midtexture colordiffuse="clearblue">white.png</midtexture>
+					</control>
+					
+					
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>220</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Internet)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					</control>
+					
+					
+					</itemlayout>
+					<focusedlayout width="352" height="255">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>332</width>
+					<height>280</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>15</posx>
+					<posy>5</posy>
+					<width>70</width>
+					<height>70</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(cpu)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>100</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(ram)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>18</posx>
+					<posy>185</posy>
+					<width>65</width>
+					<height>65</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Property(power)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="group">
+					
+					<control type="label">
+					<posx>90</posx>
+					<posy>20</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(SystemCPU)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>90</posx>
+					<posy>110</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Memory)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<posx>90</posx>
+					<posy>200</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Battery)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="progress">
+					<description>Progressbar</description>
+					<posx>35</posx>
+					<posy>80</posy>
+					<width>260</width>
+					<height>5</height>
+					<info>System.CPUUsage</info>
+					<texturebg colordiffuse="grey-light2">white.png</texturebg>
+					<midtexture colordiffuse="clearblue">white.png</midtexture>
+					</control>
+					
+					<control type="progress">
+					<description>Progressbar</description>
+					<posx>35</posx>
+					<posy>170</posy>
+					<width>260</width>
+					<height>5</height>
+					<info>system.memory(used)</info>
+					<texturebg colordiffuse="grey-light2">white.png</texturebg>
+					<midtexture colordiffuse="clearblue">white.png</midtexture>
+					</control>
+					
+					<control type="progress">
+					<description>Progressbar</description>
+					<posx>35</posx>
+					<posy>255</posy>
+					<width>260</width>
+					<height>5</height>
+					<info>System.BatteryLevel</info>
+					<texturebg colordiffuse="grey-light2">white.png</texturebg>
+					<midtexture colordiffuse="clearblue">white.png</midtexture>
+					</control>
+					
+					
+					
+					<control type="label">
+					<posx>100</posx>
+					<posy>220</posy>
+					<width>600</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Internet)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<property name="SystemCPU">$INFO[System.CpuFrequency]  [COLOR=clearblue]$INFO[System.CPUUsage][/COLOR]</property>
+					<property name="Memory">$INFO[System.Memory(total)]  [COLOR=clearblue]$INFO[System.Memory(used.percent)][/COLOR]</property>
+					<property name="Battery">[COLOR=clearblue]$INFO[System.BatteryLevel][/COLOR]</property>
+					<property name="cpu">icons/home/cpu.png</property>
+					<property name="ram">icons/home/ram.png</property>
+					<property name="power">icons/home/battery.png</property>
+					<property name="net">icons/home/internet.png</property>
+					<onclick>noop</onclick>
+					<icon>icons/home/xbmc.png</icon>
+					</item>
+					</content>
+					</control>
+					
+					
+
+					<!-- NETWORK -->
+					
+					<control type="panel" id="8005">
+					<posx>1748</posx>
+					<posy>480</posy>
+					<width>352</width>
+					<height>550</height>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(11)</visible>
+				    <include>widgets_fade_animation_bottom4</include>
+					<include>widgets_animation_bottom4</include>
+					<itemlayout width="352" height="280">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>332</width>
+					<height>280</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="group">
+					<posx>15</posx>
+					<posy>-5</posy>
+					
+					<control type="label">
+					<description>IP</description>
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$LOCALIZE[32173] $INFO[ListItem.Property(IP)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<description>MAC</description>
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$LOCALIZE[32174] $INFO[ListItem.Property(MAC)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<description>Gateaway</description>
+					<posx>0</posx>
+					<posy>120</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$LOCALIZE[32175] $INFO[ListItem.Property(Gateaway)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<description>Subnet Mask</description>
+					<posx>0</posx>
+					<posy>170</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$LOCALIZE[32176] $INFO[ListItem.Property(SubMask)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<description>Link State</description>
+					<posx>0</posx>
+					<posy>220</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Link)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					</control>
+					
+					</itemlayout>
+					<focusedlayout width="352" height="255">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>332</width>
+					<height>280</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="group">
+					<posx>15</posx>
+					<posy>-8</posy>
+					
+					<control type="label">
+					<description>IP</description>
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$LOCALIZE[32173] $INFO[ListItem.Property(IP)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<description>MAC</description>
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$LOCALIZE[32174] $INFO[ListItem.Property(MAC)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<description>Gateaway</description>
+					<posx>0</posx>
+					<posy>120</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$LOCALIZE[32175] $INFO[ListItem.Property(Gateaway)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<description>Subnet Mask</description>
+					<posx>0</posx>
+					<posy>170</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$LOCALIZE[32176] $INFO[ListItem.Property(SubMask)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					
+					<control type="label">
+					<description>Link State</description>
+					<posx>0</posx>
+					<posy>220</posy>
+					<width>400</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Property(Link)]</label>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Network</description>
+					<property name="IP">$INFO[Network.IPAddress]</property>
+					<property name="MAC">$INFO[Network.MacAddress]</property>
+					<property name="Link">$INFO[Network.LinkState]</property>
+					<property name="Gateaway">$INFO[Network.GatewayAddress]</property>
+					<property name="SubMask">$INFO[Network.SubnetMask]</property>
+					<onclick>noop</onclick>
+					
+					</item>
+					</content>
+					</control>
+					</control>
+
+					
+					
+					</include>
+					</includes>

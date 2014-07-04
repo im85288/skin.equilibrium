@@ -1,0 +1,297 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window type="dialog">
+					<defaultcontrol always="true">3</defaultcontrol>
+					<zorder>2</zorder>
+					<controls>
+					
+					<include>DefaultOpenClose</include>
+					
+					<control type="image">
+					<description>background image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<include>Dimensions_Fullscreen_Home</include>
+					<texture background="true">overlay.jpg</texture>
+					</control>
+					
+					<control type="image">
+					<posx>99</posx>
+					<posy>155</posy>
+					<width>848</width>
+					<height>787</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>1058</posx>
+					<posy>415</posy>
+					<width>527</width>
+					<height>527</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<visible>Control.IsVisible(6)</visible>
+					</control>
+
+					<control type="image">
+					<posx>1071</posx>
+					<posy>428</posy>
+					<width>502</width>
+					<height>502</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(6).ListItem.Icon]</texture>
+					</control>
+					
+					<control type="group">
+					<posx>103</posx>
+					<posy>46</posy>
+					
+					<control type="label" id="1">
+					<description>header label</description>
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>795</width>
+					<height>45</height>
+					<font>Condensed-46</font>
+					<label>$LOCALIZE[13406]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>grey4</textcolor>
+					</control>
+					
+					<control type="list" id="3">
+					<posx>10</posx>
+					<posy>120</posy>
+					<width>825</width>
+					<height>759</height>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<onleft>5</onleft>
+					<onright>61</onright>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="69" width="825">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>820</width>
+					<height>60</height>
+					<texture colordiffuse="grey3">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="label">
+					<posx>30</posx>
+					<posy>0</posy>
+					<width>765</width>
+					<height>60</height>
+					<font>Condensed-36</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout height="69" width="825">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>820</width>
+					<height>60</height>
+					<texture colordiffuse="white">white.png</texture>
+					<visible>!Control.HasFocus(3)</visible>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>820</width>
+					<height>60</height>
+					<texture colordiffuse="white">white.png</texture>
+					<visible>Control.HasFocus(3)</visible>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="label">
+					<posx>30</posx>
+					<posy>0</posy>
+					<width>765</width>
+					<height>60</height>
+					<font>Condensed-36</font>
+					<textcolor>grey4</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					</focusedlayout>
+					</control>
+					
+					<control type="list" id="6">
+					<posx>7</posx>
+					<posy>120</posy>
+					<width>825</width>
+					<height>765</height>
+					<onup>6</onup>
+					<ondown>6</ondown>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="130" width="825">
+					
+					<control type="image">
+					<posx>130</posx>
+					<posy>0</posy>
+					<width>700</width>
+					<height>120</height>
+					<texture colordiffuse="grey3">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture colordiffuse="grey3">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>10</posy>
+					<width>675</width>
+					<height>45</height>
+					<font>Condensed-46</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="label">
+					<posx>800</posx>
+					<posy>10</posy>
+					<width>200</width>
+					<height>45</height>
+					<font>Condensed-32</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Property(Addon.Version)]</label>
+					</control>
+					
+					<control type="textbox">
+					<posx>152</posx>
+					<posy>55</posy>
+					<width>650</width>
+					<height>75</height>
+					<font>Condensed-32</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Property(Addon.Creator)]</label>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout height="130" width="825">
+					
+					<control type="image">
+					<posx>130</posx>
+					<posy>0</posy>
+					<width>700</width>
+					<height>120</height>
+					<texture colordiffuse="white">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture colordiffuse="white">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>10</posy>
+					<width>675</width>
+					<height>45</height>
+					<font>Condensed-46</font>
+					<textcolor>grey4</textcolor>
+					<selectedcolor>selected1</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="label">
+					<posx>800</posx>
+					<posy>10</posy>
+					<width>200</width>
+					<height>45</height>
+					<font>Condensed-32</font>
+					<textcolor>grey3</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Property(Addon.Version)]</label>
+					</control>
+					
+					<control type="textbox">
+					<posx>152</posx>
+					<posy>55</posy>
+					<width>650</width>
+					<height>75</height>
+					<font>Condensed-32</font>
+					<textcolor>grey3</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Property(Addon.Creator)]</label>
+					</control>
+					</focusedlayout>
+					</control>
+					
+					<control type="button" id="5">
+					<description>Manual button</description>
+					<posx>0</posx>
+					<posy>940</posy>
+					<width>300</width>
+					<height>60</height>
+					<label>186</label>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<focusedcolor>red1</focusedcolor>
+					<align>left</align>
+					<onleft>3</onleft>
+					<onright>3</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					</control>
+					</control>
+					</controls>
+					</window>

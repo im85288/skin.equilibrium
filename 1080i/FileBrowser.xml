@@ -1,0 +1,388 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">450</defaultcontrol>
+					
+					<allowoverlay>no</allowoverlay>
+					<coordinates>
+					
+					<system>1</system>
+					<posx>0</posx>
+					<posy>0</posy>
+					</coordinates>
+					<controls>
+					
+					<include>Overlay</include>
+					<include>DefaultOpenClose</include>
+					
+					
+					<control type="group">
+					<posx>90</posx>
+					<posy>120</posy>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>440</height>
+					<texture>white.png</texture>
+				    <colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>1300</width>
+					<height>652</height>
+					<fadetime>600</fadetime>
+					<texture>white.png</texture>
+				    <colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>450</posy>
+					<width>440</width>
+					<height>200</height>
+					<fadetime>600</fadetime>
+					<texture>white.png</texture>
+				    <colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<!-- <control type="image">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>1300</width>
+					<height>652</height>
+					<fadetime>600</fadetime>
+					<texture flipx="true">overlay.jpg</texture>
+					<colordiffuse>white2-condensed</colordiffuse>
+					</control> -->
+					
+					<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>420</width>
+					<height>420</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="DefaultNextAiredCanceled.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					
+					<control type="group">
+					
+					<control type="label" id="411">
+					<description>header label</description>
+					<posx>0</posx>
+					<posy>-60</posy>
+					<width>795</width>
+					<height>45</height>
+					<font>Condensed-46</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>grey4</textcolor>
+					</control>
+					
+					<control type="grouplist" id="9000">
+					<posx>11</posx>
+					<posy>460</posy>
+					<width>450</width>
+					<height>338</height>
+					<itemgap>1</itemgap>
+					<orientation>vertical</orientation>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					
+					<control type="button" id="413">
+					<description>OK button</description>
+					<include>ButtonCommonValues4</include>
+					<align>left</align>
+					<label>186</label>
+					</control>
+					
+					<control type="button" id="414">
+					<description>Cancel button</description>
+					<include>ButtonCommonValues4</include>
+					<align>left</align>
+					<label>222</label>
+					</control>
+					
+					<control type="button" id="415">
+					<description>Create folder button</description>
+					<align>left</align>
+					<include>ButtonCommonValues4</include>
+					<label>119</label>
+					</control>
+					
+					<!-- <control type="radiobutton" id="416">
+					<description>Flip Image button</description>
+					<align>left</align>
+					<include>ButtonCommonValues2</include>
+					<label>749</label>
+					</control> -->
+					</control>
+					
+					<control type="panel" id="450">
+					<posx>460</posx>
+					<posy>10</posy>
+					<width>1300</width>
+					<height>640</height>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>450</onup>
+					<ondown>450</ondown>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="128" width="1300">
+					
+					<control type="image">
+					<posx>130</posx>
+					<posy>0</posy>
+					<width>1150</width>
+					<height>120</height>
+					<texture colordiffuse="grey3">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture colordiffuse="grey3">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>11</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>10</posy>
+					<width>675</width>
+					<height>45</height>
+					<font>Condensed-46</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>60</posy>
+					<width>1100</width>
+					<height>45</height>
+					<font>Condensed-32</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.FilenameandPath]</label>
+					</control>
+					
+					</itemlayout>
+					<focusedlayout height="128" width="1300">
+					
+					<control type="image">
+					<posx>130</posx>
+					<posy>0</posy>
+					<width>1150</width>
+					<height>120</height>
+					<texture colordiffuse="grey2">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture colordiffuse="grey2">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>11</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>10</posy>
+					<width>1100</width>
+					<height>45</height>
+					<font>Condensed-46</font>
+					<textcolor>grey4</textcolor>
+					<selectedcolor>selected1</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>60</posy>
+					<width>1100</width>
+					<height>45</height>
+					<font>Condensed-32</font>
+					<textcolor>grey3</textcolor>
+					<selectedcolor>selected1</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.FilenameandPath]</label>
+					</control>
+					
+					</focusedlayout>
+					</control>
+					
+					<control type="panel" id="451">
+					<posx>460</posx>
+					<posy>10</posy>
+					<width>1300</width>
+					<height>640</height>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>451</onup>
+					<ondown>451</ondown>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="128" width="1300">
+					
+					<control type="image">
+					<posx>130</posx>
+					<posy>0</posy>
+					<width>1150</width>
+					<height>120</height>
+					<texture colordiffuse="grey3">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture colordiffuse="grey3">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>11</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>10</posy>
+					<width>1100</width>
+					<height>45</height>
+					<font>Condensed-46</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>60</posy>
+					<width>1100</width>
+					<height>45</height>
+					<font>Condensed-32</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.FilenameandPath]</label>
+					</control>
+					
+					</itemlayout>
+					<focusedlayout height="128" width="1300">
+					
+					<control type="image">
+					<posx>130</posx>
+					<posy>0</posy>
+					<width>1150</width>
+					<height>120</height>
+					<texture colordiffuse="grey2">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture colordiffuse="grey2">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="image">
+					<posx>11</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>10</posy>
+					<width>675</width>
+					<height>45</height>
+					<font>Condensed-46</font>
+					<textcolor>grey4</textcolor>
+					<selectedcolor>selected1</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="label">
+					<posx>152</posx>
+					<posy>60</posy>
+					<width>1100</width>
+					<height>45</height>
+					<font>Condensed-32</font>
+					<textcolor>grey3</textcolor>
+					<selectedcolor>selected1</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.FilenameandPath]</label>
+					</control>
+					</focusedlayout>
+					</control>
+					</control>
+					</control>
+					
+					<control type="scrollbar" id="60">
+					<posx>1850</posx>
+					<posy>120</posy>
+					<width>10</width>
+					<height>650</height>
+					<texturesliderbackground colordiffuse="grey3-transparent">white.png</texturesliderbackground>
+					<textureslidernib colordiffuse="grey3">white.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="green1">white.png</textureslidernibfocus>
+					<onleft>450</onleft>
+					<onright>noop</onright>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+					</control>
+					
+					<include>Clock</include>
+					</controls>
+					</window>

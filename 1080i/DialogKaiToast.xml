@@ -1,0 +1,166 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+
+					<include>DefaultOpenClose</include>
+					<controls>
+					
+					<control type="group">
+					<posx>1200</posx>
+					<posy>35</posy>
+					
+					<visible>!Window.IsVisible(Home)</visible>
+					
+					<control type="image" id="400">
+					<description>avatar</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>75</width>
+					<height>75</height>
+					<aspectratio>keep</aspectratio>
+					<texture>DefaultIconInfo.png</texture>
+					</control>
+					
+					<control type="fadelabel" id="401">
+					<description>Line 1 Label</description>
+					<posx>110</posx>
+					<posy>0</posy>
+					<width>535</width>
+					<height>40</height>
+					<textcolor>grey4</textcolor>
+					<font>Condensed-36</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+					</control>
+					
+					<control type="fadelabel" id="402">
+					<description>Line 2 Label</description>
+					<posx>110</posx>
+					<posy>40</posy>
+					<width>535</width>
+					<height>30</height>
+					<textcolor>grey3</textcolor>
+					<font>Condensed-32</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+					</control>
+					
+					<control type="image" id="403">
+					<description>avatar</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>75</width>
+					<height>75</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+					<texture>DefaultIconInfo.png</texture>
+					</control>
+					
+					<control type="image" id="404">
+					<description>avatar</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>75</width>
+					<height>75</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+					<texture>DefaultIconWarning.png</texture>
+					</control>
+					
+					<control type="image" id="405">
+					<description>avatar</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>75</width>
+					<height>75</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+					<texture>DefaultIconError.png</texture>
+					</control>
+					</control>
+					
+					
+					<!-- HOME NOTIFICATIONS -->
+					
+					<control type="group">
+					<posx>80</posx>
+					<posy>970</posy>
+					
+					<visible>Window.IsVisible(Home)</visible>
+					
+					<control type="image" id="400">
+					<description>avatar</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>75</width>
+					<height>75</height>
+					<aspectratio>keep</aspectratio>
+					<texture>DefaultIconInfo.png</texture>
+					</control>
+					
+					<control type="fadelabel" id="401">
+					<description>Line 1 Label</description>
+					<posx>110</posx>
+					<posy>0</posy>
+					<width>1200</width>
+					<height>40</height>
+					<textcolor>grey4</textcolor>
+					<font>Condensed-36</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+					</control>
+					
+					<control type="fadelabel" id="402">
+					<description>Line 2 Label</description>
+					<posx>110</posx>
+					<posy>40</posy>
+					<width>1200</width>
+					<height>30</height>
+					<textcolor>grey3</textcolor>
+					<font>Condensed-32</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+					</control>
+					
+					<control type="image" id="403">
+					<description>avatar</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>75</width>
+					<height>75</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+					<texture>DefaultIconInfo.png</texture>
+					</control>
+					
+					<control type="image" id="404">
+					<description>avatar</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>75</width>
+					<height>75</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+					<texture>DefaultIconWarning.png</texture>
+					</control>
+					
+					<control type="image" id="405">
+					<description>avatar</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>75</width>
+					<height>75</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+					<texture>DefaultIconError.png</texture>
+					</control>
+					</control>
+					</controls>
+					</window>

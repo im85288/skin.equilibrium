@@ -1,0 +1,1438 @@
+					<includes>
+
+					<include name="SkinWidgetsPictures">
+
+					<control type="group" id="8090">
+					<visible>!Container(300).HasFocus(8)</visible>
+					<posx>-250</posx>
+					<posy>120</posy>
+					<animation effect="slide" start="0,0" end="0,40" time="200" reversible="true" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+					<animation effect="slide" start="0,40" end="0,0" time="300" reversible="true" condition="!ControlGroup(9001).HasFocus">Conditional</animation>
+					
+					<include>Window_Fade_In_Out_Widgets_Top</include>
+					
+					<!-- PICS -->
+
+					
+					<control type="wraplist" id="8091">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>300</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<visible>Container(300).Hasfocus(7)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					
+					<!-- Pics ITEM 1 -->
+					
+					<item id="1">
+					<description>Custom Item 1</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide900) | Skin.HasSetting(custom900)</visible>
+					</item>
+					
+					<item id="1">
+					<description>Custom Item 1</description>
+					<label>$INFO[Skin.String(Pics.1.Label]</label>
+					<icon>$INFO[Skin.String(Pics.1.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.1.Path]</onclick>
+					<visible>Skin.HasSetting(custom900)</visible>
+					</item>
+					
+					<!-- Pics ITEM 2 -->
+					
+					<item id="2">
+					<description>Custom Item 2</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide901) | Skin.HasSetting(custom901)</visible>
+					</item>
+					
+					<item id="2">
+					<description>Custom Item 2</description>
+					<label>$INFO[Skin.String(Pics.2.Label]</label>
+					<icon>$INFO[Skin.String(Pics.2.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.2.Path]</onclick>
+					<visible>Skin.HasSetting(custom901)</visible>
+					</item>
+					
+					<!-- Pics ITEM 3 -->
+					
+					<item id="3">
+					<description>Custom Item 3</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide902) | Skin.HasSetting(custom902)</visible>
+					</item>
+					
+					<item id="3">
+					<description>Custom Item 3</description>
+					<label>$INFO[Skin.String(Pics.3.Label]</label>
+					<icon>$INFO[Skin.String(Pics.3.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.3.Path]</onclick>
+					<visible>Skin.HasSetting(custom902)</visible>
+					</item>
+					
+					<!-- Pics ITEM 4 -->
+					
+					<item id="4">
+					<description>Custom Item 4</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide903) | Skin.HasSetting(custom903)</visible>
+					</item>
+					
+					<item id="4">
+					<description>Custom Item 4</description>
+					<label>$INFO[Skin.String(Pics.4.Label]</label>
+					<icon>$INFO[Skin.String(Pics.4.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.4.Path]</onclick>
+					<visible>Skin.HasSetting(custom903)</visible>
+					</item>
+					
+					<!-- Pics ITEM 5 -->
+					
+					<item id="5">
+					<description>Custom Item 5</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide904) | Skin.HasSetting(custom904)</visible>
+					</item>
+					
+					<item id="5">
+					<description>Custom Item 5</description>
+					<label>$INFO[Skin.String(Pics.5.Label]</label>
+					<icon>$INFO[Skin.String(Pics.5.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.5.Path]</onclick>
+					<visible>Skin.HasSetting(custom904)</visible>
+					</item>
+					
+					<!-- Pics ITEM 6 -->
+					
+					<item id="6">
+					<description>Custom Item 6</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide905) | Skin.HasSetting(custom905)</visible>
+					</item>
+					
+					<item id="6">
+					<description>Custom Item 6</description>
+					<label>$INFO[Skin.String(Pics.6.Label]</label>
+					<icon>$INFO[Skin.String(Pics.6.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.6.Path]</onclick>
+					<visible>Skin.HasSetting(custom905)</visible>
+					</item>
+					
+					<!-- Pics ITEM 7 -->
+					
+					<item id="7">
+					<description>Custom Item 7</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide906) | Skin.HasSetting(custom906)</visible>
+					</item>
+					
+					<item id="7">
+					<description>Custom Item 7</description>
+					<label>$INFO[Skin.String(Pics.7.Label]</label>
+					<icon>$INFO[Skin.String(Pics.7.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.7.Path]</onclick>
+					<visible>Skin.HasSetting(custom906)</visible>
+					</item>
+					
+					<!-- Pics ITEM 8 -->
+					
+					<item id="8">
+					<description>Custom Item 8</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide907) | Skin.HasSetting(custom907)</visible>
+					</item>
+					
+					<item id="8">
+					<description>Custom Item 8</description>
+					<label>$INFO[Skin.String(Pics.8.Label]</label>
+					<icon>$INFO[Skin.String(Pics.8.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.8.Path]</onclick>
+					<visible>Skin.HasSetting(custom907)</visible>
+					</item>
+					
+					<!-- Pics ITEM 9 -->
+					
+					<item id="9">
+					<description>Custom Item 9</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide908) | Skin.HasSetting(custom908)</visible>
+					</item>
+					
+					<item id="9">
+					<description>Custom Item 9</description>
+					<label>$INFO[Skin.String(Pics.9.Label]</label>
+					<icon>$INFO[Skin.String(Pics.9.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.9.Path]</onclick>
+					<visible>Skin.HasSetting(custom908)</visible>
+					</item>
+					
+					<!-- Pics ITEM 10 -->
+					
+					<item id="10">
+					<description>Custom Item 10</description>
+					<label>32104</label>
+					<icon>icons/home/add.png</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide909) | Skin.HasSetting(custom909)</visible>
+					</item>
+					
+					<item id="10">
+					<description>Custom Item 10</description>
+					<label>$INFO[Skin.String(Pics.10.Label]</label>
+					<icon>$INFO[Skin.String(Pics.10.Icon]</icon>
+					<onclick>$INFO[Skin.String(Pics.10.Path]</onclick>
+					<visible>Skin.HasSetting(custom909)</visible>
+					</item>
+					
+					</content>
+					</control>
+					</control>
+					
+					<include>InfoWidgetsPanelPics</include>
+					
+					<!-- WIDGETS BOTTOM -->
+					
+					<control type="group" id="8010">
+					<posx>-250</posx>
+					<posy>200</posy>
+					<include>Window_Fade_In_Out_Widgets_Bottom</include>
+					
+					<control type="group">
+					<posx>5</posx>
+					<posy>15</posy>
+					
+					<!-- Pics TILE 1 TITLE -->
+					
+					<control type="label">
+					<posx>340</posx>
+					<posy>410</posy>
+					<label>32159</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_1)</visible>
+					<include>widgets_animation_label_bottom1</include>
+					</control>
+					
+					<control type="label">
+					<posx>340</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_Pics_tile_1_addon_label)]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_1)</visible>
+					<include>widgets_animation_label_bottom1</include>
+					</control>
+					
+					<!-- Pics TILE 2 TITLE -->
+					
+					<control type="label">
+					<posx>640</posx>
+					<posy>410</posy>
+					<label>32160</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_2)</visible>
+					<include>widgets_animation_label_bottom2</include>
+					</control>
+					
+					<control type="label">
+					<posx>640</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_Pics_tile_2_addon_label)]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_2)</visible>
+					<include>widgets_animation_label_bottom2</include>
+					</control>
+					
+					<!-- Pics TILE 3 TITLE -->
+					
+					<control type="label">
+					<posx>940</posx>
+					<posy>410</posy>
+					<label>32161</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_3)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<control type="label">
+					<posx>940</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_Pics_tile_3_addon_label)]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_3)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					
+					<!-- Pics TILE 4 TITLE -->
+					
+					<control type="label">
+					<posx>1230</posx>
+					<posy>410</posy>
+					<label>32162</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_4)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<control type="label">
+					<posx>1230</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_Pics_tile_4_addon_label)]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_4)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<!-- Pics TILE 5 TITLE -->
+					
+					<control type="label">
+					<posx>1530</posx>
+					<posy>410</posy>
+					<label>32163</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_5)</visible>
+					<include>widgets_animation_label_bottom4</include>
+					</control>
+					
+					<control type="label">
+					<posx>1530</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_Pics_tile_5_addon_label)]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_5)</visible>
+					<include>widgets_animation_label_bottom4</include>
+					</control>
+					
+					<!-- Pics TILE 6 TITLE -->
+					
+					<control type="label">
+					<posx>1830</posx>
+					<posy>410</posy>
+					<label>32165</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_6)</visible>
+					<include>widgets_animation_label_bottom5</include>
+					</control>
+					
+					<control type="label">
+					<posx>1830</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_Pics_tile_6_addon_label)]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_6)</visible>
+					<include>widgets_animation_label_bottom5</include>
+					</control>
+					</control>
+					
+					
+					<!-- TILE 1 -->
+					
+					
+					<control type="panel" id="8002">
+					<posx>340</posx>
+					<posy>480</posy>
+					<width>444</width>
+					<height>550</height>
+					<onleft>noop</onleft>
+					<onright>8003</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_1)</visible>
+				    <include>widgets_fade_animation_bottom1</include>
+					<include>widgets_animation_bottom1</include>
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="255">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Pics Tile 1</description>
+					<onclick>RunAddon($INFO[Skin.String(custom_Pics_tile_1_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_Pics_tile_1_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_Pics_tile_1_addon))]</label>
+					</item>
+					</content>
+					</control>
+					
+					
+					<control type="panel" id="8002">
+					<posx>340</posx>
+					<posy>480</posy>
+					<width>444</width>
+					<height>550</height>
+					<onleft>noop</onleft>
+					<onright>8003</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_1)</visible>
+				    <include>widgets_fade_animation_bottom1</include>
+					<include>widgets_animation_bottom1</include>
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="255">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Pics Tile 1</description>
+					<onclick>ActivateWindow(3006)</onclick>
+					<icon>special://skin/extras/online/add1.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- TILE 2 -->
+
+					<control type="panel" id="8003">
+					<posx>637.5</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>510</height>
+					<onleft>8002</onleft>
+					<onright>8004</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_2)</visible>
+					<include>widgets_fade_animation_bottom2</include>
+					<include>widgets_animation_bottom2</include>
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Pics Tile 2</description>
+					<onclick>RunAddon($INFO[Skin.String(custom_Pics_tile_2_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_Pics_tile_2_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_Pics_tile_2_addon))]</label>
+					</item>
+					</content>
+					</control>
+					
+					<control type="panel" id="8003">
+					<posx>637.5</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>510</height>
+					<onleft>8002</onleft>
+					<onright>8004</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_2)</visible>
+					<include>widgets_fade_animation_bottom2</include>
+					<include>widgets_animation_bottom2</include>
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Pics Tile 2</description>
+					<onclick>ActivateWindow(3006)</onclick>
+					<icon>special://skin/extras/online/add2.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- TILE 3 -->
+					
+					<control type="panel" id="8004">
+					<posx>935</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>310</height>
+					<onleft>8003</onleft>
+					<onright>8005</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					<scrolltime>0</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_3)</visible>
+					<include>widgets_fade_animation_bottom3</include>
+					<include>widgets_animation_bottom3</include>
+					
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="label">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Pics Tile 3</description>
+					<onclick>RunAddon($INFO[Skin.String(custom_Pics_tile_3_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_Pics_tile_3_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_Pics_tile_3_addon))]</label>
+					</item>
+					</content>
+					</control>
+					
+					<control type="panel" id="8004">
+					<posx>935</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>310</height>
+					<onleft>8003</onleft>
+					<onright>8005</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					<scrolltime>0</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_3)</visible>
+					<include>widgets_fade_animation_bottom3</include>
+					<include>widgets_animation_bottom3</include>
+					
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="label">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Pics Tile 3</description>
+					<onclick>ActivateWindow(3006)</onclick>
+					<icon>special://skin/extras/online/add3.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+
+					<!-- TILE 4  -->
+
+					<control type="panel" id="8005">
+					<posx>1230</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onup>8091</onup>
+					<onleft>8004</onleft>
+					<onright>8006</onright>
+					<ondown>301</ondown>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_4)</visible>
+				    <include>widgets_fade_animation_bottom4</include>
+					<include>widgets_animation_bottom4</include>
+					
+					<itemlayout width="248" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="248" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+		
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					
+					<content>
+					<item id="1">
+					<description>Pics Tile 4</description>
+					<onclick>RunAddon($INFO[Skin.String(custom_Pics_tile_4_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_Pics_tile_4_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_Pics_tile_4_addon))]</label>
+					</item>
+					</content>
+					</control>
+					
+					<control type="panel" id="8005">
+					<posx>1230</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onup>8091</onup>
+					<onleft>8004</onleft>
+					<onright>8006</onright>
+					<ondown>301</ondown>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_4)</visible>
+				    <include>widgets_fade_animation_bottom4</include>
+					<include>widgets_animation_bottom4</include>
+					
+					<itemlayout width="248" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="248" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+		
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					
+					<content>
+					<item id="1">
+					<description>Pics Tile 4</description>
+					<onclick>ActivateWindow(3006)</onclick>
+					<icon>special://skin/extras/online/add4.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+					
+					
+
+					 <!-- TILE 5 -->
+					 
+					<control type="panel" id="8006">
+					<posx>1527.5</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8005</onleft>
+					<onright>8007</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_5)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<description>Pics Tile 5</description>
+					<onclick>RunAddon($INFO[Skin.String(custom_Pics_tile_5_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_Pics_tile_5_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_Pics_tile_5_addon))]</label>
+					</item>
+					</content>
+					</control>
+					
+					<control type="panel" id="8006">
+					<posx>1527.5</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8005</onleft>
+					<onright>8007</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_5)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<description>Pics Tile 5</description>
+					<onclick>ActivateWindow(3006)</onclick>
+					<icon>special://skin/extras/online/add5.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+					
+					 <!-- TILE 6 -->
+					 
+					<control type="panel" id="8007">
+					<posx>1825</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8006</onleft>
+					<onright>noop</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(7) + Skin.HasSetting(custom_Pics_tile_6)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<description>Pics Tile 6</description>
+					<onclick>RunAddon($INFO[Skin.String(custom_Pics_tile_6_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_Pics_tile_6_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_Pics_tile_6_addon))]</label>
+					</item>
+					</content>
+					</control>
+					
+					<control type="panel" id="8007">
+					<posx>1825</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8006</onleft>
+					<onright>noop</onright>
+					<onup>8091</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(7) + !Skin.HasSetting(custom_Pics_tile_6)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<description>Pics Tile 6</description>
+					<onclick>ActivateWindow(3006)</onclick>
+					<icon>special://skin/extras/online/add6.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+					</control>
+
+					
+					
+					</include>
+					</includes>

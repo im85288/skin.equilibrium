@@ -1,0 +1,209 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">9</defaultcontrol>
+					<controls>
+					
+					<include>Overlay</include>
+					
+					
+					<control type="group">
+					<posx>90</posx>
+					<posy>120</posy>
+					<include>DefaultOpenClose</include>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>610</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>620</posy>
+					<width>440</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>1300</width>
+					<height>850</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>1300</width>
+					<height>850</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					
+					</control>
+					
+					<control type="label" id="20">
+					<description>header label</description>
+					<posx>0</posx>
+					<posy>-70</posy>
+					<width>1600</width>
+					<height>38</height>
+					<font>Condensed-46</font>
+					<textcolor>grey4</textcolor>
+					<label>-</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>grey-light2</textcolor>
+					</control>
+					
+					<!-- GROUP OF BUTTONS ON THE LEFT -->
+					
+					<control type="grouplist" id="9">
+					<description>Button area</description>
+					<posx>11</posx>
+					<posy>10</posy>
+					<width>735</width>
+					<height>762</height>
+					<itemgap>8</itemgap>
+					<onup>9</onup>
+					<ondown>9001</ondown>
+					<onleft>noop</onleft>
+					<onright>2</onright>
+					<orientation>vertical</orientation>
+					</control>
+					
+					<control type="button" id="13">
+					<include>ButtonCommonValues3</include>
+					<align>left</align>
+					<aligny>center</aligny>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="grouplist" id="2">
+					<description>control area</description>
+					<posx>460</posx>
+					<posy>10</posy>
+					<width>1280</width>
+					<height>830</height>
+					<itemgap>8</itemgap>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onleft>9</onleft>
+					<onright>noop</onright>
+					</control>
+					
+					<control type="scrollbar" id="30">
+					<visible>false</visible>
+					</control>
+					
+					<!-- BUTTONS OK, CANCEL and DEFAULT -->
+					
+					<control type="group" id="9001">
+					<posx>10</posx>
+					<posy>480</posy>
+					
+					<control type="button" id="10">
+					<description>OK Button</description>
+					<include>ButtonCommonValues3</include>
+					<posy>150</posy>
+					<label>186</label>
+					<onup>9</onup>
+					<onleft>noop</onleft>
+					<onright>2</onright>
+					<ondown>11</ondown>
+					<align>left</align>
+					<aligny>center</aligny>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="button" id="11">
+					<description>Cancel Button</description>
+					<include>ButtonCommonValues3</include>
+					<posy>225</posy>
+					<label>222</label>
+					<onup>10</onup>
+					<onleft>noop</onleft>
+					<onright>2</onright>
+					<ondown>12</ondown>
+					<align>left</align>
+					<aligny>center</aligny>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="button" id="12">
+					<description>Defaults Button</description>
+					<label>409</label>
+					<include>ButtonCommonValues3</include>
+					<posy>300</posy>
+					<onup>11</onup>
+					<onleft>noop</onleft>
+					<onright>2</onright>
+					<ondown>noop</ondown>
+					<align>left</align>
+					<aligny>center</aligny>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					</control>
+					
+					<!-- LIST OF BUTTONS, TEXT ON THE RIGHT SIDE -->
+					
+					<control type="button" id="13">
+					<description>Default Category Button</description>
+					<include>ButtonCommonValuesWide</include>
+					<visible>false</visible>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="button" id="3">
+					<description>Default Button</description>
+					<include>ButtonCommonValuesWide</include>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="radiobutton" id="4">
+					<description>Default RadioButton</description>
+					<include>RadioButtonsWide</include>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="spincontrolex" id="5">
+					<description>Default spincontrolex</description>
+					<include>Spincontrolex_1</include>
+					<reverse>yes</reverse>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="label" id="7">
+					<height>60</height>
+					<font>Condensed-46</font>
+					<textcolor>white</textcolor>
+					<selectedcolor></selectedcolor>
+					<focusedcolor>white</focusedcolor>
+					<label>-</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>8</textoffsetx>
+					</control>
+					
+					<control type="image" id="6">
+					<description>Default Seperator</description>
+					<height>1</height>
+					<texture>-</texture>
+					</control>
+					
+					<control type="sliderex" id="8">
+					<description>Default Slider</description>
+					<include>Sliderex1</include>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					</control>
+					</controls>
+					</window>

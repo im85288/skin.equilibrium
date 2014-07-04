@@ -1,0 +1,259 @@
+				<includes>
+
+				<include name="Poster">
+				<control type="group">
+				<include>Window_Fade_In_Out</include>
+				<visible>Control.IsVisible(516)</visible>
+				
+				<control type="wraplist" id="516">
+				<posx>90</posx>
+				<posy>530</posy>
+				<width>1740</width>
+				<height>650</height>
+				<onleft>516</onleft>
+				<onright>516</onright>
+				<onup>9000</onup>
+				<ondown>60</ondown>
+				<viewtype label="Poster">panel</viewtype>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>400</scrolltime>
+				<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+				
+				<itemlayout width="176" height="250">
+				<control type="group">
+				<posx>15</posx>
+				<posy>150</posy>
+				<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>156</width>
+				<height>220</height>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+				<posx>70</posx>
+				<posy>115</posy>
+				<width>30</width>
+				<height>40</height>
+				<texture>$VAR[overlayIcon]</texture>
+				</control>
+				</control>
+				
+				</itemlayout>
+				<focusedlayout width="336" height="580">
+				<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				
+				<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>330</width>
+				<height>480</height>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="zoom" time="200" center="auto" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+				<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+				</control>
+				
+				<!-- <control type="image">
+				<posx>0</posx>
+				<posy>220</posy>
+				<width>156</width>
+				<height>15</height>
+				<texture background="true">white.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>grey6</colordiffuse>
+				<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+				<animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+				</control> -->
+				
+				<control type="image">
+				<posx>70</posx>
+				<posy>115</posy>
+				<width>30</width>
+				<height>40</height>
+				<texture>$VAR[overlayIcon]</texture>
+				</control>
+				</control>
+				</focusedlayout>
+				</control>
+				
+				<control type="group">
+				<posx>70</posx>
+				<posy>50</posy>
+				<visible>Container.Content(Movies)</visible>
+				<visible>!ListItem.IsFolder</visible>
+				<control type="label">
+				<description>title label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1700</width>
+				<height>55</height>
+				<label>$INFO[ListItem.Title] [COLOR=grey-light1]$INFO[ListItem.Year][/COLOR]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Condensed-68-B</font>
+			    <textcolor>grey3</textcolor>
+				</control>
+				
+				<control type="image">
+				<description>genre</description>
+				<posx>0</posx>
+				<posy>80</posy>
+				<height>100</height>
+				<width>100</width>
+				<texture background="true">icons/genre.png</texture>
+				<colordiffuse>info_icons</colordiffuse>
+				</control>
+					
+				<control type="label">
+				<description>Genre label</description>
+				<posx>150</posx>
+				<posy>118</posy>
+				<width>1200</width>
+				<height>25</height>
+				<label fallback="416">$INFO[Listitem.Genre]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Condensed-32</font>
+				<textcolor>grey3</textcolor>
+				</control>
+				
+				<control type="image">
+				<description>duration</description>
+				<posx>0</posx>
+				<posy>140</posy>
+				<height>100</height>
+				<width>100</width>
+				<texture background="true">icons/duration.png</texture>
+				<colordiffuse>info_icons</colordiffuse>
+				</control>
+				
+				<control type="label">
+				<description>duration Label</description>
+				<posx>150</posx>
+				<posy>178</posy>
+				<width>1200</width>
+				<height>25</height>
+				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Condensed-32</font>
+			    <textcolor>grey3</textcolor>
+				</control>
+				
+				<control type="image">
+				<description>studio</description>
+				<posx>0</posx>
+				<posy>200</posy>
+				<height>100</height>
+				<width>100</width>
+				<texture fallback="icons/studio.png">$INFO[Listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>info_icons</colordiffuse>
+				</control>
+				
+				<control type="label">
+				<description>Studio</description>
+				<posx>150</posx>
+				<posy>238</posy>
+				<width>1200</width>
+				<height>25</height>
+				<label>$INFO[ListItem.Studio]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Condensed-32</font>
+			    <textcolor>grey3</textcolor>
+				</control>
+				
+				<control type="image">
+				<description>imdb</description>
+				<posx>0</posx>
+				<posy>260</posy>
+				<height>100</height>
+				<width>100</width>
+				<texture background="true">icons/imdb.png</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>info_icons</colordiffuse>
+				</control>
+
+				<control type="image">
+				<posx>210</posx>
+				<posy>242</posy>
+				<height>140</height>
+				<width>140</width>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Rating,stars/,.png]</texture>
+				<colordiffuse>label</colordiffuse>
+				</control>
+				
+				<control type="label">
+				<description>imdb</description>
+				<posx>150</posx>
+				<posy>298</posy>
+				<height>25</height>
+				<width>1600</width>
+				<label>$INFO[ListItem.Rating]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Condensed-32</font>
+				<textcolor>grey3</textcolor>
+				</control>
+				</control>
+				
+				<control type="group">
+				<posx>30</posx>
+				<posy>20</posy>
+				
+				<control type="grouplist">
+				<!-- MPAA Rating -->
+				<description>MPAA Rating Flagging Images</description>
+				<posx>935</posx>
+				<posy>245</posy>
+				<width>249</width>
+				<height>57</height>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>VideoMPAAFlaggingConditions</include>
+				
+				</control>
+				<control type="grouplist">
+				<description>Info Flags</description>
+				<posx>0</posx>
+				<posy>400</posy>
+				<width>550</width>
+				<align>right</align>
+				<itemgap>5</itemgap>
+				<orientation>horizontal</orientation>
+				<include>InfoFlags</include>
+				<include>AudioCodecFlaggingConditions</include>
+				<include>AspectCodecFlaggingConditions</include>
+				</control>
+				</control>
+				
+				<control type="scrollbar" id="60">
+				<posx>750</posx>
+				<posy>970</posy>
+				<width>800</width>
+				<height>25</height>
+				<texturesliderbackground border="8">progressBackground.png</texturesliderbackground>
+				<textureslidernibfocus>orb_fo.png</textureslidernibfocus>
+				<colordiffuse>lightgrey</colordiffuse>
+				<onup>556</onup>
+				<ondown>556</ondown>
+				<showonepage>false</showonepage>
+				<orientation>horizontal</orientation>
+				<visible allowhiddenfocus="true">Control.IsVisible(516) + Control.HasFocus(60)</visible>
+				</control>
+				</control>
+				
+				</include>
+				</includes>

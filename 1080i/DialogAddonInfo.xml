@@ -1,0 +1,325 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">9000</defaultcontrol>
+					
+					<include>DefaultOpenClose</include>
+					<controls>
+					
+					<include>Overlay</include>
+					
+					<control type="grouplist">
+					<posx>98</posx>
+					<posy>50</posy>
+					<width>1500</width>
+					<height>70</height>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					<itemgap>8</itemgap>
+					<control type="label">
+					<include>WindowTitleCommons</include>
+					<label>$LOCALIZE[32178]</label>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>90</posx>
+					<posy>120</posy>
+					
+					<include>VisibleFadeEffect</include>
+					<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>440</height>
+					<texture>white.png</texture>
+				    <colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>450</posy>
+					<width>440</width>
+					<height>423</height>
+					<texture>white.png</texture>
+				    <colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>1300</width>
+					<height>440</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>1300</width>
+					<height>440</height>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<fadetime>600</fadetime>
+					<texture fallback="special://skin/backgrounds/skin.jpg" background="true">$INFO[ListItem.Art(fanart)]</texture>
+					<colordiffuse>white-condensed</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>450</posx>
+					<posy>450</posy>
+					<width>1300</width>
+					<height>196</height>
+					<fadetime>600</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>450</posx>
+					<posy>655</posy>
+					<width>1300</width>
+					<height>218</height>
+					<fadetime>600</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>420</width>
+					<height>420</height>
+					<aspectratio>scale</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					
+					<control type="grouplist">
+					<description>Titles</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>505</posx>
+					<posy>30</posy>
+					<width>1200</width>
+					<height>90</height>
+					<align>bottom</align>
+					<itemgap>15</itemgap>
+					<orientation>horizontal</orientation>
+
+					<control type="label">
+					<description>title label</description>
+					<width min="0" max="1000">auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>65</height>
+					<label>$INFO[ListItem.Property(Addon.Name)]</label>
+					<align>left</align>
+					<font>Condensed-62</font>
+					<textcolor>grey2</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>label</description>
+					<posx>0</posx>
+					<posy>15</posy>
+					<width>1400</width>
+					<height>55</height>
+					<label>$INFO[ListItem.Property(Addon.Version)]</label>
+					<align>left</align>
+					<font>Condensed-46</font>
+					<textcolor>grey1</textcolor>
+					</control>
+					</control>
+					
+					
+					<control type="group">
+					<posx>500</posx>
+					<posy>100</posy>
+					
+					<control type="label">
+					<description>Type Value</description>
+					<posx>5</posx>
+					<posy>45</posy>
+					<width>1200</width>
+					<height>32</height>
+					<label fallback="416">$LOCALIZE[146] $INFO[ListItem.Property(Addon.Type)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Condensed-40</font>
+					<textcolor>grey1</textcolor>
+					<scroll>true</scroll>
+					</control>
+					
+					<control type="label">
+					<description>Type Value</description>
+					<posx>5</posx>
+					<posy>90</posy>
+					<width>1200</width>
+					<height>38</height>
+					<label fallback="416">$LOCALIZE[21863]: $INFO[ListItem.Property(Addon.Creator)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Condensed-40</font>
+					<textcolor>grey1</textcolor>
+					<scroll>true</scroll>
+					</control>
+					
+					
+					<control type="image">
+					<description>Rating value</description>
+					<posx>-5</posx>
+					<posy>150</posy>
+					<width>240</width>
+					<height>48</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture fallback="stars/0.0.png">$INFO[ListItem.Property(Addon.StarRating),stars/]</texture>
+					</control>
+					
+					<control type="group">
+
+					<control type="textbox" id="400">
+					<description>Description</description>
+					<posx>0</posx>
+					<posy>370</posy>
+					<width>1150</width>
+					<height>150</height>
+					<font>Condensed-40-LS085</font>
+					<textcolor>white</textcolor>
+					<align>justify</align>
+					<label>$INFO[ListItem.Property(Addon.Description)]</label>
+					<pagecontrol>60</pagecontrol>
+					</control>
+					
+					<control type="scrollbar" id="60">
+					<posx>1225</posx>
+					<posy>370</posy>
+					<width>8</width>
+					<height>161</height>
+					<texturesliderbackground colordiffuse="grey3">white.png</texturesliderbackground>
+					<textureslidernib colordiffuse="grey2">white.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="green1">white.png</textureslidernibfocus>
+					<onleft>9000</onleft>
+					<onright>61</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					</control>
+					
+					<control type="label">
+					<description>Disclaimer txt</description>
+					<posx>0</posx>
+					<posy>575</posy>
+					<width>900</width>
+					<height>38</height>
+					<label>$LOCALIZE[24052]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Condensed-40</font>
+					<textcolor>red1</textcolor>
+					</control>
+					
+					<control type="textbox">
+					<description>Disclaimer</description>
+					<posx>0</posx>
+					<posy>625</posy>
+					<width>900</width>
+					<height>100</height>
+					<font>Condensed-40-LS085</font>
+					<textcolor>white</textcolor>
+					<align>justify</align>
+					<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+					</control>
+					</control>
+					
+					<control type="group">
+					
+					
+					
+					</control>
+					</control>
+					
+					<control type="grouplist" id="9000">
+					<posx>11</posx>
+					<posy>460</posy>
+					<width>450</width>
+					<height>405</height>
+					<onleft>60</onleft>
+					<onright>60</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<itemgap>5</itemgap>
+					
+					<control type="button" id="9">
+					<description>Configure Addon</description>
+					<include>ButtonCommonValues3</include>
+					<label>24020</label>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="button" id="8">
+					<description>Update Addon button</description>
+					<include>ButtonCommonValues3</include>
+					<label>24069</label>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="button" id="6">
+					<description>Install/UnInstall Addon button</description>
+					<include>ButtonCommonValues3</include>
+					<label>24022</label>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="button" id="7">
+					<description>Enable/Disable Addon button</description>
+					<include>ButtonCommonValues3</include>
+					<label>24021</label>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="button" id="11">
+					<description>Rollback button</description>
+					<include>ButtonCommonValues3</include>
+					<label>24048</label>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					
+					<control type="button" id="10">
+					<description>Changelog button</description>
+					<include>ButtonCommonValues3</include>
+					<label>24036</label>
+					<disabledcolor>grey3</disabledcolor>
+					</control>
+					</control>
+					
+					<control type="group">
+					<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
+					<posx>0</posx>
+					<posy>830</posy>
+					
+					<control type="image">
+					<description>Icon image</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>50</width>
+					<height>50</height>
+					<texture>DefaultIconError.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>80</posx>
+					<posy>55</posy>
+					<width>1200</width>
+					<height>38</height>
+					<font>Condensed-46</font>
+					<textcolor>grey-mid1</textcolor>
+					<label>24096</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					</control>
+					
+					</control>
+					</control>
+					</controls>
+					</window>

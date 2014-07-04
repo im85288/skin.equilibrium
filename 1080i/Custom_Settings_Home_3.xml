@@ -1,0 +1,167 @@
+					
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window type="dialog" id="3002">
+					<defaultcontrol always="true">9000</defaultcontrol>
+					<controls>
+					
+					<include>Overlay</include>
+					
+					
+					<!-- SETTINGS RECORDINGS -->
+					
+					<control type="grouplist">
+					<posx>98</posx>
+					<posy>50</posy>
+					<width>1500</width>
+					<height>70</height>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					<itemgap>8</itemgap>
+					<control type="label">
+					<include>WindowTitleCommons</include>
+					<label>$LOCALIZE[32056]</label>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>90</posx>
+					<posy>120</posy>
+					<include>DefaultOpenClose</include>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>850</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>1300</width>
+					<height>850</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="list" id="9000">
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>400</width>
+					<height>722</height>
+					<onleft>9010</onleft>
+					<onright>9010</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<scrolltime>300</scrolltime>
+					
+					<itemlayout height="90" width="405">
+					
+					<control type="label">
+					<posx>20</posx>
+					<posy>22</posy>
+					<width>570</width>
+					<height>38</height>
+					<font>Condensed-46</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					</itemlayout>
+					<focusedlayout height="90" width="405">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>405</width>
+					<height>80</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey1</colordiffuse>
+					<animation effect="fade" start="100" end="60" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
+					</control>
+					
+					<control type="label">
+					<posx>20</posx>
+					<posy>22</posy>
+					<width>570</width>
+					<height>38</height>
+					<font>Condensed-46</font>
+					<textcolor>grey4</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<label>32062</label>
+					<onclick>noop</onclick>
+					</item>
+					
+					<!-- <item id="2">
+					<label>32158</label>
+					<onclick>noop</onclick>
+					</item> -->
+					
+				<!-- 	<item id="3">
+					<label>Settings 3</label>
+					<onclick>noop</onclick>
+					</item>
+					
+					<item id="4">
+					<label>Settings 4</label>
+					<onclick>noop</onclick>
+					</item>
+					
+					<item id="5">
+					<label>Settings 5</label>
+					<onclick>noop</onclick>
+					</item> -->
+					
+					</content>
+					</control>
+				
+					
+					
+					<control type="group" id="9010">
+					<control type="grouplist" id="9001">
+					<visible>Container(9000).Hasfocus(1)</visible>
+					<posx>475</posx>
+					<posy>20</posy>
+					<width>1250</width>
+					<height>760</height>
+					<itemgap>10</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					
+					<!-- RECORDINGS PATH -->
+					
+					<control type="button" id="486">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32154]</label>
+					<onclick>Skin.SetPath(recordingspath)</onclick>
+					<label2>$INFO[Skin.String(recordingspath)]</label2>
+					</control>
+					
+				
+					
+					
+					
+					
+					</control>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>1530</posx>
+					<posy>1000</posy>
+					<include>TimeAndTemp</include>
+					</control>
+					</controls>
+					</window>

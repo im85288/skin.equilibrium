@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+    
+	<!-- HOME  -->
+	
+	<color name="overlayhome">EEFFFFFF</color>
+	<color name="rss_title">FF1ba1e2</color> 
+	<color name="rss_headline">FF1ba1e2</color> 
+	<color name="menubar">331ba1e2</color> 
+	<color name="time_weather">44000000</color>
+    <color name="home_icons_unfocus">22000000</color> 	
+	<color name="home_icons_focus">AA1ba1e2</color> 
+	<color name="home_label_unfocus">AAFFFFFF</color>
+	<color name="home_label_focus">FF1ba1e2</color>
+	<color name="home_submenu_unfocus">33000000</color> 
+	<color name="home_submenu_focus">AA1ba1e2</color>
+	<color name="title_label_focus">FFFFFFFF</color>
+	<color name="focused_widgets_bar">FF1ba1e2</color>
+    <color name="titles">FF1ba1e2</color> 				<!-- recomended top rated on demand etc. -->
+	
+	<!-- INFO SCREEN and GENERAL -->
+	
+	<color name="overlayinfo">DDFFFFFF</color>
+	<color name="info_icons">AA1ba1e2</color>
+	<color name="year">AA1ba1e2</color>
+	<color name="plot">FF000000</color>
+	<color name="label">88000000</color>    			<!-- play movie, play trailer labels + labels in general -->
+	<color name="label2">FFFFFFFF</color>   			<!-- play movie, play trailer labels -->
+	<color name="button_bar_focus">AA1ba1e2</color>  	<!-- play movie, play trailer labels -->
+	<color name="resolution_flag">FFFF1493</color>
+	<color name="other_flags">AA1ba1e2</color>
+	
+	<!-- Default Colors -->
+	
+	<color name="grey">FFb4b4b4</color>
+	<color name="grey2">FF999999</color>
+	<color name="grey3">FF505050</color>
+	<color name="selected">FFEB9E17</color>
+
+	<color name="Black">FF000000</color>
+	<color name="White">FFFFFFFF</color>
+	<color name="Red">FFFF0000</color>
+	<color name="Green">FF00FF00</color>
+	<color name="Diffuse">66FFFFFF</color>
+	<color name="orange">FF666769</color>
+	<color name="lightgrey">FFDDDDDD</color>
+	<color name="blue">FF2d5a83</color>
+	<color name="royalblue">FF4169E1</color>
+	<color name="steelblue">FF4682B4</color>
+	<color name="steelblue_dim1">EE4682B4</color>
+	<color name="darkgrey">FF2C2C2C</color>
+	<color name="orange">FFFEAF33</color>
+	
+	
+	
+</colors>

@@ -1,0 +1,2075 @@
+					<includes>
+
+					<include name="SkinWidgetsTVShows">
+					
+					<control type="group" id="8000">
+					<posx>-250</posx>
+					<posy>120</posy>
+					<animation effect="slide" start="0,0" end="0,40" time="200" reversible="true" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+					<animation effect="slide" start="0,40" end="0,0" time="300" reversible="true" condition="!ControlGroup(9001).HasFocus">Conditional</animation>
+					
+					<include>Window_Fade_In_Out_Widgets_Top</include>
+					
+
+					<!-- LATEST EPISODES -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(200)</visible>
+					<visible>![Skin.HasSetting(hide200) | Skin.HasSetting(custom200)]</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>videodb://recentlyaddedepisodes/</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 200 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(200)</visible>
+					<visible>Skin.HasSetting(custom200)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom200playlist)]</content>
+					</control>
+					
+					
+					
+					
+					<!-- UNWATCHED EPISODES  -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(201)</visible>
+					<visible>![Skin.HasSetting(hide201) | Skin.HasSetting(custom201)]</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="video">special://skin/playlists/Unwatched Episodes.xsp</content>
+					</control>
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 201 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(201)</visible>
+					<visible>Skin.HasSetting(custom201)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom201playlist)]</content>
+					</control>
+
+
+
+					<!-- ONGOING TV EPISODES -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(202)</visible>
+					<visible>![Skin.HasSetting(hide202) | Skin.HasSetting(custom202)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>plugin://service.library.data.provider?type=recommendedepisodes&reload=$INFO[Window.Property(recommendedepisodes)]</content>
+					</control>
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 202 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(202)</visible>
+					<visible>Skin.HasSetting(custom202)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom202playlist)]</content>
+					</control>
+					
+					
+					<!-- TV GUIDE  -->
+
+					<!-- <control type="list" id="8001">
+					<posx>340</posx>
+					<posy>100</posy>
+					<width>1760</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<visible>true</visible>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<preloaditems>1</preloaditems>
+					<focusposition>2</focusposition>
+					<visible>Container(9010).Hasfocus(203)</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="group">
+					<visible>Container(9010).Hasfocus(9063) + Control.HasFocus(8001)</visible>
+					<control type="image">
+					<posx>0</posx>
+					<posy>130</posy>
+					<width>156</width>
+					<height>90</height>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>white</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>140</posy>
+					<width>156</width>
+					<height>80</height>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="800" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					<include>Focused_Label_Widgets_Episodes</include>
+					</control>
+					</focusedlayout>
+					<content>plugin://script.tv.show.next.aired $INFO[Window(Home).Property(NextAired.Thumb)]</content>
+					</control> -->
+
+					
+					<!-- NEW RELEASES  -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(204)</visible>
+					<visible>![Skin.HasSetting(hide204) | Skin.HasSetting(custom204)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="video">special://skin/playlists/New TV Shows.xsp</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 204 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(204)</visible>
+					<visible>Skin.HasSetting(custom204)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom204playlist)]</content>
+					</control>
+					
+					
+					
+					<!-- TOP RATED -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(205)</visible>
+					<visible>![Skin.HasSetting(hide205) | Skin.HasSetting(custom205)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="video">special://skin/playlists/Top Rated TV Shows.xsp</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 205 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(205)</visible>
+					<visible>Skin.HasSetting(custom205)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom205playlist)]</content>
+					</control>
+					
+					
+					
+					
+					<!-- DOCUMENTARY -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(206)</visible>
+					<visible>![Skin.HasSetting(hide206) | Skin.HasSetting(custom206)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="video">special://skin/playlists/TV Documentary.xsp</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 206 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(206)</visible>
+					<visible>Skin.HasSetting(custom206)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom206playlist)]</content>
+					</control>
+					
+					
+					<!--KIDS -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<visible>true</visible>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(207)</visible>
+					<visible>![Skin.HasSetting(hide207) | Skin.HasSetting(custom207)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="video">special://skin/playlists/Kids TV Shows.xsp</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 207 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(207)</visible>
+					<visible>Skin.HasSetting(custom207)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom207playlist)]</content>
+					</control>
+					
+					
+					<!-- ACTORS -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>190</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(208)</visible>
+					<visible>![Skin.HasSetting(hide208) | Skin.HasSetting(custom208)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="video">videodb://tvshows/actors/</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 208 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(208)</visible>
+					<visible>Skin.HasSetting(custom208)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom208playlist)]</content>
+					</control>
+				
+					
+					<!-- GENRE -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(209)</visible>
+					<visible>![Skin.HasSetting(hide209) | Skin.HasSetting(custom209)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture fallback="special://skin/extras/moviegenreposter/empty.jpg">$INFO[Listitem.Label,special://skin/extras/moviegenreposter/,.jpg]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture fallback="special://skin/extras/moviegenreposter/empty.jpg">$INFO[Listitem.Label,special://skin/extras/moviegenreposter/,.jpg]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content target="video">videodb://tvshows/genres/</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 209 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(209)</visible>
+					<visible>Skin.HasSetting(custom209)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom209playlist)]</content>
+					</control>
+					
+					
+					<!-- STUDIOS -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>190</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(210)</visible>
+					<visible>![Skin.HasSetting(hide210) | Skin.HasSetting(custom210)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>28</posx>
+					<posy>28</posy>
+					<width>100</width>
+					<height>100</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture fallback="icons/home/tvshows/studios.png">$INFO[Listitem.Label,special://skin/extras/flagging/studios/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>28</posx>
+					<posy>28</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture fallback="icons/home/tvshows/studios.png">$INFO[Listitem.Label,special://skin/extras/flagging/studios/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="video">videodb://tvshows/studios/</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 210 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(210)</visible>
+					<visible>Skin.HasSetting(custom210)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom210playlist)]</content>
+					</control>
+					
+					
+					
+					<!-- YEARS FAKE NO WIDGETS -->
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 211 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(211)</visible>
+					<visible>Skin.HasSetting(custom211)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom211playlist)]</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 212 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(212)</visible>
+					<visible>Skin.HasSetting(custom212)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom212playlist)]</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 213 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(213)</visible>
+					<visible>Skin.HasSetting(custom213)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom213playlist)]</content>
+					</control>
+					
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 214 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(214)</visible>
+					<visible>Skin.HasSetting(custom214)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom214playlist)]</content>
+					</control>
+					
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 215 -->
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(215)</visible>
+					<visible>Skin.HasSetting(custom215)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>220</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom215playlist)]</content>
+					</control>
+					</control>
+	
+					<!-- WIDGETS BOTTOM -->
+	
+	
+					<control type="group" id="8010">
+					<posx>-250</posx>
+					<posy>200</posy>
+					
+					<include>Window_Fade_In_Out_Widgets_Bottom</include>
+					
+					<control type="group">
+					<posx>5</posx>
+					<posy>15</posy>
+					<include>widgets_animation_fade</include>
+					
+					<control type="label">
+					<posx>340</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32045]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(6)</visible>
+					<include>widgets_animation_label_bottom1</include>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					</control>
+					
+					<control type="label">
+					<posx>806</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32132]  $INFO[Container(8003).ListItem.Property(Percent)]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(6)</visible>
+					<include>widgets_animation_label_bottom2</include>
+					</control>
+					
+					<!-- TVSHOW TILE 1 TITLE -->
+					
+					<control type="label">
+					<posx>1268</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32105]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(6) + !Skin.HasSetting(custom_tvshows_tile_1)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<!-- CUSTOM TVSHOW TILE 1 TITLE -->
+					
+					<control type="label">
+					<posx>1268</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_TVShows_tile_1_addon_label)]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(6) + Skin.HasSetting(custom_tvshows_tile_1)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<!-- TVSHOW TILE 2 TITLE -->
+					
+					<control type="label">
+					<posx>1548</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32106]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(6) + !Skin.HasSetting(custom_tvshows_tile_2)</visible>
+					<include>widgets_animation_label_bottom4</include>
+					</control>
+					
+					<!-- CUSTOM TVSHOW TILE 2 TITLE -->
+					
+					<control type="label">
+					<posx>1548</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_TVShows_tile_2_addon_label)]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(6) + Skin.HasSetting(custom_tvshows_tile_2)</visible>
+					<include>widgets_animation_label_bottom4</include>
+					</control>
+					
+					<!-- TVSHOW TILE 3 TITLE -->
+					
+					<control type="label">
+					<posx>1826</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32107]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(6) + !Skin.HasSetting(custom_tvshows_tile_3)</visible>
+					<include>widgets_animation_label_bottom5</include>
+					</control>
+					
+					<!-- CUSTOM TVSHOW TILE 3 TITLE -->
+					
+					<control type="label">
+					<posx>1826</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_TVShows_tile_3_addon_label)]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(6) + Skin.HasSetting(custom_tvshows_tile_3)</visible>
+					<include>widgets_animation_label_bottom5</include>
+					</control>
+					</control>
+	
+					
+					<!-- RANDOM EPISODES -->
+					
+					<control type="panel" id="8002">
+					<posx>340</posx>
+					<posy>430</posy>
+					<width>444</width>
+					<height>550</height>
+					<onleft>noop</onleft>
+					<onright>8003</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(6) + ![Player.HasVideo | Player.HasAudio]</visible>
+					<include>widgets_fade_animation_bottom1</include>
+					<include>widgets_animation_bottom1</include>
+					
+					
+					<itemlayout width="444" height="280">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>444</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="444" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>444</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>225</posy>
+					<width>444</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<include>Focused_Label_Spotlight_Episodes</include>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<label>$INFO[Window(Home).Property(RandomEpisode.1.TVShowTitle)]</label>
+					<label2>$INFO[Window(Home).Property(RandomEpisode.1.EpisodeNo)]</label2>
+					<onclick>$INFO[Window(Home).Property(RandomEpisode.1.Play)]</onclick> 
+					<icon>$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.poster))]</icon>
+					<property name="Mpaa">$INFO[Window(Home).Property(RandomEpisode.1.MPAA)]</property>
+					<property name="Plot">$INFO[Window(Home).Property(RandomEpisode.1.Plot)]</property>
+					<property name="Watched">$INFO[Window(Home).Property(RandomEpisode.1.Watched)]</property>
+					<property name="AudioCodec">$INFO[Window(Home).Property(RandomEpisode.1.AudioCodec)]</property>
+					<property name="Resolution">$INFO[Window(Home).Property(RandomEpisode.1.VideoResolution)]</property>
+					<property name="Studio">$INFO[Window(Home).Property(RandomEpisode.1.Studio)]</property>
+					<property name="RunningTime">$INFO[Window(Home).Property(RandomEpisode.1.RunTime)]</property>
+					<property name="Year">$INFO[Window(Home).Property(RandomEpisode.1.Year)]</property>
+					<property name="Rating">$INFO[Window(Home).Property(RandomEpisode.1.Rating)]</property>
+					<property name="EpisodeSeason">$INFO[Window(Home).Property(RandomEpisode.1.EpisodeSeasonNo)]</property>
+					<property name="EpisodeNumber">$INFO[Window(Home).Property(RandomEpisode.1.EpisodeNo)]</property>
+					<property name="TVShowTitle">$INFO[Window(Home).Property(RandomEpisode.1.TVShowTitle)]</property>
+					<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.fanart))]</property>
+					<property name="Clearlogo">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.clearlogo))]</property>
+					<property name="Clearart">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.clearart))]</property>
+					<visible>!IsEmpty(Window(Home).Property(RandomEpisode.1.Title))</visible>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- CURRENTLY WATCHING EPISODE -->
+
+					<control type="panel" id="8003">
+					<posx>805</posx>
+					<posy>430</posy>
+					<width>930</width>
+					<height>550</height>
+					<onleft>8002</onleft>
+					<onright>8004</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(6)</visible>
+					<include>widgets_fade_animation_bottom2</include>
+					<include>widgets_animation_bottom2</include>
+					
+					
+					<itemlayout width="470" height="280">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>441</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="470" height="280">
+					<control type="image">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>441</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>225</posy>
+					<width>441</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<include>Focused_Label_Spotlight_Episodes</include>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<label>$INFO[Window(Home).Property(RecommendedEpisode.1.TVShowTitle)]</label>
+					<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</label2>
+					<onclick>$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</onclick> 
+					<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.poster))]</icon>
+					<property name="Mpaa">$INFO[Window(Home).Property(RecommendedEpisode.1.MPAA)]</property>
+					<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.1.Plot)]</property>
+					<property name="Percent">$INFO[Window(Home).Property(RecommendedEpisode.1.PercentPlayed)]</property>
+					<property name="Watched">$INFO[Window(Home).Property(RecommendedEpisode.1.Watched)]</property>
+					<property name="AudioCodec">$INFO[Window(Home).Property(RecommendedEpisode.1.AudioCodec)]</property>
+					<property name="Resolution">$INFO[Window(Home).Property(RecommendedEpisode.1.VideoResolution)]</property>
+					<property name="Studio">$INFO[Window(Home).Property(RecommendedEpisode.1.Studio)]</property>
+					<property name="RunningTime">$INFO[Window(Home).Property(RecommendedEpisode.1.RunTime)]</property>
+					<property name="Year">$INFO[Window(Home).Property(RecommendedEpisode.1.Year)]</property>
+					<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.1.Rating)]</property>
+					<property name="EpisodeSeason">$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeSeasonNo)]</property>
+					<property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</property>
+					<property name="TVShowTitle">$INFO[Window(Home).Property(RecommendedEpisode.1.TVShowTitle)]</property>
+					<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
+					<property name="Clearlogo">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.clearlogo))]</property>
+					<property name="Clearart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.clearart))]</property>
+					<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title))</visible>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- ADDON 1 -->
+					
+					<control type="panel" id="8004">
+					<posx>1269</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>310</height>
+					<onleft>8003</onleft>
+					<onright>8005</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					<scrolltime>0</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(6) + !Skin.HasSetting(custom_tvshows_tile_1)</visible>
+					<include>widgets_fade_animation_bottom3</include>
+					<include>widgets_animation_bottom3</include>
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>80</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<onclick>ActivateWindow(3001)</onclick>
+					<icon>special://skin/extras/online/add1.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- CUSTOM TVSHOW TILE 1 -->
+					
+					<control type="panel" id="8004">
+					<posx>1269</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>310</height>
+					<onleft>8003</onleft>
+					<onright>8005</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					<scrolltime>0</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(6) + Skin.HasSetting(custom_tvshows_tile_1)</visible>
+					<include>widgets_fade_animation_bottom3</include>
+					<include>widgets_animation_bottom3</include>
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>80</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<onclick>RunAddon($INFO[Skin.String(custom_TVShows_tile_1_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_TVShows_tile_1_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_TVShows_tile_1_addon))]</label>
+					</item>
+					</content>
+					</control>
+					
+					
+					
+
+					<!-- ADDON 2  -->
+
+					<control type="panel" id="8005">
+					<posx>1548</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onup>8001</onup>
+					<onleft>8004</onleft>
+					<onright>8006</onright>
+					<ondown>301</ondown>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(6) + !Skin.HasSetting(custom_tvshows_tile_2)</visible>
+				    <include>widgets_fade_animation_bottom4</include>
+					<include>widgets_animation_bottom4</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>80</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					
+					<content>
+					<item id="1">
+					<onclick>ActivateWindow(3001)</onclick>
+					<icon>special://skin/extras/online/add2.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+					
+					
+					
+					<!-- CUSTOM TVSHOW TILE 2  -->
+
+					<control type="panel" id="8005">
+					<posx>1548</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onup>8001</onup>
+					<onleft>8004</onleft>
+					<onright>8006</onright>
+					<ondown>301</ondown>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(6) + Skin.HasSetting(custom_tvshows_tile_2)</visible>
+				    <include>widgets_fade_animation_bottom4</include>
+					<include>widgets_animation_bottom4</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>80</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					
+					<content>
+					<item id="1">
+					<onclick>RunAddon($INFO[Skin.String(custom_TVShows_tile_2_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_TVShows_tile_2_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_TVShows_tile_2_addon))]</label>
+					</item>
+					</content>
+					</control>
+					
+					
+
+					 <!-- ADDON 3 -->
+					 
+					<control type="panel" id="8006">
+					<posx>1825</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8005</onleft>
+					<onright>noop</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(6) + !Skin.HasSetting(custom_tvshows_tile_3)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>80</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<onclick>ActivateWindow(3001)</onclick>
+					<icon>special://skin/extras/online/add3.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- CUSTOM TVSHOW TILE 3 -->
+					 
+					<control type="panel" id="8006">
+					<posx>1825</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8005</onleft>
+					<onright>noop</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(6) + Skin.HasSetting(custom_tvshows_tile_3)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<animation effect="fade" time="800" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>80</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<onclick>RunAddon($INFO[Skin.String(custom_TVShows_tile_3_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_TVShows_tile_3_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_TVShows_tile_3_addon))]</label>
+					</item>
+					</content>
+					</control>
+					</control>
+					
+					
+					</include>
+					</includes>

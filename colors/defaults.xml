@@ -1,0 +1,70 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<colors>
+
+					<!-- NEW -->
+					
+					<color name="grey1">FFCCCCCC</color>
+					<color name="grey2">FFE0E0E0</color>
+					<color name="grey3">FF787878</color>
+					<color name="grey4">FF474747</color>
+					<color name="grey6">FF2C2C2C</color> 
+					
+					
+					<!-- TRANSPARENT -->
+					
+					<color name="grey6-condensed">AA000000</color> 
+					<color name="grey2-transparent">AAE0E0E0</color>
+					<color name="grey3-transparent">AA787878</color>
+					
+					<!-- WHITE -->
+
+					<color name="white">FFFFFFFF</color>
+					<color name="white-condensed">22FFFFFF</color>
+					<color name="white2-condensed">88FFFFFF</color>
+					<color name="overlay-transparency-1">CCFFFFFF</color>
+					<color name="overlay-transparency-2">DDFFFFFF</color>
+					<color name="overlay-transparency-3">EEFFFFFF</color>
+					<color name="overlay-transparency-4">AAFFFFFF</color>
+
+					<!-- GREY -->
+
+					<!-- <color name="grey-mid1">FF505050</color>
+					<color name="grey-dark1">FF2C2C2C</color> 
+					<color name="grey-dark1-condensed">AA000000</color> 
+					<color name="grey-dark2-condensed">882C2C2C</color> 
+					<color name="grey-light1">FF999999</color> 
+					<color name="grey-light2">FF6d6d6d</color>
+					<color name="grey-light3">FFDDDDDD</color>
+					<color name="grey-light1-condensed">BBDDDDDD</color>
+					<color name="grey-light2-condensed">332C2C2C</color>
+					<color name="grey-light3-condensed">772C2C2C</color>
+ -->
+					<!-- RED -->
+
+					<color name="red1">FFDE181F</color> 
+					<color name="red2">FFFF0000</color>
+					<color name="red2-condensed">44FF0000</color>
+					<color name="red3-condensed">AAFF0000</color>
+
+					<!-- OTHERS -->
+
+					<color name="green1">FF40DE8F</color>
+					<color name="selected1">FFDE181F</color>
+					<color name="selected2">FF40DE8F</color>
+
+					<color name="royalblue">FF4169E1</color>
+					<color name="steelblue">FF4682B4</color>
+					<color name="clearblue">FF80D4FF</color>
+					
+					<color name="steelblue_dim1">EE4682B4</color>
+					<color name="orange">FFFEAF33</color>
+
+
+					<!-- DEFAULT -->
+
+					<color name="Black">FF000000</color>
+					<color name="Red">FFFF0000</color>
+					<color name="Green">AA2E8B57</color>
+					<color name="Blue">FF2d5a83</color>
+
+					</colors>

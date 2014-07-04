@@ -1,0 +1,119 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window type="dialog">
+					<defaultcontrol always="true">450</defaultcontrol>
+					<include>DefaultOpenClose</include>
+					<coordinates>
+					
+					<system>1</system>
+					<posx>0</posx>
+					<posy>0</posy>
+					</coordinates>
+					<controls>
+					
+					<include>Overlay</include>
+					
+					<control type="grouplist">
+					<posx>98</posx>
+					<posy>55</posy>
+					<width>1500</width>
+					<height>70</height>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					<itemgap>8</itemgap>
+					<control type="label">
+					<include>WindowTitleCommons</include>
+					<label>32124</label>
+					</control>
+					</control>
+					
+					<control type="label">
+					<include>Window_Fade_In_Out</include>
+					<posx>-15</posx>
+					<posy>90</posy>
+					<width>330</width>
+					<height>82</height>
+					<font>Condensed-32</font>
+					<textcolor>grey-light2</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(450).NumItems] $LOCALIZE[32166]</label>
+					</control>
+					
+					<control type="group">
+					<posx>80</posx>
+					<posy>90</posy>
+					
+					<control type="panel" id="450">
+					<posx>15</posx>
+					<posy>75</posy>
+					<width>1750</width>
+					<height>1000</height>
+					<onup>Dialog.Close(Favourites)</onup>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<ondown>Dialog.Close(Favourites)</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>300</scrolltime>
+					<orientation>horizontal</orientation>
+					<itemlayout height="350" width="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>330</height>
+					<width>330</width>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<fadetime>300</fadetime>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout height="350" width="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>330</height>
+					<width>330</width>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<fadetime>300</fadetime>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="sine" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>250</posy>
+					<height>80</height>
+					<width>330</width>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<fadetime>300</fadetime>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="sine" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="label">
+					<posx>165</posx>
+					<posy>250</posy>
+					<width>330</width>
+					<height>82</height>
+					<font>Condensed-36</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					</focusedlayout>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>1550</posx>
+					<posy>1005</posy>
+					<include>TimeAndTemp</include>
+					</control>
+					</controls>
+					</window>

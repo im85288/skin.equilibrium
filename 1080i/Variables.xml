@@ -1,0 +1,127 @@
+﻿					<includes>
+
+					<variable name="homebackgrounds">   
+					<value condition="Container(300).HasFocus(1)">special://skin/backgrounds/addons.jpg</value>
+					<value condition="Container(300).HasFocus(2)">special://skin/backgrounds/moviesets.jpg</value>
+					<value condition="Container(300).HasFocus(3)">special://skin/backgrounds/music.jpg</value>
+					<value condition="Container(300).HasFocus(4)">special://skin/backgrounds/pictures.jpg</value>
+					<value condition="Container(300).HasFocus(5)">special://skin/backgrounds/movies.jpg</value>
+					<value condition="Container(300).HasFocus(6)">special://skin/backgrounds/tv_shows.jpg</value>
+					<value condition="Container(300).HasFocus(7)">special://skin/backgrounds/favourites.jpg</value>
+					<value condition="Container(300).HasFocus(9)">special://skin/backgrounds/weather.jpg</value>
+					<value condition="Container(300).HasFocus(11)">special://skin/backgrounds/settings.jpg</value>
+					<value condition="Container(300).HasFocus(12)">special://skin/backgrounds/shutdown.jpg</value>
+					<value condition="Container(300).HasFocus(13)">special://skin/backgrounds/livetv.jpg</value>
+					<value condition="Container(300).HasFocus(14)">special://skin/backgrounds/custom1.jpg</value>
+					<value condition="Container(300).HasFocus(15)">special://skin/backgrounds/custom2.jpg</value>
+					<value condition="Container(300).HasFocus(16)">special://skin/backgrounds/custom2.jpg</value>
+					</variable>
+
+					<variable name="breadcrumps">
+					<value condition="Container.Content(MusicVideos)">$LOCALIZE[31024]</value>
+					<value condition="Container.Content(TVShows)">$LOCALIZE[20343]</value>
+					<value condition="Container.Content(Seasons)">$LOCALIZE[33054]</value>
+					<value condition="Container.Content(Episodes)">$LOCALIZE[20360]</value>
+					<value condition="Container.Content(Movies)">$LOCALIZE[342]</value>
+					<value condition="Container.Content(Sets)">$LOCALIZE[32049]</value>
+					<value condition="Container.Content(Genres)">$LOCALIZE[135]</value>
+					<value condition="Container.Content(Studios)">$LOCALIZE[20388]</value>
+					<value condition="Container.Content(Countries)">$LOCALIZE[20451]</value>
+					<value condition="Container.Content(Tags)">$LOCALIZE[20459]</value>
+					<value condition="Container.Content(Years)">$LOCALIZE[652]</value>
+					<value condition="Container.Content(Actors)">$LOCALIZE[344]</value>
+					<value condition="Container.Content(Directors)">$LOCALIZE[20348]</value>
+					<value condition="Container.Content(Files)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Container.Content(Addons)">$LOCALIZE[32052]</value>
+					<value condition="substring(container.folderpath,plugin://plugin.program.advanced.launcher)">$INFO[System.Time]  [COLOR=grey2]Advanced Launcher Library  $INFO[Container.NumItems] $LOCALIZE[31025]  $LOCALIZE[31024] $INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR]</value>
+					<value condition="Container.Content(Artists)">$LOCALIZE[133]</value>
+					<value condition="Container.Content(Albums)">$LOCALIZE[132]</value>
+					<value condition="Container.Content(Songs)">$LOCALIZE[134]</value>
+					<value condition="Window.IsActive(3)">$LOCALIZE[7]</value>
+					<value condition="Window.IsActive(2)">$LOCALIZE[1]</value>
+					<value condition="Window.IsActive(28)">$INFO[System.Time]  [COLOR=grey2]$LOCALIZE[41339]  $INFO[Container.NumItems] $LOCALIZE[31025]  $LOCALIZE[31024] $INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR]</value>
+					<value condition="Window.IsActive(502) + ![Container.Content(Genres) | Container.Content(Years) | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons)]">$LOCALIZE[2]</value>
+					<value condition="Window.IsVisible(503)">$INFO[System.Time]  [COLOR=grey2]$LOCALIZE[10503]  $INFO[Container.NumItems] $LOCALIZE[31025]  $LOCALIZE[31024] $INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR]</value>
+					</variable>
+					
+					<variable name="breadcrumps2">
+					<value condition="Container.Content(MusicVideos)">$INFO[Container.NumItems] $LOCALIZE[31025] $LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="Container.Content(TVShows)">$INFO[Container.NumItems] $LOCALIZE[31025] $LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="Container.Content(Seasons)">$INFO[Container.NumItems] $LOCALIZE[31025] $LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="Container.Content(Episodes)">$INFO[Container.NumItems] $LOCALIZE[31025] $LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="Container.Content(Movies)">$INFO[Container.NumItems] $LOCALIZE[31025] $LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="Container.Content(Sets)">$INFO[Container.NumItems] $LOCALIZE[31025] $LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="Container.Content(Genres)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Container.Content(Studios)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Container.Content(Countries)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Container.Content(Tags)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Container.Content(Years)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Container.Content(Actors)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Container.Content(Directors)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Container.Content(Files)">$LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="Container.Content(Addons)">$INFO[Container.NumItems] $LOCALIZE[31025] $LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="substring(container.folderpath,plugin://plugin.program.advanced.launcher)">$INFO[System.Time]  [COLOR=grey2]Advanced Launcher Library  $INFO[Container.NumItems] $LOCALIZE[31025]  $LOCALIZE[31024] $INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR]</value>
+					<value condition="Container.Content(Videos)">$INFO[System.Time]  [COLOR=grey2]$LOCALIZE[31021]  $INFO[Container.NumItems] $LOCALIZE[31025]  $LOCALIZE[31024] $INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR]</value>
+					<value condition="Container.Content(Artists)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Container.Content(Albums)">$INFO[Container.NumItems] $LOCALIZE[31025] $LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="Container.Content(Songs)">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Window.IsActive(3)">$INFO[System.Time]  [COLOR=grey2]$LOCALIZE[7][/COLOR]</value>
+					<value condition="Window.IsActive(2)">$INFO[Container.NumItems] $LOCALIZE[31025] $LOCALIZE[32051] $INFO[Container.SortMethod]</value>
+					<value condition="Window.IsActive(28)">$INFO[System.Time]  [COLOR=grey2]$LOCALIZE[41339]  $INFO[Container.NumItems] $LOCALIZE[31025]  $LOCALIZE[31024] $INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR]</value>
+					<value condition="Window.IsActive(502) + ![Container.Content(Genres) | Container.Content(Years) | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons)]">$INFO[Container.NumItems] $LOCALIZE[31025]</value>
+					<value condition="Window.IsVisible(503)">$INFO[System.Time]  [COLOR=grey2]$LOCALIZE[10503]  $INFO[Container.NumItems] $LOCALIZE[31025]  $LOCALIZE[31024] $INFO[Container.CurrentPage]/$INFO[Container.NumPages][/COLOR]</value>
+					</variable>
+					
+					
+
+					
+					<variable name="mpaa">
+
+					<!-- AUSTRALIA -->
+
+					<value condition="substring(listitem.mpaa,Australia:G)">special://skin/extras/flagging/ratings/australia_g.png</value>
+					<value condition="substring(listitem.mpaa,Australia:PG)">special://skin/extras/flagging/ratings/australia_pg.png</value>
+					<value condition="substring(listitem.mpaa,Australia:M) + ! substring(listitem.mpaa,Australia:MA)">special://skin/extras/flagging/ratings/australia_m.png</value>
+					<value condition="substring(listitem.mpaa,Australia:MA)">special://skin/extras/flagging/ratings/australia_ma.png</value>
+					<value condition="substring(listitem.mpaa,Australia:R)">special://skin/extras/flagging/ratings/australia_r.png</value>
+					<value condition="substring(listitem.mpaa,Australia:X)">special://skin/extras/flagging/ratings/australia_x.png</value>
+
+					<!-- US -->
+
+					<value condition="substring(listitem.mpaa,Rated G)">special://skin/extras/flagging/ratings/mpaa_general.png</value>
+					<value condition="substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)">special://skin/extras/flagging/ratings/mpaa_pg.png</value>
+					<value condition="substring(listitem.mpaa,Rated PG-13)">special://skin/extras/flagging/ratings/mpaa_pg13.png</value>
+					<value condition="substring(Listitem.mpaa,Rated R)">special://skin/extras/flagging/ratings/mpaa_restricted.png</value>
+					<value condition="substring(Listitem.mpaa,Rated NC)">special://skin/extras/flagging/ratings/mpaa_nc17.png</value>
+
+					<!-- UK -->
+
+					<value condition="substring(listitem.mpaa,UK:U)">special://skin/extras/flagging/ratings/UK_u.png</value>
+					<value condition="substring(listitem.mpaa,UK:PG)">special://skin/extras/flagging/ratings/UK_pg.png</value>
+					<value condition="substring(listitem.mpaa,UK:12a)">special://skin/extras/flagging/ratings/UK_12a.png</value>
+					<value condition="substring(listitem.mpaa,UK:12) + !substring(listitem.mpaa,UK:12a)">special://skin/extras/flagging/ratings/UK_12.png</value>
+					<value condition="substring(listitem.mpaa,UK:15)">special://skin/extras/flagging/ratings/UK_15.png</value>
+					<value condition="substring(listitem.mpaa,UK:18)">special://skin/extras/flagging/ratings/UK_18.png</value>
+					<value condition="substring(listitem.mpaa,UK:R18)">special://skin/extras/flagging/ratings/UK_r18.png</value>
+
+					<!-- GERMANY -->
+
+					<value condition="substring(ListItem.mpaa,Germany:o.A.) | substring(ListItem.mpaa, o.A.)">special://skin/extras/flagging/ratings/Germany0.png</value>
+					<value condition="substring(ListItem.mpaa,Germany:6) | substring(ListItem.mpaa,FSK 6)">special://skin/extras/flagging/ratings/Germany6.png</value>
+					<value condition="substring(ListItem.mpaa,Germany:12) | substring(ListItem.mpaa,FSK 12)">special://skin/extras/flagging/ratings/Germany12.png</value>
+					<value condition="substring(ListItem.mpaa,Germany:16) | substring(ListItem.mpaa,FSK 16)">special://skin/extras/flagging/ratings/Germany16.png</value>
+					<value condition="substring(ListItem.mpaa,Germany:18) | substring(ListItem.mpaa,FSK 18)">special://skin/extras/flagging/ratings/Germany18.png</value>
+					</variable>
+
+					<variable name="mpaatv">
+
+					<value condition="substring(Listitem.mpaa,tv-14)">special://skin/extras/flagging/ratings/tv-14.png</value>
+					<value condition="substring(Listitem.mpaa,tv-g)">special://skin/extras/flagging/ratings/tv-g.png</value>
+					<value condition="substring(Listitem.mpaa,tv-ma)">special://skin/extras/flagging/ratings/tv-ma.png</value>
+					<value condition="substring(Listitem.mpaa,tv-pg)">special://skin/extras/flagging/ratings/tv-pg.png</value>
+					<value condition="substring(Listitem.mpaa,tv-y)">special://skin/extras/flagging/ratings/tv-y.png</value>
+					<value condition="substring(Listitem.mpaa,tv-y7)">special://skin/extras/flagging/ratings/tv-y7.png</value>
+					</variable>
+					
+
+					</includes>

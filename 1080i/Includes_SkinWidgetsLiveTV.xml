@@ -1,0 +1,658 @@
+					<includes>
+
+					<include name="SkinWidgetsLiveTV">
+
+					<control type="group" id="8050">
+					<visible>!Container(300).HasFocus(8)</visible>
+					<posx>-250</posx>
+					<posy>120</posy>
+					<animation effect="slide" start="0,0" end="0,40" time="200" reversible="true" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+					<animation effect="slide" start="0,40" end="0,0" time="300" reversible="true" condition="!ControlGroup(9001).HasFocus">Conditional</animation>
+					
+					<include>Window_Fade_In_Out_Widgets_Top</include>
+					
+					<!-- RECENTLY RECORDED -->
+
+					
+					<control type="wraplist" id="8051">
+					<posx>340</posx>
+					<posy>190</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>300</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<visible>Container(300).Hasfocus(13)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(recordingspath)]</content>
+					</control>
+					</control>
+					
+					<include>InfoWidgetsPanelLiveTV</include>
+					
+					
+					
+					<!-- WIDGETS BOTTOM -->
+					
+					
+					
+					<control type="group" id="8010">
+					<posx>-250</posx>
+					<posy>200</posy>
+					<include>Window_Fade_In_Out_Widgets_Bottom</include>
+					
+					<control type="group">
+					<posx>5</posx>
+					<posy>15</posy>
+					
+					
+					<control type="label">
+					<posx>340</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32099]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(13)</visible>
+					<include>widgets_animation_label_bottom1</include>
+					</control>
+					
+					<control type="label">
+					<posx>640</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32100]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(13)</visible>
+					<include>widgets_animation_label_bottom2</include>
+					</control>
+					
+					<control type="label">
+					<posx>940</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32120]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(13)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<control type="label">
+					<posx>1230</posx>
+					<posy>410</posy>
+					<label>Recordings</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(13)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<control type="label">
+					<posx>1530</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32122]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(13)</visible>
+					<include>widgets_animation_label_bottom4</include>
+					</control>
+					
+					<control type="label">
+					<posx>1830</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32123]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(13)</visible>
+					<include>widgets_animation_label_bottom5</include>
+					</control>
+					</control>
+					
+					
+					<!-- TV CHANNELS -->
+					
+					
+					<control type="panel" id="8002">
+					<posx>340</posx>
+					<posy>480</posy>
+					<width>444</width>
+					<height>550</height>
+					<onleft>noop</onleft>
+					<onright>8003</onright>
+					<onup>8051</onup>
+					<ondown>301</ondown>
+					
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(13)</visible>
+				    <include>widgets_fade_animation_bottom1</include>
+					<include>widgets_animation_bottom1</include>
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="255">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					 <item id="1">
+					<description>TV Channels</description>
+					<label>$LOCALIZE[32118]</label>
+					<onclick>ActivateWindowAndFocus(MyPVR, 32,0, 11,0)</onclick>
+					<icon>icons/home/pvr/tv_channels.png</icon>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- RADIO CHANNELS -->
+
+					<control type="panel" id="8003">
+					<posx>637.5</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>510</height>
+					<onleft>8002</onleft>
+					<onright>8004</onright>
+					<onup>8051</onup>
+					<ondown>301</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(13)</visible>
+					<include>widgets_fade_animation_bottom2</include>
+					<include>widgets_animation_bottom2</include>
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>Radio Channels</description>
+					<label>$LOCALIZE[32119]</label>
+					<onclick>ActivateWindowAndFocus(MyPVR, 33,0, 12,0)</onclick>
+					<icon>icons/home/pvr/radio_channels.png</icon>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- TV GUIDE -->
+					
+					<control type="panel" id="8004">
+					<posx>935</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>310</height>
+					<onleft>8003</onleft>
+					<onright>8005</onright>
+					<onup>8051</onup>
+					<ondown>301</ondown>
+					<scrolltime>0</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(13)</visible>
+					<include>widgets_fade_animation_bottom3</include>
+					<include>widgets_animation_bottom3</include>
+					
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="label">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<description>EPG TV</description>
+					<label>$LOCALIZE[32098]</label>
+					<onclick>ActivateWindowAndFocus(MyPVR, 31,0, 11,0)</onclick>
+					<icon>icons/home/pvr/epg.png</icon>
+					</item>
+					</content>
+					</control>
+
+					<!-- ALL RECORDINGS  -->
+
+					<control type="panel" id="8005">
+					<posx>1230</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onup>8051</onup>
+					<onleft>8004</onleft>
+					<onright>8006</onright>
+					<ondown>301</ondown>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(13)</visible>
+				    <include>widgets_fade_animation_bottom4</include>
+					<include>widgets_animation_bottom4</include>
+					
+					<itemlayout width="248" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="248" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+		
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					
+					<content>
+					<item id="5">
+					<label>$LOCALIZE[32101]</label>
+					<onclick>ActivateWindowAndFocus(MyPVR, 34,0, 13,0)</onclick>
+					<icon>icons/home/pvr/recordings.png</icon>
+					</item>
+					</content>
+					</control>
+					
+					
+
+					 <!-- TIMER -->
+					 
+					<control type="panel" id="8006">
+					<posx>1527.5</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8005</onleft>
+					<onright>8007</onright>
+					<onup>8051</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(13)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<label>$LOCALIZE[32097]</label>
+				    <onclick>ActivateWindowAndFocus(MyPVR, 35,0, 14,0)</onclick>
+					<icon>icons/home/pvr/timer.png</icon>
+					</item> 
+					</content>
+					</control>
+					
+					 <!-- RESULTS -->
+					 
+					<control type="panel" id="8007">
+					<posx>1825</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8006</onleft>
+					<onright>noop</onright>
+					<onup>8051</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(13)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>70</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<label>$LOCALIZE[32096]</label>
+					<onclick>ActivateWindowAndFocus(MyPVR, 36,0, 17,0)</onclick>
+					<icon>icons/home/pvr/results.png</icon>
+					</item>
+					</content>
+					</control>
+					</control>
+
+					
+					
+					</include>
+					</includes>

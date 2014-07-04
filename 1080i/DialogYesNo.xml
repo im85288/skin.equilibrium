@@ -1,0 +1,98 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">10</defaultcontrol>
+					<coordinates>
+					<system>1</system>
+					<posx>502</posx>
+					<posy>345</posy>
+					</coordinates>
+					<include>DefaultOpenClose</include>
+					<controls>
+					
+					<control type="image">
+					<description>Overlay</description>
+					<posx>-502</posx>
+					<posy>-345</posy>
+					<include>Dimensions_Fullscreen_Home</include>
+					<texture background="true">overlay.jpg</texture>
+					<colordiffuse>grey2-transparent</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>915</width>
+					<height>360</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="label" id="1">
+					<description>header label</description>
+					<posx>60</posx>
+					<posy>30</posy>
+					<width>795</width>
+					<height>45</height>
+					<font>Condensed-46</font>
+					<textcolor>white</textcolor>
+					<label>$LOCALIZE[13406]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					</control>
+					
+					<control type="textbox" id="9">
+					<description>dialogs</description>
+					<posx>45</posx>
+					<posy>90</posy>
+					<width>825</width>
+					<height>120</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<label>-</label>
+					<font>Condensed-36</font>
+					<textcolor>grey2</textcolor>
+					</control>
+					
+					<control type="button" id="11">
+					<description>Yes button</description>
+					<posx>142</posx>
+					<posy>262</posy>
+					<width>300</width>
+					<height>60</height>
+					<label>107</label>
+					<font>Condensed-36</font>
+					<textcolor>white</textcolor>
+					<focusedcolor>grey4</focusedcolor>
+					<disabledcolor>grey3</disabledcolor>
+					<texturenofocus colordiffuse="grey3">white.png</texturenofocus>
+					<texturefocus colordiffuse="grey2">white.png</texturefocus>
+					<aligny>center</aligny>
+					<align>center</align>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					</control>
+					
+					<control type="button" id="10">
+					<description>No button</description>
+					<posx>458</posx>
+					<posy>262</posy>
+					<width>300</width>
+					<height>60</height>
+					<label>106</label>
+					<font>Condensed-36</font>
+					<textcolor>white</textcolor>
+					<focusedcolor>grey4</focusedcolor>
+					<disabledcolor>grey3</disabledcolor>
+					<texturenofocus colordiffuse="grey3">white.png</texturenofocus>
+					<texturefocus colordiffuse="grey2">white.png</texturefocus>
+					<aligny>center</aligny>
+					<align>center</align>
+					<onleft>11</onleft>
+					<onright>11</onright>
+					<onup>10</onup>
+					<ondown>10</ondown>
+					</control>
+					</controls>
+					</window>

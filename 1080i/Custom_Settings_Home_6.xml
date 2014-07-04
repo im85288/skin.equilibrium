@@ -1,0 +1,896 @@
+					
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window type="dialog" id="3005">
+					<defaultcontrol always="true">9000</defaultcontrol>
+					<controls>
+					
+					
+					<include>Overlay</include>
+					
+					
+					
+					<!-- SETTINGS CUSTOM APPS ITEMS -->
+					
+					<control type="grouplist">
+					
+					<posx>98</posx>
+					<posy>50</posy>
+					<width>1500</width>
+					<height>70</height>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					<itemgap>8</itemgap>
+					<control type="label">
+					<include>WindowTitleCommons</include>
+					<label>$LOCALIZE[32060]</label>
+					</control>
+					</control>
+					
+					<control type="group">
+					
+					<posx>90</posx>
+					<posy>120</posy>
+					<include>DefaultOpenClose</include>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>850</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>1300</width>
+					<height>850</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					</control>
+					
+					<control type="list" id="9000">
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>400</width>
+					<height>722</height>
+					<onleft>9010</onleft>
+					<onright>9010</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<scrolltime>300</scrolltime>
+					
+					<itemlayout height="90" width="405">
+					
+					<control type="label">
+					<posx>20</posx>
+					<posy>22</posy>
+					<width>570</width>
+					<height>38</height>
+					<font>Condensed-46</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					</itemlayout>
+					<focusedlayout height="90" width="405">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>405</width>
+					<height>80</height>
+					<texture>white.png</texture>
+					<colordiffuse>grey1</colordiffuse>
+					<animation effect="fade" start="100" end="60" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
+					</control>
+					
+					<control type="label">
+					<posx>20</posx>
+					<posy>22</posy>
+					<width>570</width>
+					<height>38</height>
+					<font>Condensed-46</font>
+					<textcolor>grey4</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<label>32166</label>
+					<onclick>noop</onclick>
+					</item>
+					
+					<item id="2">
+					<label>32158</label>
+					<onclick>noop</onclick>
+					</item>
+					
+				<!-- 	<item id="3">
+					<label>Settings 3</label>
+					<onclick>noop</onclick>
+					</item>
+					
+					<item id="4">
+					<label>Settings 4</label>
+					<onclick>noop</onclick>
+					</item>
+					
+					<item id="5">
+					<label>Settings 5</label>
+					<onclick>noop</onclick>
+					</item> -->
+					
+					</content>
+					</control>
+				
+					
+					
+					<control type="group" id="9010">
+					<control type="grouplist" id="9001">
+					<visible>Container(9000).Hasfocus(1)</visible>
+					<posx>475</posx>
+					<posy>20</posy>
+					<width>1250</width>
+					<height>760</height>
+					<itemgap>10</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					
+					<!-- App SUBMENU ITEM 1 -->
+					
+					<control type="button" id="600">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32136]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item1)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item1)</selected>
+					</control>
+					
+					<control type="radiobutton" id="601">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide600)</onclick>
+					<onclick>Skin.Reset(custom600)</onclick>
+					<selected>Skin.HasSetting(hide600)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="radiobutton" id="602">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide600)</onclick>
+					<onclick>Skin.ToggleSetting(custom600)</onclick>
+					<selected>Skin.HasSetting(custom600)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="button" id="603">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.1)</onclick>
+					<label2>$INFO[Skin.String(App.1.Label]</label2>
+					<visible>Skin.HasSetting(custom600)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="button" id="605">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.1.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.1.Icon)]</label2>
+					<visible>Skin.HasSetting(custom600)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item1)</visible>
+					</control>
+					
+					<!-- App SUBMENU ITEM 2 -->
+					
+					<control type="button" id="611">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32137]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item2)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item2)</selected>
+					</control>
+					
+					<control type="radiobutton" id="612">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide601)</onclick>
+					<onclick>Skin.Reset(custom601)</onclick>
+					<selected>Skin.HasSetting(hide601)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="radiobutton" id="613">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide601)</onclick>
+					<onclick>Skin.ToggleSetting(custom601)</onclick>
+					<selected>Skin.HasSetting(custom601)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="button" id="614">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.2)</onclick>
+					<label2>$INFO[Skin.String(App.2.Label]</label2>
+					<visible>Skin.HasSetting(custom601)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="button" id="616">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.2.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.2.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item2)</visible>
+					<visible>Skin.HasSetting(custom601)</visible>
+					</control>
+					
+					
+					<!-- App SUBMENU ITEM 3 -->
+					
+					<control type="button" id="621">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32138]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item3)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item3)</selected>
+					</control>
+					
+					<control type="radiobutton" id="622">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide602)</onclick>
+					<onclick>Skin.Reset(custom602)</onclick>
+					<selected>Skin.HasSetting(hide602)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="radiobutton" id="623">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide602)</onclick>
+					<onclick>Skin.ToggleSetting(custom602)</onclick>
+					<selected>Skin.HasSetting(custom602)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="button" id="624">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.3)</onclick>
+					<label2>$INFO[Skin.String(App.3.Label]</label2>
+					<visible>Skin.HasSetting(custom602)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="button" id="626">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.3.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.3.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item3)</visible>
+					<visible>Skin.HasSetting(custom602)</visible>
+					</control>
+					
+					
+					<!-- App SUBMENU ITEM 4 -->
+					
+					<control type="button" id="631">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32139]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item4)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item4)</selected>
+					</control>
+					
+					<control type="radiobutton" id="632">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide603)</onclick>
+					<onclick>Skin.Reset(custom603)</onclick>
+					<selected>Skin.HasSetting(hide603)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="radiobutton" id="633">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide603)</onclick>
+					<onclick>Skin.ToggleSetting(custom603)</onclick>
+					<selected>Skin.HasSetting(custom603)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="button" id="634">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.4)</onclick>
+					<label2>$INFO[Skin.String(App.4.Label]</label2>
+					<visible>Skin.HasSetting(custom603)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="button" id="636">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.4.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.4.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item4)</visible>
+					<visible>Skin.HasSetting(custom603)</visible>
+					</control>
+					
+					
+					<!-- App SUBMENU ITEM 5 -->
+					
+					<control type="button" id="641">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32140]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item5)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item5)</selected>
+					</control>
+					
+					<control type="radiobutton" id="642">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide604)</onclick>
+					<onclick>Skin.Reset(custom604)</onclick>
+					<selected>Skin.HasSetting(hide604)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="radiobutton" id="643">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide604)</onclick>
+					<onclick>Skin.ToggleSetting(custom604)</onclick>
+					<selected>Skin.HasSetting(custom604)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="button" id="644">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.5)</onclick>
+					<label2>$INFO[Skin.String(App.5.Label]</label2>
+					<visible>Skin.HasSetting(custom604)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="button" id="646">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.5.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.5.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item5)</visible>
+					<visible>Skin.HasSetting(custom604)</visible>
+					</control>
+					
+					
+					<!-- App SUBMENU ITEM 6 -->
+					
+					<control type="button" id="651">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32141]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item6)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item6)</selected>
+					</control>
+					
+					<control type="radiobutton" id="652">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide605)</onclick>
+					<onclick>Skin.Reset(custom605)</onclick>
+					<selected>Skin.HasSetting(hide605)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="radiobutton" id="653">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide605)</onclick>
+					<onclick>Skin.ToggleSetting(custom605)</onclick>
+					<selected>Skin.HasSetting(custom605)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="button" id="654">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.6)</onclick>
+					<label2>$INFO[Skin.String(App.6.Label]</label2>
+					<visible>Skin.HasSetting(custom605)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="button" id="656">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.6.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.6.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item6)</visible>
+					<visible>Skin.HasSetting(custom605)</visible>
+					</control>
+					
+					
+					<!-- App SUBMENU ITEM 7 -->
+					
+					<control type="button" id="661">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32142]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item7)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item7)</selected>
+					</control>
+					
+					<control type="radiobutton" id="662">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide606)</onclick>
+					<onclick>Skin.Reset(custom606)</onclick>
+					<selected>Skin.HasSetting(hide606)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="radiobutton" id="663">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide606)</onclick>
+					<onclick>Skin.ToggleSetting(custom606)</onclick>
+					<selected>Skin.HasSetting(custom606)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="button" id="664">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.7)</onclick>
+					<label2>$INFO[Skin.String(App.7.Label]</label2>
+					<visible>Skin.HasSetting(custom606)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="button" id="666">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.7.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.7.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item7)</visible>
+					<visible>Skin.HasSetting(custom606)</visible>
+					</control>
+					
+					
+					<!-- App SUBMENU ITEM 8 -->
+					
+					<control type="button" id="671">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32143]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item8)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item8)</selected>
+					</control>
+					
+					<control type="radiobutton" id="672">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide607)</onclick>
+					<onclick>Skin.Reset(custom607)</onclick>
+					<selected>Skin.HasSetting(hide607)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item8)</visible>
+					</control>
+					
+					<control type="radiobutton" id="673">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide607)</onclick>
+					<onclick>Skin.ToggleSetting(custom607)</onclick>
+					<selected>Skin.HasSetting(custom607)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item8)</visible>
+					</control>
+					
+					<control type="button" id="674">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.8)</onclick>
+					<label2>$INFO[Skin.String(App.8.Label]</label2>
+					<visible>Skin.HasSetting(custom607)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item8)</visible>
+					</control>
+					
+					<control type="button" id="676">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.8.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.8.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item8)</visible>
+					<visible>Skin.HasSetting(custom607)</visible>
+					</control>
+					
+					
+					<!-- App SUBMENU ITEM 9 -->
+					
+					<control type="button" id="681">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32144]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item9)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item9)</selected>
+					</control>
+					
+					<control type="radiobutton" id="682">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide608)</onclick>
+					<onclick>Skin.Reset(custom608)</onclick>
+					<selected>Skin.HasSetting(hide608)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item9)</visible>
+					</control>
+					
+					<control type="radiobutton" id="683">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide608)</onclick>
+					<onclick>Skin.ToggleSetting(custom608)</onclick>
+					<selected>Skin.HasSetting(custom608)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item9)</visible>
+					</control>
+					
+					<control type="button" id="684">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.9)</onclick>
+					<label2>$INFO[Skin.String(App.9.Label]</label2>
+					<visible>Skin.HasSetting(custom608)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item9)</visible>
+					</control>
+					
+					<control type="button" id="686">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.9.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.9.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item9)</visible>
+					<visible>Skin.HasSetting(custom608)</visible>
+					</control>
+					
+					
+					<!-- App SUBMENU ITEM 10 -->
+					
+					<control type="button" id="691">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32145]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Submenu_Item10)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Submenu_Item10)</selected>
+					</control>
+					
+					<control type="radiobutton" id="692">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide609)</onclick>
+					<onclick>Skin.Reset(custom609)</onclick>
+					<selected>Skin.HasSetting(hide609)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item10)</visible>
+					</control>
+					
+					<control type="radiobutton" id="693">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide609)</onclick>
+					<onclick>Skin.ToggleSetting(custom609)</onclick>
+					<selected>Skin.HasSetting(custom609)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item10)</visible>
+					</control>
+					
+					<control type="button" id="694">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=App.10)</onclick>
+					<label2>$INFO[Skin.String(App.10.Label]</label2>
+					<visible>Skin.HasSetting(custom609)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item10)</visible>
+					</control>
+					
+					<control type="button" id="696">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(App.10.Icon)</onclick>
+					<label2>$INFO[Skin.String(App.10.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Submenu_Item10)</visible>
+					<visible>Skin.HasSetting(custom609)</visible>
+					</control>
+					</control>
+					
+					
+					
+					<control type="grouplist" id="9002">
+					<visible>Container(9000).Hasfocus(2)</visible>
+					<posx>475</posx>
+					<posy>20</posy>
+					<width>1250</width>
+					<height>760</height>
+					<itemgap>10</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9002</onup>
+					<ondown>9002</ondown>
+					
+					
+					<!-- App TILE 1 -->
+					
+					<control type="button" id="401">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32159]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Tile_1)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Tile_1)</selected>
+					</control>
+					
+					<control type="radiobutton" id="402">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.ToggleSetting(custom_App_tile_1)</onclick>
+					<selected>Skin.HasSetting(custom_App_tile_1)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_1)</visible>
+					</control>
+					
+					<control type="button" id="403">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32109]</label>
+					<onclick>Skin.SetAddon(custom_App_tile_1_addon,xbmc.addon.programs,xbmc.addon.executable)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_1_addon)]</label2>
+					<visible>Skin.HasSetting(custom_App_tile_1)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_1)</visible>
+					</control>
+					
+					<control type="button" id="404">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom_App_tile_1_addon_label)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_1_addon_label)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_1)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_1)</visible>
+					</control>
+					
+					<control type="button" id="405">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(custom_App_tile_1_addon_icon)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_1_addon_icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_1)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_1)</visible>
+					</control>
+					
+					
+					<!-- App TILE 2 -->
+					
+					<control type="button" id="406">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32160]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Tile_2)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Tile_2)</selected>
+					</control>
+					
+					<control type="radiobutton" id="407">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.ToggleSetting(custom_App_tile_2)</onclick>
+					<selected>Skin.HasSetting(custom_App_tile_2)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_2)</visible>
+					</control>
+					
+					<control type="button" id="408">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32109]</label>
+					<onclick>Skin.SetAddon(custom_App_tile_2_addon,xbmc.addon.Programs,xbmc.addon.executable)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_2_addon)]</label2>
+					<visible>Skin.HasSetting(custom_App_tile_2)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_2)</visible>
+					</control>
+					
+					<control type="button" id="409">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom_App_tile_2_addon_label)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_2_addon_label)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_2)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_2)</visible>
+					</control>
+					
+					<control type="button" id="410">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(custom_App_tile_2_addon_icon)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_2_addon_icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_2)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_2)</visible>
+					</control>
+					
+					<!-- App TILE 3 -->
+					
+					<control type="button" id="411">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32161]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Tile_3)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Tile_3)</selected>
+					</control>
+					
+					<control type="radiobutton" id="412">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.ToggleSetting(custom_App_tile_3)</onclick>
+					<selected>Skin.HasSetting(custom_App_tile_3)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_3)</visible>
+					</control>
+					
+					<control type="button" id="413">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32109]</label>
+					<onclick>Skin.SetAddon(custom_App_tile_3_addon,xbmc.addon.Programs,xbmc.addon.executable)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_3_addon)]</label2>
+					<visible>Skin.HasSetting(custom_App_tile_3)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_3)</visible>
+					</control>
+					
+					<control type="button" id="414">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom_App_tile_3_addon_label)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_3_addon_label)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_3)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_3)</visible>
+					</control>
+					
+					<control type="button" id="415">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(custom_App_tile_3_addon_icon)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_3_addon_icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_3)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_3)</visible>
+					</control>
+					
+					
+					<!-- App TILE 4 -->
+					
+					<control type="button" id="416">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32162]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Tile_4)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Tile_4)</selected>
+					</control>
+					
+					<control type="radiobutton" id="417">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.ToggleSetting(custom_App_tile_4)</onclick>
+					<selected>Skin.HasSetting(custom_App_tile_4)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_4)</visible>
+					</control>
+					
+					<control type="button" id="418">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32109]</label>
+					<onclick>Skin.SetAddon(custom_App_tile_4_addon,xbmc.addon.Programs,xbmc.addon.executable)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_4_addon)]</label2>
+					<visible>Skin.HasSetting(custom_App_tile_4)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_4)</visible>
+					</control>
+					
+					<control type="button" id="419">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom_App_tile_4_addon_label)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_4_addon_label)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_4)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_4)</visible>
+					</control>
+					
+					<control type="button" id="420">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(custom_App_tile_4_addon_icon)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_4_addon_icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_4)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_4)</visible>
+					</control>
+					
+					<!-- App TILE 5 -->
+					
+					<control type="button" id="421">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32163]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Tile_5)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Tile_5)</selected>
+					</control>
+					
+					<control type="radiobutton" id="422">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.ToggleSetting(custom_App_tile_5)</onclick>
+					<selected>Skin.HasSetting(custom_App_tile_5)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_5)</visible>
+					</control>
+					
+					<control type="button" id="423">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32109]</label>
+					<onclick>Skin.SetAddon(custom_App_tile_5_addon,xbmc.addon.Programs,xbmc.addon.executable)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_5_addon)]</label2>
+					<visible>Skin.HasSetting(custom_App_tile_5)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_5)</visible>
+					</control>
+					
+					<control type="button" id="424">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom_App_tile_5_addon_label)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_5_addon_label)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_5)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_5)</visible>
+					</control>
+					
+					<control type="button" id="425">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(custom_App_tile_5_addon_icon)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_5_addon_icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_5)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_5)</visible>
+					</control>
+					
+					<!-- App TILE 6 -->
+					
+					<control type="button" id="426">
+					<include>ButtonsSkinSettingsSmall</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32165]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_App_Tile_6)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_App_Tile_6)</selected>
+					</control>
+					
+					<control type="radiobutton" id="427">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.ToggleSetting(custom_App_tile_6)</onclick>
+					<selected>Skin.HasSetting(custom_App_tile_6)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_6)</visible>
+					</control>
+					
+					<control type="button" id="428">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32109]</label>
+					<onclick>Skin.SetAddon(custom_App_tile_6_addon,xbmc.addon.Programs,xbmc.addon.executable)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_6_addon)]</label2>
+					<visible>Skin.HasSetting(custom_App_tile_6)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_6)</visible>
+					</control>
+					
+					<control type="button" id="429">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom_App_tile_6_addon_label)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_6_addon_label)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_6)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_6)</visible>
+					</control>
+					
+					<control type="button" id="430">
+					<include>RadioButtonsSkinSettings</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(custom_App_tile_6_addon_icon)</onclick>
+					<label2>$INFO[Skin.String(custom_App_tile_6_addon_icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_App_Tile_6)</visible>
+					<visible>Skin.HasSetting(custom_App_tile_6)</visible>
+					</control>
+					</control>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>1530</posx>
+					<posy>1000</posy>
+					<include>TimeAndTemp</include>
+					</control>
+					</controls>
+					</window>

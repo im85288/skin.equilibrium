@@ -1,0 +1,2155 @@
+					<includes>
+
+					<include name="SkinWidgetsMusic">
+
+					<control type="group" id="8000">
+					<visible>!Container(300).HasFocus(8)</visible>
+					<posx>-250</posx>
+					<posy>120</posy>
+					<animation effect="slide" start="0,0" end="0,40" time="200" reversible="true" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+					<animation effect="slide" start="0,40" end="0,0" time="300" reversible="true" condition="!ControlGroup(9001).HasFocus">Conditional</animation>
+					
+					<include>Window_Fade_In_Out_Widgets_Top</include>
+					
+					
+					
+					<!-- RECENT ALBUMS  -->
+					
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(500)</visible>
+					<visible>![Skin.HasSetting(hide500) | Skin.HasSetting(custom500)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="music">musicdb://recentlyaddedalbums/</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 500 -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(500)</visible>
+					<visible>Skin.HasSetting(custom500)</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom500playlist)]</content>
+					</control>
+					
+					
+					
+					<!-- ALBUMS  -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(501)</visible>
+					<visible>![Skin.HasSetting(hide501) | Skin.HasSetting(custom501)]</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="music">musicdb://albums/</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 501 -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(501)</visible>
+					<visible>Skin.HasSetting(custom501)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom501playlist)]</content>
+					</control>
+					
+					
+					<!-- TOP 100 ALBUMS -->
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(502)</visible>
+					<visible>![Skin.HasSetting(hide502) | Skin.HasSetting(custom502)]</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="music">musicdb://top100/albums/</content>
+					</control>
+					
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 502 -->
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(502)</visible>
+					<visible>Skin.HasSetting(custom502)</visible>
+					<include>widgets_animation</include>
+					<include>Window_Fade_In_Out_Widgets</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom502playlist)]</content>
+					</control>
+					
+					
+					<!-- TOP 100 SONGS -->
+					
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(503)</visible>
+					<visible>![Skin.HasSetting(hide503) | Skin.HasSetting(custom503)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>musicdb://top100/songs/</content>
+					</control>
+					
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 503 -->
+					
+
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(503)</visible>
+					<visible>Skin.HasSetting(custom503)</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom503playlist)]</content>
+					</control>
+
+					
+					<!-- ARTISTS -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(504)</visible>
+					<visible>![Skin.HasSetting(hide504) | Skin.HasSetting(custom504)]</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content target="music">musicdb://artists/</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 504 -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(504)</visible>
+					<visible>Skin.HasSetting(custom504)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom504playlist)]</content>
+					</control>
+					
+					
+					<!-- GENRES -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(505)</visible>
+					<visible>![Skin.HasSetting(hide505) | Skin.HasSetting(custom505)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture fallback="special://skin/extras/musicgenresquare/empty.jpg">$INFO[Listitem.Label,special://skin/extras/musicgenresquare/,.jpg]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture fallback="special://skin/extras/musicgenresquare/empty.jpg">$INFO[Listitem.Label,special://skin/extras/musicgenresquare/,.jpg]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="music">musicdb://genres/</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 505 -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(505)</visible>
+					<visible>Skin.HasSetting(custom505)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom505playlist)]</content>
+					</control>
+					
+					
+					
+						<!-- ONLINE -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(506)</visible>
+					<visible>![Skin.HasSetting(hide506) | Skin.HasSetting(custom506)]</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content target="music">addons://sources/audio</content>
+					
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 506 -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(506)</visible>
+					<visible>Skin.HasSetting(custom506)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom506playlist)]</content>
+					</control>
+					
+					
+					
+					<!-- LIBRARY -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(507)</visible>
+					<visible>![Skin.HasSetting(hide507) | Skin.HasSetting(custom507)]</visible>
+					<include>widgets_animation</include>
+					<itemlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="176" height="350">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<description>Genre</description>
+					<label>135</label>
+					<onclick>ActivateWindow(MusicLibrary,genres,return)</onclick>
+					<icon>icons/home/music/genres.png</icon>
+					</item>
+					
+					<item id="2">
+					<description>Artists</description>
+					<label>133</label>
+					<onclick>ActivateWindow(MusicLibrary,artists,return)</onclick>
+					<icon>icons/home/music/artists.png</icon>
+					</item>
+					
+					<item id="3">
+					<description>Albums</description>
+					<label>132</label>
+					<onclick>ActivateWindow(MusicLibrary,albums,return)</onclick>
+					<icon>icons/home/music/albums.png</icon>
+					</item>
+					
+					<item id="4">
+					<description>Recently Added Albums</description>
+					<label>32128</label>
+					<onclick>ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</onclick>
+					<icon>icons/home/music/recentaddedalbums.png</icon>
+					</item>
+					
+					<item id="5">
+					<description>Top 100 Albums</description>
+					<label>32103</label>
+					<onclick>ActivateWindow(MusicLibrary,Top100Albums,return)</onclick>
+					<icon>icons/home/music/top100.png</icon>
+					</item>
+					
+					<item id="6">
+					<description>Last Played Albums</description>
+					<label>517</label>
+					<onclick>ActivateWindow(MusicLibrary,RecentlyPlayedAlbums,return)</onclick>
+					<icon>icons/home/music/hd.png</icon>
+					</item>
+					
+					<item id="7">
+					<description>Top 100 Songs</description>
+					<label>32126</label>
+					<onclick>ActivateWindow(MusicLibrary,Top100Songs,return)</onclick>
+					<icon>icons/home/music/mic.png</icon>
+					</item>
+					
+					<item id="8">
+					<description>Playlists</description>
+					<label>136</label>
+					<onclick>ActivateWindow(MusicLibrary,Playlists,return)</onclick>
+					<icon>icons/home/music/playlists.png</icon>
+					</item>
+					
+					<item id="9">
+					<description>Music Videos</description>
+					<label>20389</label>
+					<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+					<icon>icons/home/music/musicvideos.png</icon>
+					</item>
+					
+					<item id="10">
+					<description>Years</description>
+					<label>652</label>
+					<onclick>ActivateWindow(MusicLibrary,years,return)</onclick>
+					<icon>icons/home/music/years.png</icon>
+					</item>
+					
+					
+					
+					</content>
+					</control>
+					
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 507 -->
+
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(507)</visible>
+				    <visible>Skin.HasSetting(custom507)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom507playlist)]</content>
+					</control>
+					
+					
+					<!-- MUSIC VIDEOS -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(508)</visible>
+					<visible>![Skin.HasSetting(hide508) | Skin.HasSetting(custom508)]</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>videodb://musicvideos/titles/</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 508 -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(508)</visible>
+					<visible>Skin.HasSetting(custom508)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom508playlist)]</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 509 -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(509)</visible>
+					<visible>Skin.HasSetting(custom509)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom509playlist)]</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 510 -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(510)</visible>
+					<visible>Skin.HasSetting(custom510)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom510playlist)]</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 511 -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(511)</visible>
+					<visible>Skin.HasSetting(custom511)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom511playlist)]</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 512 -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(512)</visible>
+					<visible>Skin.HasSetting(custom512)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom512playlist)]</content>
+					</control>
+					
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 513 -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(513)</visible>
+					<visible>Skin.HasSetting(custom513)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom513playlist)]</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 514 -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(514)</visible>
+					<visible>Skin.HasSetting(custom514)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom514playlist)]</content>
+					</control>
+				
+				
+					<!-- CUSTOM MUSIC WIDGETS 515 -->
+					
+					
+					<control type="wraplist" id="8001">
+					<posx>340</posx>
+					<posy>130</posy>
+					<width>1740</width>
+					<height>360</height>
+					<onup>9010</onup>
+					<ondown>8002</ondown>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>1</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(9010).Hasfocus(515)</visible>
+					<visible>Skin.HasSetting(custom515)</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="176" height="350">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>156</width>
+					<height>156</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>$INFO[Skin.String(custom515playlist)]</content>
+					</control>
+					
+					</control>
+					
+					<include>InfoWidgetsPanelMusic</include>
+					
+					<!-- WIDGETS BOTTOM -->
+					
+					
+					<control type="group" id="8010">
+					<posx>-250</posx>
+					<posy>200</posy>
+					<include>Window_Fade_In_Out_Widgets_Bottom</include>
+					
+					<control type="group">
+					<posx>5</posx>
+					<posy>15</posy>
+					
+					
+					<control type="label">
+					<posx>340</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32045]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(3)</visible>
+					<include>widgets_animation_label_bottom1</include>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					</control>
+					
+					<control type="label">
+					<posx>806</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32102]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(3)</visible>
+					<include>widgets_animation_label_bottom2</include>
+					</control>
+					
+					<!-- MUSIC TILE 1 TITLE -->
+					
+					<control type="label">
+					<posx>1268</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32105]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(3) + !Skin.HasSetting(custom_music_tile_1)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<!-- CUSTOM MUSIC TILE 1 TITLE -->
+					
+					<control type="label">
+					<posx>1268</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_Music_tile_1_addon_label)]</label>
+					<width>350</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(3) + Skin.HasSetting(custom_music_tile_1)</visible>
+					<include>widgets_animation_label_bottom3</include>
+					</control>
+					
+					<!-- MUSIC TILE 2 TITLE -->
+					
+					<control type="label">
+					<posx>1548</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32135]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(3) + !Skin.HasSetting(custom_music_tile_2)</visible>
+					<include>widgets_animation_label_bottom4</include>
+					</control>
+					
+					<!-- CUSTOM MUSIC TILE 2 TITLE -->
+					
+					<control type="label">
+					<posx>1548</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_Music_tile_2_addon_label)]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(3) + Skin.HasSetting(custom_music_tile_2)</visible>
+					<include>widgets_animation_label_bottom4</include>
+					</control>
+					
+					<!-- MUSIC TILE 3 TITLE -->
+					
+					<control type="label">
+					<posx>1826</posx>
+					<posy>410</posy>
+					<label>$LOCALIZE[32082]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(3) + !Skin.HasSetting(custom_music_tile_3)</visible>
+					<include>widgets_animation_label_bottom5</include>
+					</control>
+					
+					<!-- CUSTOM MUSIC TILE 3 TITLE -->
+					
+					<control type="label">
+					<posx>1826</posx>
+					<posy>410</posy>
+					<label>$INFO[Skin.String(custom_Music_tile_3_addon_label)]</label>
+					<width>250</width>
+					<height>45</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Container(300).HasFocus(3) + Skin.HasSetting(custom_music_tile_3)</visible>
+					<include>widgets_animation_label_bottom5</include>
+					</control>
+					</control>
+					
+					
+					<!-- RANDOM ALBUMS -->
+					
+					
+					<control type="panel" id="8002">
+					<posx>340</posx>
+					<posy>430</posy>
+					<width>444</width>
+					<height>550</height>
+					<onleft>noop</onleft>
+					<onright>8003</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(3) + ![Player.HasVideo | Player.HasAudio]</visible>
+				    <include>widgets_fade_animation_bottom1</include>
+					<include>widgets_animation_bottom1</include>
+					<itemlayout width="444" height="280">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>444</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="444" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>444</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>225</posy>
+					<width>444</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>223</posy>
+					<width>232</width>
+					<height>75</height>
+					<label>$INFO[ListItem.Label] [CR][COLOR=grey-light3]$INFO[ListItem.Label2][/COLOR][CR]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<label>$INFO[Window(Home).Property(RandomAlbum.1.Title)]</label>
+					<label2>$INFO[Window(Home).Property(RandomAlbum.1.Artist)]</label2>
+					<onclick>$INFO[Window(Home).Property(RandomAlbum.1.Play)]</onclick> 
+					<property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.1.Art(fanart))]</property>
+					</item>
+					
+					</content>
+					</control>
+					
+					
+					<!-- RECOMMENDED -->
+
+					<control type="panel" id="8003">
+					<posx>805</posx>
+					<posy>430</posy>
+					<width>930</width>
+					<height>550</height>
+					<onleft>8002</onleft>
+					<onright>8004</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(3)</visible>
+					<include>widgets_fade_animation_bottom2</include>
+					<include>widgets_animation_bottom2</include>
+					
+					<itemlayout width="470" height="280">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>441</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="470" height="280">
+					<control type="image">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>441</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>225</posy>
+					<width>441</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>223</posy>
+					<width>232</width>
+					<height>75</height>
+					<label>$INFO[ListItem.Label] [CR][COLOR=grey-light3]$INFO[ListItem.Label2][/COLOR][CR]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<label>$INFO[Window(Home).Property(RecommendedAlbum.1.Title)]</label>
+					<label2>$INFO[Window(Home).Property(RecommendedAlbum.1.Artist)]</label2>
+					<onclick>$INFO[Window(Home).Property(RecommendedAlbum.1.Play)]</onclick> 
+					<icon>$INFO[Window(Home).Property(RecommendedAlbum.1.Art(poster))]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.1.Art(fanart))]</property>
+					</item>
+					
+					</content>
+					</control>
+					
+					
+					<!-- ONLINE -->
+					
+					<control type="panel" id="8004">
+					<posx>1269</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>310</height>
+					<onleft>8003</onleft>
+					<onright>8005</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					<scrolltime>0</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(3) + !Skin.HasSetting(custom_music_tile_1)</visible>
+					<include>widgets_fade_animation_bottom3</include>
+					<include>widgets_animation_bottom3</include>
+					
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="label">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<onclick>ActivateWindow(3004)</onclick>
+					<icon>special://skin/extras/online/add1.png</icon>
+					<label>32104</label>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUISC TILE 1 -->
+					
+					<control type="panel" id="8004">
+					<posx>1269</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>310</height>
+					<onleft>8003</onleft>
+					<onright>8005</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					<scrolltime>0</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>Container(300).HasFocus(3) + Skin.HasSetting(custom_music_tile_1)</visible>
+					<include>widgets_fade_animation_bottom3</include>
+					<include>widgets_animation_bottom3</include>
+					
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="label">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<onclick>RunAddon($INFO[Skin.String(custom_Music_tile_1_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_Music_tile_1_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_Music_tile_1_addon))]</label>
+					</item>
+					</content>
+					</control>
+
+					
+					
+					
+					<!-- LAST PLAYED  -->
+
+					<control type="panel" id="8005">
+					<posx>1548</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onup>8001</onup>
+					<onleft>8004</onleft>
+					<onright>8006</onright>
+					<ondown>301</ondown>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(3) + !Skin.HasSetting(custom_music_tile_2)</visible>
+				    <include>widgets_fade_animation_bottom4</include>
+					<include>widgets_animation_bottom4</include>
+					
+					<itemlayout width="248" height="280">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>75</height>
+					<label>$INFO[ListItem.Label] [CR][COLOR=grey-light3]$INFO[ListItem.Artist][/COLOR][CR]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					
+					<content target="music">special://skin/playlists/Last Played Songs.xsp</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUISC TILE 2 -->
+					
+					<control type="panel" id="8005">
+					<posx>1548</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onup>8001</onup>
+					<onleft>8004</onleft>
+					<onright>8006</onright>
+					<ondown>301</ondown>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(3) + Skin.HasSetting(custom_music_tile_2)</visible>
+				    <include>widgets_fade_animation_bottom4</include>
+					<include>widgets_animation_bottom4</include>
+					
+					
+					<itemlayout width="255" height="255">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="255" height="255">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="label">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>240</width>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<onclick>RunAddon($INFO[Skin.String(custom_Music_tile_2_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_Music_tile_2_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_Music_tile_2_addon))]</label>
+					</item>
+					</content>
+					</control>
+
+					
+					
+					 <!-- NEW RELEASED ALBUMS -->
+					 
+					<control type="panel" id="8006">
+					<posx>1825</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8005</onleft>
+					<onright>noop</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(3) + !Skin.HasSetting(custom_music_tile_3)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>75</height>
+					<label>$INFO[ListItem.Label] [CR][COLOR=grey-light3]$INFO[ListItem.Label2][/COLOR][CR]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+				    <item id="1">
+					<label>$INFO[Window(Home).Property(PlaylistRandomMusicMenu1.1.Title)]</label>
+					<label2>$INFO[Window(Home).Property(PlaylistRandomMusicMenu1.1.Artist)]</label2>
+					<onclick>$INFO[Window(Home).Property(PlaylistRandomMusicMenu1.1.Play)]</onclick> 
+					<icon>$INFO[Window(Home).Property(PlaylistRandomMusicMenu1.1.Art(thumb))]</icon>
+					</item>
+					</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUISC TILE 3 -->
+					 
+					<control type="panel" id="8006">
+					<posx>1825</posx>
+					<posy>480</posy>
+					<width>255</width>
+					<height>280</height>
+					<onleft>8005</onleft>
+					<onright>noop</onright>
+					<onup>8001</onup>
+					<ondown>301</ondown>
+					<align>left</align>
+					<orientation>vertical</orientation>
+					<scrolltime>300</scrolltime>
+					<visible>Container(300).HasFocus(3) + Skin.HasSetting(custom_music_tile_3)</visible>
+				    <include>widgets_fade_animation_bottom5</include>
+					<include>widgets_animation_bottom5</include>
+					
+					<itemlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="255" height="280">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>255</width>
+					<height>255</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>255</width>
+					<height>80</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>grey6</colordiffuse>
+					<animation effect="fade" time="600" start="0" end="100" delay="150" tween="quadratic" easing="out" reversible="false">focus</animation>
+				    <animation effect="fade" time="100" start="100" end="0" tween="quadratic" easing="in" reversible="false">unfocus</animation>
+					</control>
+					
+					<control type="group">
+					<control type="textbox">
+					<posx>10</posx>
+					<posy>173</posy>
+					<width>232</width>
+					<height>75</height>
+					<label>$INFO[ListItem.Label] [CR][COLOR=grey-light3]$INFO[ListItem.Label2][/COLOR][CR]</label>
+					<font>Condensed-32-LS</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					<animation effect="fade" time="800" start="0" end="100" delay="400" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
+					</control>
+					</focusedlayout>
+					<content>
+					
+				    <item id="1">
+					<onclick>RunAddon($INFO[Skin.String(custom_Music_tile_3_addon)])</onclick>
+					<icon>$INFO[Skin.String(custom_Music_tile_3_addon_icon)]</icon>
+					<label>$INFO[system.addontitle(Skin.String(custom_Music_tile_3_addon))]</label>
+					</item>
+					</content>
+					</control>
+					
+					</control>
+					
+					</include>
+					</includes>

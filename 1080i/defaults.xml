@@ -1,0 +1,156 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<includes>
+					<default type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>-</texture>
+					<colorkey>0</colorkey>
+					</default>
+					<default type="label">
+					<posx>-</posx>
+					<posy>-</posy>
+					<label>-</label>
+					<font>Condensed-36</font>
+					<textcolor>white</textcolor>
+					<disabledcolor>grey3</disabledcolor>
+					</default>
+					<default type="fadelabel">
+					<posx>120</posx>
+					<posy>90</posy>
+					<font>Condensed-36</font>
+					<textcolor>white</textcolor>
+					<disabledcolor>grey3</disabledcolor>
+					</default>
+					
+					<default type="button">
+					<posx>-</posx>
+					<posy>-</posy>
+					<font>-</font>
+					<textcolor>-</textcolor>
+					<disabledcolor>-</disabledcolor>
+					<textoffsetx>-</textoffsetx>
+					<aligny>-</aligny>
+					<pulseonselect>no</pulseonselect>
+					</default>
+					
+					<default type="togglebutton">
+					<posx>210</posx>
+					<posy>250</posy>
+					<width>30</width>
+					<height>30</height>
+					<texturefocus>scroll-up-focus.png</texturefocus>
+					<texturenofocus>scroll-up.png</texturenofocus>
+					<alttexturefocus>scroll-down-focus.png</alttexturefocus>
+					<alttexturenofocus>scroll-down.png</alttexturenofocus>
+					<textcolor>white</textcolor>
+					<label>-</label>
+					<font>Condensed-36</font>
+					<disabledcolor>grey3</disabledcolor>
+					<pulseonselect>no</pulseonselect>
+					</default>
+					<default type="textbox">
+					<posx>330</posx>
+					<posy>330</posy>
+					<width>615</width>
+					<height>322</height>
+					<align>left</align>
+					<textcolor>white</textcolor>
+					<font>Condensed-36</font>
+					</default>
+					<default type="progress">
+					<posx>150</posx>
+					<posy>488</posy>
+					<texturebg border="6,0,6,0">OSDProgressBack.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="6,0,6,0">OSDProgressMid.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					</default>
+					<default type="spincontrol">
+					</default>
+					<default type="spincontrolex">
+					</default>
+					<default type="radiobutton">
+					<posx>450</posx>
+					<posy>300</posy>
+					<width>450</width>
+					<height>63</height>
+					<radiowidth>36</radiowidth>
+					<radioheight>36</radioheight>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<textureradionofocus>radiobutton-nofocus.png</textureradionofocus>
+					<texturefocus border="5">button-focus.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<label>215</label>
+					<font>Condensed-36</font>
+					<textcolor>white</textcolor>
+					<disabledcolor>grey3</disabledcolor>
+					<textoffsetx>10</textoffsetx>
+					<aligny>center</aligny>
+					<pulseonselect>no</pulseonselect>
+					</default>
+					<default type="selectbutton">
+					<posx>735</posx>
+					<posy>502</posy>
+					<width>450</width>
+					<height>75</height>
+					<label>-</label>
+					<font>font12</font>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<texturebg>button-focus.png</texturebg>
+					<textureleft>scroll-left.png</textureleft>
+					<textureleftfocus>scroll-left-focus.png</textureleftfocus>
+					<textureright>scroll-right.png</textureright>
+					<texturerightfocus>scroll-right-focus.png</texturerightfocus>
+					<font>Condensed-36</font>
+					<textcolor>white</textcolor>
+					<disabledcolor>grey3</disabledcolor>
+					<aligny>center</aligny>
+					</default>
+					<default type="slider">
+					<controloffsetx>75</controloffsetx>
+					<controloffsety>0</controloffsety>
+					</default>
+					<default type="sliderex">
+					<height>52</height>
+					<textoffsetx>10</textoffsetx>
+					<aligny>center</aligny>
+					<texturefocus border="5">button-focus.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<sliderwidth>150</sliderwidth>
+					<sliderheight>20</sliderheight>
+					<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+					<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<disabledcolor>grey3</disabledcolor>
+					</default>
+					<default type="mover">
+					<posx>90</posx>
+					<posy>288</posy>
+					<texturefocus border="5">button-focus.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					</default>
+					<default type="resize">
+					<posx>90</posx>
+					<posy>288</posy>
+					<texturefocus border="5">button-focus.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					</default>
+					<default type="edit">
+					<posx>450</posx>
+					<posy>300</posy>
+					<width>450</width>
+					<height>63</height>
+					<texturefocus border="5">button-focus.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<font>Condensed-36</font>
+					<textcolor>white</textcolor>
+					<disabledcolor>grey3</disabledcolor>
+					<textoffsetx>10</textoffsetx>
+					<aligny>center</aligny>
+					<pulseonselect>no</pulseonselect>
+					</default>
+					</includes>
