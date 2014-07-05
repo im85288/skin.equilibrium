@@ -104,7 +104,7 @@
 					<onclick>noop</onclick>
 					</item>
 					
-					<item id="2">
+					<!-- <item id="2">
 					<label>Settings 2</label>
 					<onclick>noop</onclick>
 					</item>
@@ -122,7 +122,7 @@
 					<item id="5">
 					<label>Settings 5</label>
 					<onclick>noop</onclick>
-					</item>
+					</item> -->
 					
 					</content>
 					</control>
