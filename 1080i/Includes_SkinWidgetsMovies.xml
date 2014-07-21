@@ -1501,7 +1501,6 @@
 					<aligny>center</aligny>
 					<visible>Container(300).HasFocus(5)</visible>
 					<include>widgets_animation_label_bottom1</include>
-					<visible>![Player.HasVideo | Player.HasAudio]</visible>
 					</control>
 					
 					<control type="label">
@@ -1632,7 +1631,7 @@
 					<orientation>horizontal</orientation>
 					<scrolltime>300</scrolltime>
 					<focusposition>1</focusposition>
-					<visible>Container(300).HasFocus(5) + ![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Container(300).HasFocus(5)</visible>
 				    <include>widgets_fade_animation_bottom1</include>
 					<include>widgets_animation_bottom1</include>
 					<itemlayout width="444" height="280">

@@ -630,8 +630,14 @@
 
 					<control type="group">
 					<posx>1550</posx>
-					<posy>1005</posy>
+					<posy>1008</posy>
 					<include>TimeAndTemp</include>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<include>nowplaying_home_widgets</include>
 					</control>
 
 					<control type="scrollbar" id="60">

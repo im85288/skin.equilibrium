@@ -518,49 +518,26 @@
 					<visible>Player.HasVideo | Player.HasAudio</visible>
 					<visible>!Container(300).HasFocus(8)</visible>
 					<posx>-245</posx>
-					<posy>215</posy>
-					
-					<control type="label">
-					<posx>341</posx>
-					<posy>412</posy>
-					<label>$LOCALIZE[32043]</label>
-					<width>350</width>
-					<height>36</height>
-					<font>Condensed-36</font>
-					<textcolor>grey3</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					</control>
+					<posy>540</posy>
 					
 					<control type="image">
-					<posx>335</posx>
-					<posy>465</posy>
-					<width>444</width>
-					<height>255</height>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture>$INFO[Player.Art(fanart)]</texture>
-					<aspectratio align="center" aligny="center">scale</aspectratio>
-					</control>
-					
-					<control type="progress">
-					<description>Progressbar</description>
-					<posx>335</posx>
-					<posy>640</posy>
-					<width>444</width>
-					<height>80</height>
-					<info>Player.Progress</info>
-					<texturebg colordiffuse="grey6">white.png</texturebg>
-					<midtexture colordiffuse="grey4">white.png</midtexture>
+					<posx>295</posx>
+					<posy>437</posy>
+					<height>120</height>
+					<width>120</width>
+					<texture>icons/home/nowplaying.png</texture>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>red1</colordiffuse>
 					</control>
 					
 					<control type="label">
-					<posx>346</posx>
-					<posy>640</posy>
-					<width>430</width>
+					<posx>400</posx>
+					<posy>470</posy>
+					<width>1400</width>
 					<height>70</height>
 					<label>$INFO[VideoPlayer.Title]</label>
-					<font>Condensed-32-LS</font>
-					<textcolor>white</textcolor>
+					<font>Condensed-40</font>
+					<textcolor>grey4</textcolor>
 					<align>left</align>
 					<aligny>top</aligny>
 					<autoscroll>false</autoscroll>
@@ -570,55 +547,66 @@
 					
 					<control type="label">
 					<description>title label</description>
-					<posx>346</posx>
-					<posy>640</posy>
-					<width>430</width>
+					<posx>400</posx>
+					<posy>470</posy>
+					<width>1400</width>
 					<height>70</height>
-					<label>$INFO[VideoPlayer.TVShowTitle]</label>
+					<label>$INFO[VideoPlayer.TVShowTitle]  [COLOR=grey3]$LOCALIZE[20373] $INFO[VideoPlayer.Season] $LOCALIZE[32091] $INFO[VideoPlayer.Episode][/COLOR]</label>
 					<align>left</align>
-					<font>Condensed-32-LS</font>
-					<textcolor>white</textcolor>
-					<visible>VideoPlayer.Content(Episodes)</visible>
-					</control>
-					
-					<control type="label">
-					<description>TVShowtitle label</description>
-					<posx>346</posx>
-					<posy>675</posy>
-					<width>430</width>
-					<height>55</height>
-					<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] $LOCALIZE[32091] $INFO[VideoPlayer.Episode]</label>
-					<align>left</align>
-					<font>Condensed-30</font>
-					<textcolor>grey2</textcolor>
+					<font>Condensed-40</font>
+					<textcolor>grey4</textcolor>
 					<visible>VideoPlayer.Content(Episodes)</visible>
 					</control>
 					
 					<control type="label">
 					<description>Artist label</description>
-					<posx>346</posx>
-					<posy>640</posy>
-					<width>430</width>
+					<posx>400</posx>
+					<posy>470</posy>
+					<width>1400</width>
 					<height>70</height>
-					<label>$INFO[MusicPlayer.Artist]</label>
+					<label>$INFO[MusicPlayer.TrackNumber]. $INFO[MusicPlayer.Title] [COLOR=grey3] $INFO[MusicPlayer.Artist][/COLOR]</label>
 					<align>left</align>
-					<font>Condensed-32-LS</font>
-					<textcolor>white</textcolor>
+					<font>Condensed-40</font>
+					<textcolor>grey4</textcolor>
 					<visible>Player.HasAudio</visible>
 					</control>
 					
-					<control type="label">
-					<description>Track label</description>
-					<posx>346</posx>
-					<posy>675</posy>
-					<width>430</width>
-					<height>55</height>
-					<label>$INFO[MusicPlayer.TrackNumber]. $INFO[MusicPlayer.Title]</label>
+					
+					
+					<!-- <control type="label">
+					<posx>341</posx>
+					<posy>425</posy>
+					<label>$LOCALIZE[32043]</label>
+					<width>350</width>
+					<height>36</height>
+					<font>Condensed-36</font>
+					<textcolor>grey3</textcolor>
 					<align>left</align>
-					<font>Condensed-30</font>
-					<textcolor>grey2</textcolor>
-					<visible>Player.HasAudio</visible>
-					</control>
+					<aligny>center</aligny>
+					</control> -->
+					
+					<!-- <control type="image">
+					<posx>335</posx>
+					<posy>465</posy>
+					<width>444</width>
+					<height>255</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[Player.Art(fanart)]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control> -->
+					
+					<!-- <control type="progress">
+					<description>Progressbar</description>
+					<posx>335</posx>
+					<posy>520</posy>
+					<width>444</width>
+					<height>5</height>
+					<info>Player.Progress</info>
+					<texturebg colordiffuse="grey6">white.png</texturebg>
+					<midtexture colordiffuse="grey4">white.png</midtexture>
+					</control> -->
+					
+					
 					</control>
 					</include>
 	
@@ -700,7 +688,7 @@
 					<width>1400</width>
 					<height>57</height>
 					<align>bottom</align>
-					<itemgap>15</itemgap>
+					<itemgap>35</itemgap>
 					<orientation>horizontal</orientation>
 
 					<control type="label">
@@ -709,7 +697,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<height>55</height>
-					<label>$INFO[VideoPlayer.Title]</label>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
 					<align>left</align>
 					<font>Condensed-46</font>
 					<textcolor>white</textcolor>
@@ -722,7 +710,7 @@
 					<posy>15</posy>
 					<width>1400</width>
 					<height>55</height>
-					<label>$INFO[VideoPlayer.TVShowTitle]  $LOCALIZE[20373] $INFO[VideoPlayer.Season] $LOCALIZE[32091] $INFO[VideoPlayer.Episode]</label>
+					<label>$INFO[VideoPlayer.Title] $LOCALIZE[32189] $LOCALIZE[20373] $INFO[VideoPlayer.Season] $LOCALIZE[32091] $INFO[VideoPlayer.Episode]</label>
 					<align>left</align>
 					<font>Condensed-32</font>
 					<textcolor>grey2</textcolor>

@@ -105,6 +105,8 @@
 					<aligny>center</aligny>
 					<font>Condensed-30-B</font>
 					<textcolor>grey3</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<visible>!substring(listitem.label,..,left)</visible>
 					</control>
 					</control>
 
@@ -170,6 +172,8 @@
 					<aligny>center</aligny>
 					<font>Condensed-30-B</font>
 					<textcolor>grey4</textcolor>
+					<selectedcolor>selected1</selectedcolor>
+					<visible>!substring(listitem.label,..,left)</visible>
 					</control>
 					</control>
 
@@ -416,8 +420,14 @@
 
 					<control type="group">
 					<posx>1550</posx>
-					<posy>990</posy>
+					<posy>1008</posy>
 					<include>TimeAndTemp</include>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<include>nowplaying_home_widgets</include>
 					</control>
 
 					<control type="scrollbar" id="60">

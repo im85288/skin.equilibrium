@@ -231,8 +231,14 @@
 					
 					<control type="group">
 					<posx>1550</posx>
-					<posy>970</posy>
+					<posy>985</posy>
 					<include>TimeAndTemp</include>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>-20</posy>
+					<include>nowplaying_home_widgets</include>
 					</control>
 					
 					<control type="scrollbar" id="60">
