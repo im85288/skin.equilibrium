@@ -517,6 +517,7 @@
 					<control type="group">
 					<visible>Player.HasVideo | Player.HasAudio</visible>
 					<visible>!Container(300).HasFocus(8)</visible>
+					<visible>!Window.IsActive(volumebar)</visible>
 					<posx>-245</posx>
 					<posy>540</posy>
 					

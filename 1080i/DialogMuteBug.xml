@@ -12,8 +12,8 @@
 				<control type="group">
                 <visible>Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)</visible>
 				<control type="image">
-				<posx>120r</posx>
-				<posy>50</posy>
+				<posx>550r</posx>
+				<posy>30</posy>
 				<width>68</width>
 				<height>68</height>
 				<aspectratio>keep</aspectratio>
@@ -24,8 +24,8 @@
 				<control type="group">
                 <visible>![Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Window.IsActive(home)</visible>
 				<control type="image">
-				<posx>140r</posx>
-				<posy>50</posy>
+				<posx>550r</posx>
+				<posy>30</posy>
 				<width>68</width>
 				<height>68</height>
 				<aspectratio>keep</aspectratio>
@@ -37,7 +37,7 @@
                 <visible>![Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + Window.IsActive(home)</visible>
 				<control type="image">
 				<posx>80</posx>
-				<posy>980</posy>
+				<posy>990</posy>
 				<width>68</width>
 				<height>68</height>
 				<aspectratio>keep</aspectratio>

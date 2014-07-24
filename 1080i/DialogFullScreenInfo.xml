@@ -10,6 +10,7 @@
 					<animation effect="fade" start="100" end="0" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
 					<animation effect="fade" start="100" end="0" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
 					
+					
 					<control type="image">
 					<posx>290</posx>
 					<posy>690</posy>

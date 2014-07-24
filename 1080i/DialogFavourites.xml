@@ -62,7 +62,18 @@
 					<posy>0</posy>
 					<height>330</height>
 					<width>330</width>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>white.png</texture>
+					<colordiffuse>grey6</colordiffuse>
+					<fadetime>300</fadetime>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>330</height>
+					<width>330</width>
+					<texture fallback="icons/home/xbmc2.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>300</fadetime>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					</control>
@@ -76,7 +87,19 @@
 					<posy>0</posy>
 					<height>330</height>
 					<width>330</width>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>white.png</texture>
+				    <colordiffuse>grey6</colordiffuse>
+					<fadetime>300</fadetime>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="sine" easing="out" reversible="false">focus</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>330</height>
+					<width>330</width>
+					<texture fallback="icons/home/xbmc2.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>300</fadetime>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="sine" easing="out" reversible="false">focus</animation>

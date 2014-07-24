@@ -1,65 +1,149 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<window>
-    <defaultcontrol>1</defaultcontrol>
-    <animation effect="slide" start="0,-60" end="0,0" time="100">WindowOpen</animation>
-    <animation effect="slide" start="0,0" end="0,-90" delay="400" time="100">WindowClose</animation>
-    <controls>
-        <control type="group">
-            <posx>1230</posx>
-            <posy>0</posy>
-            <control type="image">
-                <posx>0</posx>
-                <posy>-15</posy>
-                <width>450</width>
-                <height>75</height>
-                <texture flipy="true" border="20,20,20,2">InfoMessagePanel.png</texture>
-            </control>
-            <control type="group">
-                <visible>!player.passthrough</visible>
-                <control type="image">
-                    <description>Lite Volume Logo</description>
-                    <posx>15</posx>
-                    <posy>0</posy>
-                    <width>60</width>
-                    <height>52</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture>VolumeIcon.png</texture>
-                </control>
-                <control type="progress" id="1">
-                    <description>progress control</description>
-                    <posx>75</posx>
-                    <posy>12</posy>
-                    <width>345</width>
-                    <height>27</height>
-                    <info>Player.Volume</info>
-                </control>
-            </control>
-            <control type="group">
-                <visible>player.passthrough</visible>
-                <control type="image">
-                    <description>Lite Volume Logo</description>
-                    <posx>15</posx>
-                    <posy>0</posy>
-                    <width>60</width>
-                    <height>52</height>
-                    <aspectratio>keep</aspectratio>
-                    <colordiffuse>CCFF0000</colordiffuse>
-                    <texture>VolumeIcon.png</texture>
-                </control>
-                <control type="label">
-                    <description>Passthrough Label</description>
-                    <posx>75</posx>
-                    <posy>9</posy>
-                    <width>345</width>
-                    <height>30</height>
-                    <label>$LOCALIZE[29802]</label>
-                    <font>font10_title</font>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                </control>
-            </control>
-        </control>
-    </controls>
-</window>
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol>1</defaultcontrol>
+					
+					<controls>
+					
+					<control type="group">
+					<posx>80</posx>
+					<posy>990</posy>
+					
+					<control type="group">
+					<visible>![Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + Window.IsActive(home)</visible>
+					 
+					<control type="image">
+					<description>Lite Volume Logo Back</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>68</width>
+					<height>68</height>
+					<aspectratio>keep</aspectratio>
+					<texture>dialogs/backgrounds/Dialog_Back.png</texture>
+					</control>
+					
+					<control type="image">
+					<description>Lite Volume Logo</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>68</width>
+					<height>68</height>
+					<aspectratio>keep</aspectratio>
+					<texture>dialogs/volume/icon_volume.png</texture>
+					</control>
+					
+					<control type="progress" id="1">
+					<description>progress control</description>
+					<posx>100</posx>
+					<posy>20</posy>
+					<width>375</width>
+					<height>20</height>
+					<texturebg colordiffuse="grey1">white.png</texturebg>
+					<midtexture colordiffuse="red1">white.png</midtexture>
+					<info>Player.Volume</info>
+					</control>
+					</control>
+					</control>
+					
+					
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+					<control type="group">
+					<visible>![Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Window.IsActive(home)</visible>
+					
+					<control type="image">
+					<description>Lite Volume Logo Back</description>
+					<posx>550r</posx>
+					<posy>30</posy>
+					<width>68</width>
+					<height>68</height>
+					<aspectratio>keep</aspectratio>
+					<texture>dialogs/backgrounds/Dialog_Back.png</texture>
+					</control>
+					
+					<control type="image">
+					<description>Lite Volume Logo</description>
+					<posx>550r</posx>
+					<posy>30</posy>
+					<width>68</width>
+					<height>68</height>
+					<aspectratio>keep</aspectratio>
+					<texture>dialogs/volume/icon_volume.png</texture>
+					</control>
+					
+					<control type="progress" id="1">
+					<description>progress control</description>
+					<posx>450r</posx>
+					<posy>50</posy>
+					<width>375</width>
+					<height>20</height>
+					<texturebg colordiffuse="grey1">white.png</texturebg>
+					<midtexture colordiffuse="red1">white.png</midtexture>
+					<info>Player.Volume</info>
+					</control>
+					</control>
+					</control>
+					
+					
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+					<control type="group">
+					<visible>Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)</visible>
+					
+					<control type="image">
+					<description>Lite Volume Logo Back</description>
+					<posx>550r</posx>
+					<posy>30</posy>
+					<width>68</width>
+					<height>68</height>
+					<aspectratio>keep</aspectratio>
+					<texture>dialogs/backgrounds/Dialog_Back.png</texture>
+					</control>
+					
+					<control type="image">
+					<description>Lite Volume Logo</description>
+					<posx>550r</posx>
+					<posy>30</posy>
+					<width>68</width>
+					<height>68</height>
+					<aspectratio>keep</aspectratio>
+					<texture>dialogs/volume/icon_volume.png</texture>
+					</control>
+					
+					<control type="progress" id="1">
+					<description>progress control</description>
+					<posx>450r</posx>
+					<posy>50</posy>
+					<width>375</width>
+					<height>20</height>
+					<texturebg colordiffuse="grey1">white.png</texturebg>
+					<midtexture colordiffuse="red1">white.png</midtexture>
+					<info>Player.Volume</info>
+					</control>
+					</control>
+					</control>
+					
+					<!-- <control type="group">
+					<visible>player.passthrough</visible>
+					<control type="label">
+					<description>Passthrough Label</description>
+					<posx>75</posx>
+					<posy>9</posy>
+					<width>345</width>
+					<height>30</height>
+					<label>$LOCALIZE[29802]</label>
+					<font>font10_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					
+					</control>
+					</control> -->
+					</controls>
+					</window>

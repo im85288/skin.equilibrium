@@ -158,14 +158,53 @@
 					<texturefocus colordiffuse="grey6">osd/NextTrackFO.png</texturefocus>
 					<texturenofocus>osd/NextTrackNF.png</texturenofocus>
 					<onleft>204</onleft>
-					<onright>255</onright>
+					<onright>206</onright>
 					<onup>1000</onup>
 					<ondown>1000</ondown>
 					<onclick>PlayerControl(Next)</onclick>
 					</control>
+					
+					<control type="togglebutton" id="206">
+					<posx>494</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<label>209</label>
+					<font>-</font>
+					<texturefocus colordiffuse="grey6">osd/InfoFO.png</texturefocus>
+					<texturenofocus>osd/InfoNF.png</texturenofocus>
+					<usealttexture>Window.IsActive(fullscreeninfo)</usealttexture>
+					<alttexturenofocus>osd/InfoNF.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="grey6">osd/InfoFO.png</alttexturefocus>
+					<onleft>205</onleft>
+					<onright>255</onright>
+					<onup>1000</onup>
+					<ondown>1000</ondown>
+					<onclick>ActivateWindow(fullscreeninfo)</onclick>
+					<altclick>Dialog.Close(fullscreeninfo)</altclick>
 					</control>
 					
+					<!-- <control type="button" id="206">
+					<posx>494</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<label>209</label>
+					<font>-</font>
+					<texturefocus colordiffuse="grey6">osd/InfoFO.png</texturefocus>
+					<texturenofocus>osd/InfoNF.png</texturenofocus>
+					<onleft>205</onleft>
+					<onright>255</onright>
+					<onup>1000</onup>
+					<ondown>1000</ondown>
+					<onclick>Dialog.Close(fullscreeninfo)</onclick>
+					<visible>Window.IsActive(fullscreeninfo)</visible>
+					</control> -->
+					</control>
+					
+					
 					<!-- LiveTV -->
+					
 					<control type="group" id="100">
 					<posx>488</posx>
 					<posy>90r</posy>
@@ -336,7 +375,7 @@
 					<font>-</font>
 					<texturefocus colordiffuse="grey6">osd/StereoscopicFO.png</texturefocus>
 					<texturenofocus>osd/StereoscopicNF.png</texturenofocus>
-					<onleft>205</onleft>
+					<onleft>206</onleft>
 					<onright>250</onright>
 					<onup>501</onup>
 					<ondown>1000</ondown>

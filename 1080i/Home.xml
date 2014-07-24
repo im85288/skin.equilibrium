@@ -208,7 +208,7 @@
 					
 					<control type="group">
 					
-					<visible>![Container(300).HasFocus(8) | Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(extendedprogressdialog) | Window.IsActive(mutebug) | Player.HasVideo | Player.HasAudio]</visible>
+					<visible>![Container(300).HasFocus(8) | Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(extendedprogressdialog) | Window.IsActive(mutebug) | Window.IsActive(volumebar) | Player.HasVideo | Player.HasAudio]</visible>
 					
 					<control type="panel" id="301">
 					<description>Home list 2</description>
