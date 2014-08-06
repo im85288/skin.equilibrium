@@ -106,7 +106,7 @@
 					<posy>0</posy>
 					<width>217.5</width>
 					<height>80</height>
-					<font>Condensed-46</font>
+					<font>Condensed-50</font>
 					<textcolor>grey3</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -121,7 +121,7 @@
 					<posy>0</posy>
 					<width>217.5</width>
 					<height>80</height>
-					<font>Condensed-46</font>
+					<font>Condensed-50</font>
 					<textcolor>white</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -187,17 +187,18 @@
 					<onclick>ActivateWindow(programs,addons,return)</onclick>
 					</item>
 					
+					<item id="9">
+					<description>Weather</description>
+					<label>$LOCALIZE[12600]</label>
+					<onclick>ActivateWindow(weather)</onclick>
+					</item>
+					
 					<item id="11">
 					<description>System</description>
 					<label>$LOCALIZE[31959]</label>
 					<onclick>ActivateWindow(settings)</onclick>
 					</item>
 					
-					<item id="9">
-					<description>Weather</description>
-					<label>$LOCALIZE[12600]</label>
-					<onclick>ActivateWindow(weather)</onclick>
-					</item>
 					
 					</content>
 					</control>
