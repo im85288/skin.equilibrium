@@ -1,71 +1,74 @@
 					<?xml version="1.0" encoding="UTF-8"?>
-
-					<includes>
-					
-					
-					
-					<include name="Overlay">
-					<control type="image">
-					<description>Overlay</description>
-					<include>Dimensions_Fullscreen_Home</include>
-					<texture background="true">overlay.jpg</texture>
-					</control>
-					</include>
-					
-					<include name="OverlayDialogs">
-					<control type="image">
-					<description>Overlay for dialogs slideout</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>426</width>
-					<height>1080</height>
-					<texture background="true">white.png</texture>
-					<colordiffuse>overlay-no-transparency</colordiffuse>
-					</control>
-					
-					<control type="image">
-					<description>Overlay for dialogs slideout</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>424</width>
-					<height>1080</height>
-					<texture background="true">white.png</texture>
-					<colordiffuse>grey6</colordiffuse>
-					</control>
-					</include>
-
-					<include name="CommonBackground">
-					<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1920</width>
-					<height>1080</height>
-					<aspectratio>scale</aspectratio>
-					<texture colordiffuse="white-condensed" fallback="special://skin/backgrounds/movies.jpg" background="true">$INFO[ListItem.Art(fanart)]</texture>
-					<include>Window_Fade_In_Out_Background</include>
-					<fadetime>FanartCrossfadeTime</fadetime>
-					<animation effect="slide" start="0,0" end="422,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
-					</control>
-					
-					<control type="visualisation">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1920</width>
-					<height>1080</height>
-					<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + ![Window.IsVisible(PVR) + [Control.IsVisible(11) | Control.IsVisible(12)]]</visible>
-					<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
-					</control>
-					</include>
-					
-					<!-- Home Backgrounds -->
-                    
-					<include name="Backgrounds_Home">
-					<control type="image">
-					<include>Dimensions_Fullscreen_Home_Mainbackgrounds</include>
-					<description>Home Backgorunds</description>
-					<texture background="true">$VAR[homebackgrounds]</texture>
-					<fadetime>380</fadetime>
-					<include>Window_Fade_In_Out_Background</include>
-					</control>	
-					</include>
-					</includes>
+<includes>
+	<include name="Overlay">
+		<control type="image">
+			<description>Overlay</description>
+			<include>Dimensions_Fullscreen_Home</include>
+			<texture background="true">overlay.jpg</texture>
+		</control>
+	</include>
+	<include name="OverlayDialogs">
+		<control type="image">
+			<description>Overlay for dialogs slideout</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>426</width>
+			<height>1080</height>
+			<texture background="true">white.png</texture>
+			<colordiffuse>overlay-no-transparency</colordiffuse>
+		</control>
+		<control type="image">
+			<description>Overlay for dialogs slideout</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>424</width>
+			<height>1080</height>
+			<texture background="true">white.png</texture>
+			<colordiffuse>grey6</colordiffuse>
+		</control>
+	</include>
+	<include name="CommonBackground">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<texture colordiffuse="white-condensed" fallback="special://skin/backgrounds/movies.jpg" background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<include>Window_Fade_In_Out_Background</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<animation effect="slide" start="0,0" end="422,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
+			<visible>IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt))</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio>scale</aspectratio>
+			<texture colordiffuse="white-condensed" fallback="special://skin/backgrounds/movies.jpg" background="true">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</texture>
+			<include>Window_Fade_In_Out_Background</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<animation effect="slide" start="0,0" end="422,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
+			<visible>!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt))</visible>
+		</control>
+		<control type="visualisation">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + ![Window.IsVisible(PVR) + [Control.IsVisible(11) | Control.IsVisible(12)]]</visible>
+			<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
+		</control>
+	</include>
+	<!-- Home Backgrounds -->
+	<include name="Backgrounds_Home">
+		<control type="image">
+			<include>Dimensions_Fullscreen_Home_Mainbackgrounds</include>
+			<description>Home Backgorunds</description>
+			<texture background="true">$VAR[homebackgrounds]</texture>
+			<fadetime>380</fadetime>
+			<include>Window_Fade_In_Out_Background</include>
+		</control>
+	</include>
+</includes>

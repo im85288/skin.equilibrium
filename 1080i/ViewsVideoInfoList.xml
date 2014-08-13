@@ -1,260 +1,241 @@
-					<includes>
 
-					<include name="InfoList">
-				
-				    
+<includes>
+	<include name="InfoList">
+		<control type="group">
+			<posx>0</posx>
+			<posy>20</posy>
+			<visible>Control.IsVisible(531) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)]</visible>
+			<include>Window_Fade_In_Out</include>
+			<animation effect="slide" start="0,0" end="422,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
+			<control type="image">
+				<posx>70</posx>
+				<posy>115</posy>
+				<width>1222</width>
+				<height>810</height>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+				<fadetime>300</fadetime>
+				<texture colordiffuse="white-condensed">$INFO[ListItem.Art(fanart)]</texture>
+				<visible>IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt))</visible>
+			</control>
+			<control type="image">
+				<posx>70</posx>
+				<posy>115</posy>
+				<width>1222</width>
+				<height>810</height>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+				<fadetime>300</fadetime>
+				<texture colordiffuse="white-condensed">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</texture>
+				<visible>!IsEmpty(Window(Home).Property(MB3.Background.Item.FanArt))</visible>
+			</control>
+			<control type="image">
+				<posx>1291</posx>
+				<posy>115</posy>
+				<width>559</width>
+				<height>810</height>
+				<texture>white.png</texture>
+				<colordiffuse>grey6</colordiffuse>
+			</control>
+			<posx>1281</posx>
+			<posy>115</posy>
+			<width>10</width>
+			<height>810</height>
+			<control type="list" id="531">
+				<posx>80</posx>
+				<posy>125</posy>
+				<width>1210</width>
+				<height>782</height>
+				<onleft>60</onleft>
+				<onright>301</onright>
+				<onup>531</onup>
+				<ondown>531</ondown>
+				<focusposition>2</focusposition>
+				<viewtype label="InfoList">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="sine" easing="inout">200</scrolltime>
+				<itemlayout height="56" width="870">
+					<control type="label">
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>990</width>
+						<height>56</height>
+						<font>Condensed-30</font>
+						<textcolor>grey3</textcolor>
+						<selectedcolor>selected1</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>1020</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>56</height>
+						<font>Condensed-30</font>
+						<textcolor>grey3</textcolor>
+						<selectedcolor>selected1</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Window.IsVisible(Videos)</visible>
+					</control>
+					<control type="label">
+						<posx>932</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>56</height>
+						<font>Condensed-30</font>
+						<textcolor>grey3</textcolor>
+						<selectedcolor>selected1</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>Window.IsVisible(Videos)</visible>
+					</control>
+					<control type="image">
+						<posx>1150</posx>
+						<posy>10</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>icons/overlays/unwatched.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>red2-condensed</colordiffuse>
+						<visible>!substring(listitem.label,..,left)</visible>
+						<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)] + !IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="120" width="870">
 					<control type="group">
-					<posx>0</posx>
-					<posy>20</posy>
-					
-					<visible>Control.IsVisible(531) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)]</visible>
-					<include>Window_Fade_In_Out</include>
-					<animation effect="slide" start="0,0" end="422,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
-					
-					<control type="image">
-					<posx>70</posx>
-					<posy>115</posy>
-					<width>1222</width>
-					<height>810</height>
-					<aspectratio align="center" aligny="top">scale</aspectratio>
-					<fadetime>300</fadetime>
-					<texture colordiffuse="white-condensed">$INFO[ListItem.Art(fanart)]</texture>
+						<animation effect="slide" start="0,40" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(531).OnPrevious">focus</animation>
+						<animation effect="slide" start="0,-40" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(531).OnNext">focus</animation>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1202</width>
+							<height>120</height>
+							<texture>white.png</texture>
+							<colordiffuse>grey6</colordiffuse>
+						</control>
+						<control type="label">
+							<posx>15</posx>
+							<posy>0</posy>
+							<width>990</width>
+							<height>60</height>
+							<font>Condensed-46</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected2</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posx>15</posx>
+							<posy>50</posy>
+							<width>990</width>
+							<height>60</height>
+							<font>Condensed-32-LS</font>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>grey-light3</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label fallback="416">[COLOR=white]$INFO[ListItem.Year][/COLOR] $INFO[Listitem.Genre]</label>
+							<visible>![Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+						</control>
+						<control type="label">
+							<posx>15</posx>
+							<posy>50</posy>
+							<width>990</width>
+							<height>60</height>
+							<font>Condensed-32-LS</font>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>grey-light3</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.TVShowTitle]</label>
+							<visible>Container.Content(Seasons) | Container.Content(Episodes)</visible>
+						</control>
+						<!-- RATING STARS -->
+						<control type="image">
+							<posx>960</posx>
+							<posy>-40</posy>
+							<height>140</height>
+							<width>140</width>
+							<aspectratio>keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Rating,stars/,.png]</texture>
+							<colordiffuse>white</colordiffuse>
+							<fadetime>800</fadetime>
+							<visible>[Container.Content(Movies) | Container.Content(Videos,Files) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
+						</control>
+						<!-- RATING LABEL -->
+						<control type="label">
+							<posx>932</posx>
+							<posy>0</posy>
+							<width>600</width>
+							<height>60</height>
+							<font>Condensed-30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected2</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>Window.IsVisible(Videos)</visible>
+						</control>
+						<!-- RATING LABEL -->
+						<control type="label">
+							<posx>1020</posx>
+							<posy>0</posy>
+							<width>600</width>
+							<height>60</height>
+							<font>Condensed-30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected2</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+							<visible>!Window.IsVisible(Videos)</visible>
+						</control>
+						<control type="image">
+							<posx>1150</posx>
+							<posy>10</posy>
+							<width>40</width>
+							<height>40</height>
+							<texture>icons/overlays/unwatched.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>red2</colordiffuse>
+							<visible>!substring(listitem.label,..,left)</visible>
+							<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)] + !IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+						</control>
 					</control>
-					
-					<control type="image">
-					<posx>1291</posx>
-					<posy>115</posy>
-					<width>559</width>
-					<height>810</height>
-					<texture>white.png</texture>
-					<colordiffuse>grey6</colordiffuse>
-					</control>
-					
-					<posx>1281</posx>
-					<posy>115</posy>
-					<width>10</width>
-					<height>810</height>
-					
-					<control type="list" id="531">
-					<posx>80</posx>
-					<posy>125</posy>
-					<width>1210</width>
-					<height>782</height>
-					<onleft>60</onleft>
-					<onright>301</onright>
-					<onup>531</onup>
-					<ondown>531</ondown>
-					<focusposition>2</focusposition>
-					<viewtype label="InfoList">list</viewtype>
-					<pagecontrol>60</pagecontrol>
-					<scrolltime tween="sine" easing="inout">200</scrolltime>
-					<itemlayout height="56" width="870">
-					
-					<control type="label">
-					<posx>15</posx>
-					<posy>0</posy>
-					<width>990</width>
-					<height>56</height>
-					<font>Condensed-30</font>
-					<textcolor>grey3</textcolor>
-					<selectedcolor>selected1</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-					</control>
-					
-					<control type="label">
-					<posx>1020</posx>
-					<posy>0</posy>
-					<width>600</width>
-					<height>56</height>
-					<font>Condensed-30</font>
-					<textcolor>grey3</textcolor>
-					<selectedcolor>selected1</selectedcolor>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label2]</label>
-					<visible>!Window.IsVisible(Videos)</visible>
-					</control>
-					
-					<control type="label">
-					<posx>932</posx>
-					<posy>0</posy>
-					<width>600</width>
-					<height>56</height>
-					<font>Condensed-30</font>
-					<textcolor>grey3</textcolor>
-					<selectedcolor>selected1</selectedcolor>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label2]</label>
-					<visible>Window.IsVisible(Videos)</visible>
-					</control>
-					
-					<control type="image">
-					<posx>1150</posx>
-					<posy>10</posy>
-					<width>40</width>
-				    <height>40</height>
-				    <texture>icons/overlays/unwatched.png</texture>
-				    <aspectratio>stretch</aspectratio>
-				    <colordiffuse>red2-condensed</colordiffuse>
-				    <visible>!substring(listitem.label,..,left)</visible>
-				    <visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)] + !IntegerGreaterThan(ListItem.PlayCount,0)</visible>
-					</control>
-					</itemlayout>
-					
-					<focusedlayout height="120" width="870">
-					
-					<control type="group">
-					<animation effect="slide" start="0,40" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(531).OnPrevious">focus</animation>
-				    <animation effect="slide" start="0,-40" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container(531).OnNext">focus</animation>
-					
-					<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1202</width>
-					<height>120</height>
-					<texture>white.png</texture>
-					<colordiffuse>grey6</colordiffuse>
-					</control>
-					
-					<control type="label">
-					<posx>15</posx>
-					<posy>0</posy>
-					<width>990</width>
-					<height>60</height>
-					<font>Condensed-46</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>selected2</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-					</control>
-					
-					<control type="label">
-					<posx>15</posx>
-					<posy>50</posy>
-					<width>990</width>
-					<height>60</height>
-					<font>Condensed-32-LS</font>
-					<textcolor>grey2</textcolor>
-					<selectedcolor>grey-light3</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label fallback="416">[COLOR=white]$INFO[ListItem.Year][/COLOR]  $INFO[Listitem.Genre]</label>
-					<visible>![Container.Content(Seasons) | Container.Content(Episodes)]</visible>
-					</control>
-					
-					<control type="label">
-					<posx>15</posx>
-					<posy>50</posy>
-					<width>990</width>
-					<height>60</height>
-					<font>Condensed-32-LS</font>
-					<textcolor>grey2</textcolor>
-					<selectedcolor>grey-light3</selectedcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.TVShowTitle]</label>
-					<visible>Container.Content(Seasons) | Container.Content(Episodes)</visible>
-					</control>
-					
-					<!-- RATING STARS --> 
-					
-					<control type="image">
-					<posx>960</posx>
-					<posy>-40</posy>
-					<height>140</height>
-					<width>140</width>
-					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Rating,stars/,.png]</texture>
-					<colordiffuse>white</colordiffuse>
-					<fadetime>800</fadetime>
-					<visible>[Container.Content(Movies) | Container.Content(Videos,Files) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-					</control>
-					
-					<!-- RATING LABEL -->
-					
-					<control type="label">
-					<posx>932</posx>
-					<posy>0</posy>
-					<width>600</width>
-					<height>60</height>
-					<font>Condensed-30</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>selected2</selectedcolor>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label2]</label>
-					<visible>Window.IsVisible(Videos)</visible>
-					</control>
-					
-					<!-- RATING LABEL -->
-					
-					<control type="label">
-					<posx>1020</posx>
-					<posy>0</posy>
-					<width>600</width>
-					<height>60</height>
-					<font>Condensed-30</font>
-					<textcolor>white</textcolor>
-					<selectedcolor>selected2</selectedcolor>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label2]</label>
-					<visible>!Window.IsVisible(Videos)</visible>
-					</control>
-					
-					<control type="image">
-					<posx>1150</posx>
-					<posy>10</posy>
-					<width>40</width>
-				    <height>40</height>
-				    <texture>icons/overlays/unwatched.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>red2</colordiffuse>
-					<visible>!substring(listitem.label,..,left)</visible>
-					<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)] + !IntegerGreaterThan(ListItem.PlayCount,0)</visible>
-					</control>
-					</control>
-					</focusedlayout>
-					</control>
-					
-					
-					<control type="group">
-					<posx>1550</posx>
-					<posy>985</posy>
-					<include>TimeAndTemp</include>
-					</control>
-					
-					<control type="group">
-					<posx>0</posx>
-					<posy>-20</posy>
-					<include>nowplaying_home_widgets</include>
-					</control>
-					
-					<control type="scrollbar" id="60">
-					<posx>40</posx>
-					<posy>115</posy>
-					<width>10</width>
-					<height>810</height>
-					<texturesliderbackground colordiffuse="grey3-transparent">white.png</texturesliderbackground>
-					<textureslidernib colordiffuse="grey3">white.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="green1">white.png</textureslidernibfocus>
-					<onleft>9000</onleft>
-					<onright>531</onright>
-					<showonepage>true</showonepage>
-					<orientation>vertical</orientation>
-					<visible>Control.IsVisible(531)</visible>
-					</control>
-					
-					<control type="group">
-					<posx>1301</posx>
-					<posy>125</posy>
-					<visible>Control.IsVisible(531) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)]</visible>
-					
-					<control type="image">
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<posx>1550</posx>
+				<posy>985</posy>
+				<include>TimeAndTemp</include>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>-20</posy>
+				<include>nowplaying_home_widgets</include>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>40</posx>
+				<posy>115</posy>
+				<width>10</width>
+				<height>810</height>
+				<texturesliderbackground colordiffuse="grey3-transparent">white.png</texturesliderbackground>
+				<textureslidernib colordiffuse="grey3">white.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="green1">white.png</textureslidernibfocus>
+				<onleft>9000</onleft>
+				<onright>531</onright>
+				<showonepage>true</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(531)</visible>
+			</control>
+			<control type="group">
+				<posx>1301</posx>
+				<posy>125</posy>
+				<visible>Control.IsVisible(531) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)]</visible>
+				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>540</width>
@@ -262,9 +243,8 @@
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<fadetime>200</fadetime>
 					<texture>$INFO[ListItem.Art(fanart)]</texture>
-					</control>
-					
-					<control type="textbox">
+				</control>
+				<control type="textbox">
 					<posx>3</posx>
 					<posy>625</posy>
 					<width>528</width>
@@ -275,14 +255,9 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<align>justify</align>
 					<autoscroll delay="6000" time="3000" repeat="8000">true</autoscroll>
-					</control>
-					
-					
-					<!-- FLAGS MOVIES AND TVSHOWS -->
-					
-					
-					
-					<control type="grouplist">
+				</control>
+				<!-- FLAGS MOVIES AND TVSHOWS -->
+				<control type="grouplist">
 					<description>Flags Backgrounds</description>
 					<posx>0</posx>
 					<posy>550</posy>
@@ -291,67 +266,60 @@
 					<align>left</align>
 					<itemgap>9.5</itemgap>
 					<orientation>horizontal</orientation>
-
 					<control type="image">
-					<description>Resolution</description>
-					<width>173.5</width>
-					<height>56</height>
-					<texture>white.png</texture>
-					<colordiffuse>green1</colordiffuse>
-					<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)]</visible>
+						<description>Resolution</description>
+						<width>173.5</width>
+						<height>56</height>
+						<texture>white.png</texture>
+						<colordiffuse>green1</colordiffuse>
+						<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)]</visible>
 					</control>
-					
 					<control type="image">
-					<description>Codec</description>
-					<width>173.5</width>
-					<height>56</height>
-					<texture>white.png</texture>
-					<colordiffuse>grey3</colordiffuse>
-					<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)]</visible>
+						<description>Codec</description>
+						<width>173.5</width>
+						<height>56</height>
+						<texture>white.png</texture>
+						<colordiffuse>grey3</colordiffuse>
+						<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)]</visible>
 					</control>
-
 					<control type="image">
-					<description>MPPA Ratings</description>
-					<width>173.5</width>
-					<height>56</height>
-					<texture>white.png</texture>
-					<colordiffuse>grey3</colordiffuse>
-					<visible>![substring(ListItem.MPAA,TV-MA)]</visible>
-					<visible>Container.Content(TVShows)</visible>
+						<description>MPPA Ratings</description>
+						<width>173.5</width>
+						<height>56</height>
+						<texture>white.png</texture>
+						<colordiffuse>grey3</colordiffuse>
+						<visible>![substring(ListItem.MPAA,TV-MA)]</visible>
+						<visible>Container.Content(TVShows)</visible>
 					</control>
-
 					<control type="image">
-					<description>MPAA Rated R</description>
-					<width>173.5</width>
-					<height>56</height>
-					<texture>white.png</texture>
-					<colordiffuse>red3-condensed</colordiffuse>
-					<visible>[substring(ListItem.MPAA,TV-MA)]</visible>
-					<visible>Container.Content(TVShows)</visible>
+						<description>MPAA Rated R</description>
+						<width>173.5</width>
+						<height>56</height>
+						<texture>white.png</texture>
+						<colordiffuse>red3-condensed</colordiffuse>
+						<visible>[substring(ListItem.MPAA,TV-MA)]</visible>
+						<visible>Container.Content(TVShows)</visible>
 					</control>
-
 					<control type="image">
-					<description>MPAA Rated R</description>
-					<width>173.5</width>
-					<height>56</height>
-					<texture>white.png</texture>
-					<colordiffuse>red3-condensed</colordiffuse>
-					<visible>[substring(ListItem.MPAA,Rated R)]</visible>
-					<visible>Container.Content(Movies)</visible>
+						<description>MPAA Rated R</description>
+						<width>173.5</width>
+						<height>56</height>
+						<texture>white.png</texture>
+						<colordiffuse>red3-condensed</colordiffuse>
+						<visible>[substring(ListItem.MPAA,Rated R)]</visible>
+						<visible>Container.Content(Movies)</visible>
 					</control>
-					
 					<control type="image">
-					<description>MPPA Ratings</description>
-					<width>173.5</width>
-					<height>56</height>
-					<texture>white.png</texture>
-					<colordiffuse>grey3</colordiffuse>
-					<visible>![substring(ListItem.MPAA,Rated R)]</visible>
-					<visible>Container.Content(Movies)</visible>
+						<description>MPPA Ratings</description>
+						<width>173.5</width>
+						<height>56</height>
+						<texture>white.png</texture>
+						<colordiffuse>grey3</colordiffuse>
+						<visible>![substring(ListItem.MPAA,Rated R)]</visible>
+						<visible>Container.Content(Movies)</visible>
 					</control>
-					</control>
-					
-					<control type="grouplist">
+				</control>
+				<control type="grouplist">
 					<description>Info Flags</description>
 					<posx>0</posx>
 					<posy>540</posy>
@@ -360,92 +328,82 @@
 					<align>left</align>
 					<itemgap>9.5</itemgap>
 					<orientation>horizontal</orientation>
-
 					<control type="label">
-					<width>173.5</width>
-					<height>72</height>
-					<label fallback="32072">$INFO[ListItem.VideoResolution]p</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Condensed-38</font>
-					<textcolor>white</textcolor>
-					<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)]</visible>
+						<width>173.5</width>
+						<height>72</height>
+						<label fallback="32072">$INFO[ListItem.VideoResolution]p</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Condensed-38</font>
+						<textcolor>white</textcolor>
+						<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)]</visible>
 					</control>
-					
 					<control type="label">
-					<width>173.5</width>
-					<height>72</height>
-					<label fallback="32072">$INFO[ListItem.Duration] $LOCALIZE[32086]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Condensed-38</font>
-					<textcolor>white</textcolor>
-					<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)]</visible>
+						<width>173.5</width>
+						<height>72</height>
+						<label fallback="32072">$INFO[ListItem.Duration] $LOCALIZE[32086]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Condensed-38</font>
+						<textcolor>white</textcolor>
+						<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos,Files)]</visible>
 					</control>
-					
 					<control type="label">
-					<width>173.5</width>
-					<height>72</height>
-					<label fallback="32072">$INFO[ListItem.MPAA]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Condensed-38</font>
-					<textcolor>white</textcolor>
-					<visible>![substring(ListItem.MPAA,Rated PG-13)]</visible>
-					<visible>Container.Content(Movies)</visible>
+						<width>173.5</width>
+						<height>72</height>
+						<label fallback="32072">$INFO[ListItem.MPAA]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Condensed-38</font>
+						<textcolor>white</textcolor>
+						<visible>![substring(ListItem.MPAA,Rated PG-13)]</visible>
+						<visible>Container.Content(Movies)</visible>
 					</control>
-
 					<control type="label">
-					<width>173.5</width>
-					<height>72</height>
-					<label fallback="32072">32079</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Condensed-38</font>
-					<textcolor>white</textcolor>
-					<visible>[substring(ListItem.MPAA,Rated PG-13)]</visible>
-					<visible>Container.Content(Movies)</visible>
+						<width>173.5</width>
+						<height>72</height>
+						<label fallback="32072">32079</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Condensed-38</font>
+						<textcolor>white</textcolor>
+						<visible>[substring(ListItem.MPAA,Rated PG-13)]</visible>
+						<visible>Container.Content(Movies)</visible>
 					</control>
-					
 					<control type="label">
-					<width>173.5</width>
-					<height>72</height>
-					<label fallback="32072">32079</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Condensed-38</font>
-					<textcolor>white</textcolor>
-					<visible>![substring(ListItem.MPAA,Rated R)]</visible>
-					<visible>Container.Content(Movies)</visible>
+						<width>173.5</width>
+						<height>72</height>
+						<label fallback="32072">32079</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Condensed-38</font>
+						<textcolor>white</textcolor>
+						<visible>![substring(ListItem.MPAA,Rated R)]</visible>
+						<visible>Container.Content(Movies)</visible>
 					</control>
-					
 					<control type="label">
-					<width>173.5</width>
-					<height>72</height>
-					<label fallback="32072">32079</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Condensed-38</font>
-					<textcolor>white</textcolor>
-					<visible>[substring(ListItem.MPAA,Rated R)]</visible>
-					<visible>Container.Content(Movies)</visible>
+						<width>173.5</width>
+						<height>72</height>
+						<label fallback="32072">32079</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Condensed-38</font>
+						<textcolor>white</textcolor>
+						<visible>[substring(ListItem.MPAA,Rated R)]</visible>
+						<visible>Container.Content(Movies)</visible>
 					</control>
-					
 					<control type="label">
-					<width>173.5</width>
-					<height>72</height>
-					<label fallback="32072">$INFO[ListItem.MPAA]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Condensed-38</font>
-					<textcolor>white</textcolor>
-					<visible>Container.Content(TVShows)</visible>
+						<width>173.5</width>
+						<height>72</height>
+						<label fallback="32072">$INFO[ListItem.MPAA]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Condensed-38</font>
+						<textcolor>white</textcolor>
+						<visible>Container.Content(TVShows)</visible>
 					</control>
-					</control>
-					</control>
-					
-					</control>
-					
-					
-					</include>
-					</includes>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

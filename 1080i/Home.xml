@@ -1,46 +1,34 @@
-					<window>
-					
-					
-					<onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Movie,unwatched=True,limit=50,resume=False,method=Random,playlist=special://skin/playlists/Top Rated Movies.xsp,menu=Menu10)</onload>
-					<onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Movie,unwatched=True,limit=50,resume=False,method=Random,playlist=special://skin/playlists/New Movies.xsp,menu=Menu12)</onload>
-					<onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Episode,unwatched=True,limit=1,resume=False,method=Last,playlist=special://skin/playlists/Episodes in Progress.xsp,menu=Menu19)</onload>
-					
-					<onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Music,limit=50,resume=False,method=Random,playlist=special://skin/playlists/New Albums.xsp,menu=Menu1)</onload>
-					<onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Music,limit=1,method=LastPlayed,playlist=special://skin/playlists/Last Played Songs.xsp,menu=Menu2)</onload>
-					
-					
-					
-					<defaultcontrol always="false">300</defaultcontrol>
-					<allowoverlay>yes</allowoverlay>
-					
-					<controls>
-					
-					<include>Overlay</include>
-					
-					<control type="group">
-					
-					<include>SkinWidgetsMovies</include>
-					<include>SkinWidgetsTVShows</include>
-					<include>SkinWidgetsVideos</include>
-					<include>SkinWidgetsLiveTV</include>
-					<include>SkinWidgetsMusic</include>
-					<include>SkinWidgetsWeather</include>
-					<include>SkinWidgetsApps</include>
-					<include>SkinWidgetsPictures</include>
-					<include>SkinWidgetsSystem</include>
-					<include>nowplaying_home</include>
-					<include>nowplaying_home_widgets</include>
-					<include>DefaultOpenClose</include>
-					
 
-					<!-- RSS -->
-
-					<control type="group">
-					
-					<posx>0</posx>
-					<posy>0</posy>
-					
-					<control type="rss">
+<window>
+	<!--  <onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Movie,unwatched=True,limit=50,resume=False,method=Random,playlist=special://skin/playlists/Top Rated Movies.xsp,menu=Menu10)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Movie,unwatched=True,limit=50,resume=False,method=Random,playlist=special://skin/playlists/New Movies.xsp,menu=Menu12)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Episode,unwatched=True,limit=1,resume=False,method=Last,playlist=special://skin/playlists/Episodes in Progress.xsp,menu=Menu19)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Music,limit=50,resume=False,method=Random,playlist=special://skin/playlists/New Albums.xsp,menu=Menu1)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems)">XBMC.RunScript(script.randomandlastitems,type=Music,limit=1,method=LastPlayed,playlist=special://skin/playlists/Last Played Songs.xsp,menu=Menu2)</onload> -->
+	<onload condition="System.HasAddon(plugin.video.xbmb3c)">RunScript(plugin.video.xbmb3c,skin)</onload>
+	
+	<defaultcontrol always="false">300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Overlay</include>
+		<control type="group">
+			<include>SkinWidgetsMovies</include>
+			<include>SkinWidgetsTVShows</include>
+			<include>SkinWidgetsVideos</include>
+			<include>SkinWidgetsLiveTV</include>
+			<include>SkinWidgetsMusic</include>
+			<include>SkinWidgetsWeather</include>
+			<include>SkinWidgetsApps</include>
+			<include>SkinWidgetsPictures</include>
+			<include>SkinWidgetsSystem</include>
+			<include>nowplaying_home</include>
+			<include>nowplaying_home_widgets</include>
+			<include>DefaultOpenClose</include>
+			<!-- RSS -->
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<control type="rss">
 					<description>RSS Feed</description>
 					<posx>90</posx>
 					<posy>3</posy>
@@ -51,36 +39,27 @@
 					<titlecolor>grey6</titlecolor>
 					<headlinecolor>grey6</headlinecolor>
 					<textcolor>grey3</textcolor>
-					</control>
-					</control>
-
-					<!-- TIME AND TEMPERATURE -->
-					
-					<control type="group">
-					<posx>1550</posx>
-					<posy>1005</posy>
-					<include>TimeAndTemp</include>
-					</control>
-
-					<!-- MENU -->
-					
-					<control type="group">
-					
-					<include>HomeSubmenu</include>
-					
-					<control type="image">
+				</control>
+			</control>
+			<!-- TIME AND TEMPERATURE -->
+			<control type="group">
+				<posx>1550</posx>
+				<posy>1005</posy>
+				<include>TimeAndTemp</include>
+			</control>
+			<!-- MENU -->
+			<control type="group">
+				<include>HomeSubmenu</include>
+				<control type="image">
 					<posx>90</posx>
 					<posy>55</posy>
 					<height>80</height>
 					<width>1740</width>
 					<texture background="true">white.png</texture>
 					<colordiffuse>grey6</colordiffuse>
-					</control>
-					
-					
-					<!-- MAIN MENU -->
-					
-					<control type="list" id="300">
+				</control>
+				<!-- MAIN MENU -->
+				<control type="list" id="300">
 					<description>Home list</description>
 					<centerleft>50%</centerleft>
 					<posy>55</posy>
@@ -99,119 +78,96 @@
 					<orientation>horizontal</orientation>
 					<scrolltime>200</scrolltime>
 					<itemlayout width="217.5" height="80">
-					
-					
-					<control type="label">
-					<posx>108.75</posx>
-					<posy>0</posy>
-					<width>217.5</width>
-					<height>80</height>
-					<font>Condensed-50</font>
-					<textcolor>grey3</textcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-					<animation effect="fade" start="100" end="70" time="200" reversible="true" condition="ControlGroup(9001).HasFocus | ControlGroup(8000).HasFocus  | ControlGroup(8010).HasFocus | Control.HasFocus(301) | ControlGroup(8050).HasFocus | ControlGroup(8060).HasFocus | ControlGroup(8070).HasFocus | ControlGroup(8080).HasFocus | ControlGroup(8090).HasFocus | ControlGroup(8100).HasFocus">conditional</animation>
-					</control>
+						<control type="label">
+							<posx>108.75</posx>
+							<posy>0</posy>
+							<width>217.5</width>
+							<height>80</height>
+							<font>Condensed-50</font>
+							<textcolor>grey3</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="70" time="200" reversible="true" condition="ControlGroup(9001).HasFocus | ControlGroup(8000).HasFocus  | ControlGroup(8010).HasFocus | Control.HasFocus(301) | ControlGroup(8050).HasFocus | ControlGroup(8060).HasFocus | ControlGroup(8070).HasFocus | ControlGroup(8080).HasFocus | ControlGroup(8090).HasFocus | ControlGroup(8100).HasFocus">conditional</animation>
+						</control>
 					</itemlayout>
-					
 					<focusedlayout width="217.5" height="80">
-					<control type="label">
-					<posx>108.75</posx>
-					<posy>0</posy>
-					<width>217.5</width>
-					<height>80</height>
-					<font>Condensed-50</font>
-					<textcolor>white</textcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-					<animation effect="fade" start="100" end="70" time="200" reversible="true" condition="ControlGroup(9001).HasFocus | ControlGroup(8000).HasFocus | ControlGroup(8010).HasFocus | Control.HasFocus(301) | ControlGroup(8050).HasFocus | ControlGroup(8060).HasFocus | ControlGroup(8070).HasFocus | ControlGroup(8080).HasFocus | ControlGroup(8090).HasFocus | ControlGroup(8100).HasFocus">conditional</animation>
-					</control>
+						<control type="label">
+							<posx>108.75</posx>
+							<posy>0</posy>
+							<width>217.5</width>
+							<height>80</height>
+							<font>Condensed-50</font>
+							<textcolor>white</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="70" time="200" reversible="true" condition="ControlGroup(9001).HasFocus | ControlGroup(8000).HasFocus | ControlGroup(8010).HasFocus | Control.HasFocus(301) | ControlGroup(8050).HasFocus | ControlGroup(8060).HasFocus | ControlGroup(8070).HasFocus | ControlGroup(8080).HasFocus | ControlGroup(8090).HasFocus | ControlGroup(8100).HasFocus">conditional</animation>
+						</control>
 					</focusedlayout>
 					<content>
-					
-					<item id="8">
-					<description>now playing</description>
-					<label>$LOCALIZE[31023]</label>
-					<onclick>fullscreen</onclick>
-					<visible>Player.HasVideo | Player.HasAudio</visible>
-					</item>
-					
-					<item id="5">
-					<description>Movies</description>
-					<label>$LOCALIZE[342]</label>
-					<onclick>ActivateWindow(video,movietitles,return)</onclick>
-					<visible>Library.HasContent(Movies)</visible>
-					</item>
-					
-					<item id="6">
-					<description>TV Shows</description>
-					<label>$LOCALIZE[20343]</label>
-					<onclick>ActivateWindow(video,tvshowtitles,return)</onclick>
-					<visible>Library.HasContent(TVShows)</visible>
-					</item>
-					
-					<item id="13">
-					<description>Live TV</description>
-					<label>$LOCALIZE[32042]</label>
-					<onclick>ActivateWindow(TV)</onclick>
-					<!-- <visible>System.HasPVR</visible> -->
-					<visible>System.GetBool(pvrmanager.enabled)</visible>
-					</item>
-					
-					 <item id="2">
-					<description>Videos</description>
-					<label>$LOCALIZE[10025]</label>
-					<onclick>ActivateWindow(Videos)</onclick>
-					</item>
-					
-					<item id="3">
-					<description>Music</description>
-					<label>$LOCALIZE[10005]</label>
-					<onclick>ActivateWindow(music)</onclick>
-					</item>
-					
-					
-					<item id="7">
-					<description>Pictures</description>
-					<label>$LOCALIZE[31951]</label>
-					<onclick>ActivateWindow(pictures,return)</onclick>
-					<visible>!System.GetBool(pvrmanager.enabled)</visible>
-					<!-- <visible>!System.HasPVR</visible> -->
-					</item>
-					
-					<item id="1">
-					<description>APPS</description>
-					<label>$LOCALIZE[32041]</label>
-					<onclick>ActivateWindow(programs,addons,return)</onclick>
-					</item>
-					
-					<item id="9">
-					<description>Weather</description>
-					<label>$LOCALIZE[12600]</label>
-					<onclick>ActivateWindow(weather)</onclick>
-					</item>
-					
-					<item id="11">
-					<description>System</description>
-					<label>$LOCALIZE[31959]</label>
-					<onclick>ActivateWindow(settings)</onclick>
-					</item>
-					
-					
+						<item id="8">
+							<description>now playing</description>
+							<label>$LOCALIZE[31023]</label>
+							<onclick>fullscreen</onclick>
+							<visible>Player.HasVideo | Player.HasAudio</visible>
+						</item>
+						<item id="5">
+							<description>Movies</description>
+							<label>$LOCALIZE[342]</label>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)]</onclick>
+						</item>
+						<item id="6">
+							<description>TV Shows</description>
+							<label>$LOCALIZE[20343]</label>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
+						</item>
+						<item id="13">
+							<description>Live TV</description>
+							<label>$LOCALIZE[32042]</label>
+							<onclick>ActivateWindow(TV)</onclick>
+							<!-- <visible>System.HasPVR</visible> -->
+							<visible>System.GetBool(pvrmanager.enabled)</visible>
+						</item>
+						<item id="2">
+							<description>Videos</description>
+							<label>$LOCALIZE[10025]</label>
+							<onclick>ActivateWindow(Videos)</onclick>
+						</item>
+						<item id="3">
+							<description>Music</description>
+							<label>$LOCALIZE[10005]</label>
+							<onclick>ActivateWindow(music)</onclick>
+						</item>
+						<item id="7">
+							<description>Pictures</description>
+							<label>$LOCALIZE[31951]</label>
+							<onclick>ActivateWindow(pictures,return)</onclick>
+							<visible>!System.GetBool(pvrmanager.enabled)</visible>
+							<!-- <visible>!System.HasPVR</visible> -->
+						</item>
+						<item id="1">
+							<description>APPS</description>
+							<label>$LOCALIZE[32041]</label>
+							<onclick>ActivateWindow(programs,addons,return)</onclick>
+						</item>
+						<item id="9">
+							<description>Weather</description>
+							<label>$LOCALIZE[12600]</label>
+							<onclick>ActivateWindow(weather)</onclick>
+						</item>
+						<item id="11">
+							<description>System</description>
+							<label>$LOCALIZE[31959]</label>
+							<onclick>ActivateWindow(settings)</onclick>
+						</item>
 					</content>
-					</control>
-					</control>
-					
-					
-					<!-- MAIN BUTTONS -->
-					
-					<control type="group">
-					
-					<visible>![Container(300).HasFocus(8) | Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(extendedprogressdialog) | Window.IsActive(mutebug) | Window.IsActive(volumebar) | Player.HasVideo | Player.HasAudio]</visible>
-					
-					<control type="panel" id="301">
+				</control>
+			</control>
+			<!-- MAIN BUTTONS -->
+			<control type="group">
+				<visible>![Container(300).HasFocus(8) | Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(extendedprogressdialog) | Window.IsActive(mutebug) | Window.IsActive(volumebar) | Player.HasVideo | Player.HasAudio]</visible>
+				<control type="panel" id="301">
 					<description>Home list 2</description>
 					<posx>50</posx>
 					<posy>975</posy>
@@ -225,53 +181,43 @@
 					<onright>301</onright>
 					<orientation>horizontal</orientation>
 					<scrolltime tween="sine" easing="inout">400</scrolltime>
-					
 					<itemlayout width="80" height="100">
-					<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<height>120</height>
-					<width>120</width>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
-					<colordiffuse>grey6</colordiffuse>
-					</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<height>120</height>
+							<width>120</width>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>grey6</colordiffuse>
+						</control>
 					</itemlayout>
-					
 					<focusedlayout width="80" height="100">
-					<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<height>120</height>
-					<width>120</width>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
-					<colordiffuse>red1</colordiffuse>
-					<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
-					</control>
-					
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<height>120</height>
+							<width>120</width>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>red1</colordiffuse>
+							<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+						</control>
 					</focusedlayout>
 					<content>
-					<item id="1">
-					<description>Power</description>
-					<icon>icons/home/power.png</icon>
-					<onclick>ActivateWindow(shutdownmenu)</onclick>
-					</item>
-					
-					<item id="2">
-					<description>Favourites</description>
-					<icon>icons/home/favs.png</icon>
-					<onclick>ActivateWindow(favourites)</onclick>
-					</item>
-					
-					
-					
+						<item id="1">
+							<description>Power</description>
+							<icon>icons/home/power.png</icon>
+							<onclick>ActivateWindow(shutdownmenu)</onclick>
+						</item>
+						<item id="2">
+							<description>Favourites</description>
+							<icon>icons/home/favs.png</icon>
+							<onclick>ActivateWindow(favourites)</onclick>
+						</item>
 					</content>
-					</control>
-					
-					
-					</control> 
-					</control>
-					
-					</controls>
-					</window>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
