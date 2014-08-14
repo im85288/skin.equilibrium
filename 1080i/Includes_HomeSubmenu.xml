@@ -349,7 +349,7 @@
 						<item id="110">
 							<label>135</label>
 							<icon>icons/home/movies/genres.png</icon>
-							<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.7.path)]</onclick>
 							<visible>![Skin.HasSetting(hide110) | Skin.HasSetting(custom110)]</visible>
 						</item>
 						<item id="110">
@@ -364,7 +364,7 @@
 							<description>studios</description>
 							<label>$LOCALIZE[20388]</label>
 							<icon>icons/home/tvshows/studios.png</icon>
-							<onclick>ActivateWindow(VideoLibrary,MoviesStudios,return)</onclick>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.8.path)]</onclick>
 							<visible>![Skin.HasSetting(hide111) | Skin.HasSetting(custom111)]</visible>
 						</item>
 						<item id="111">
@@ -378,7 +378,7 @@
 						<item id="112">
 							<label>344</label>
 							<icon>icons/home/movies/actors.png</icon>
-							<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.9.path)]</onclick>
 							<visible>![Skin.HasSetting(hide112) | Skin.HasSetting(custom112)]</visible>
 						</item>
 						<item id="112">
@@ -588,7 +588,7 @@
 						<item id="208">
 							<label>344</label>
 							<icon>icons/home/tvshows/actors.png</icon>
-							<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.10.path)]</onclick>
 							<visible>![Skin.HasSetting(hide208) | Skin.HasSetting(custom208)]</visible>
 						</item>
 						<item id="208">
@@ -602,7 +602,7 @@
 						<item id="209">
 							<label>135</label>
 							<icon>icons/home/tvshows/genres.png</icon>
-							<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.8.path)]</onclick>
 							<visible>![Skin.HasSetting(hide209) | Skin.HasSetting(custom209)]</visible>
 						</item>
 						<item id="209">
@@ -616,7 +616,7 @@
 						<item id="210">
 							<label>$LOCALIZE[20388]</label>
 							<icon>icons/home/tvshows/studios.png</icon>
-							<onclick>ActivateWindow(VideoLibrary,TVShowStudios,return)</onclick>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.9.path)]</onclick>
 							<visible>![Skin.HasSetting(hide210) | Skin.HasSetting(custom210)]</visible>
 						</item>
 						<item id="210">

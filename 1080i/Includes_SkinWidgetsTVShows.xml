@@ -668,7 +668,7 @@
 						<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
 					</control>
 				</focusedlayout>
-				<content target="video">videodb://tvshows/actors/</content>
+				<content target="video">$INFO[Window(Home).Property(xbmb3c.std.tvshows.10.content)]</content>
 			</control>
 			<!-- CUSTOM TV SHOWS WIDGETS 208 -->
 			<control type="wraplist" id="8001">
@@ -747,7 +747,7 @@
 						<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
 					</control>
 				</focusedlayout>
-				<content target="video">videodb://tvshows/genres/</content>
+				<content target="video">$INFO[Window(Home).Property(xbmb3c.std.tvshows.8.content)]</content>
 			</control>
 			<!-- CUSTOM TV SHOWS WIDGETS 209 -->
 			<control type="wraplist" id="8001">
@@ -847,7 +847,7 @@
 						<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
 					</control>
 				</focusedlayout>
-				<content target="video">videodb://tvshows/studios/</content>
+				<content target="video">$INFO[Window(Home).Property(xbmb3c.std.tvshows.9.content)]</content>
 			</control>
 			<!-- CUSTOM TV SHOWS WIDGETS 210 -->
 			<control type="wraplist" id="8001">

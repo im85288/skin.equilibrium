@@ -124,7 +124,7 @@
 						<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
 					</control>
 				</focusedlayout>
-				<content target="video">$INFO[Window(Home).Property(xbmb3c.std.movies.6.content)]</content>
+				<content>$INFO[Window(Home).Property(xbmb3c.std.movies.6.content)]</content>
 			</control>
 			<!-- CUSTOM MOVIES WIDGETS 101 -->
 			<control type="wraplist" id="8001">
@@ -836,7 +836,7 @@
 						<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
 					</control>
 				</focusedlayout>
-				<content target="video">videodb://movies/genres/</content>
+				<content target="video">$INFO[Window(Home).Property(xbmb3c.std.movies.7.content)]</content>
 			</control>
 			<!-- CUSTOM MOVIES WIDGETS 110 -->
 			<control type="wraplist" id="8001">
@@ -936,7 +936,7 @@
 						<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
 					</control>
 				</focusedlayout>
-				<content target="video">videodb://movies/studios/</content>
+				<content target="video">$INFO[Window(Home).Property(xbmb3c.std.movies.8.content)]</content>
 			</control>
 			<!-- CUSTOM MOVIES WIDGETS 111 -->
 			<control type="wraplist" id="8001">
@@ -1036,7 +1036,7 @@
 						<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
 					</control>
 				</focusedlayout>
-				<content target="video">videodb://movies/actors/</content>
+				<content target="video">$INFO[Window(Home).Property(xbmb3c.std.movies.9.content)]</content>
 			</control>
 			<!-- CUSTOM MOVIES WIDGETS 112 -->
 			<control type="wraplist" id="8001">
