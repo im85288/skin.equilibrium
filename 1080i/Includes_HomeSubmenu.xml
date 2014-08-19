@@ -198,10 +198,10 @@
 					<content>
 						<!-- ITEM 1 -->
 						<item id="100">
-							<description>recently added</description>
-							<label>$LOCALIZE[32044]</label>
+							<description>new movies</description>
+							<label>$LOCALIZE[32994]</label>
 							<icon>icons/home/movies/recentmovies.png</icon>
-							<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.2.path)]</onclick>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
 							<visible>![Skin.HasSetting(hide100) | Skin.HasSetting(custom100)]</visible>
 						</item>
 						<item id="100">
@@ -241,13 +241,13 @@
 							<visible>Skin.HasSetting(custom102)</visible>
 						</item>
 						<!-- ITEM 4 -->
-						<item id="103">
+					<!--  	<item id="103">
 							<description>new</description>
 							<label>$LOCALIZE[32085]</label>
 							<icon>icons/home/movies/new.png</icon>
 							<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
 							<visible>![Skin.HasSetting(hide103) | Skin.HasSetting(custom103)]</visible>
-						</item>
+						</item> -->
 						<item id="103">
 							<description>custom103</description>
 							<label>$INFO[Skin.String(custom103label)]</label>
@@ -257,11 +257,11 @@
 						</item>
 						<!-- ITEM 5 -->
 						<item id="104">
-							<description>hd</description>
-							<label>$LOCALIZE[32046]</label>
-							<icon>icons/home/movies/hdmovies.png</icon>
-							<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HD Movies.xsp,return)</onclick>
-							<visible>![Skin.HasSetting(hide104) | Skin.HasSetting(custom104)]</visible>
+							<description>user folder</description>
+							<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.1.title)]</label>
+							<icon>icons/home/files.png</icon>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.1.path)]</onclick>
+							<visible>![Skin.HasSetting(hide104) | Skin.HasSetting(custom104)] + !IsEmpty(Window(Home).Property(xbmb3c.usr.movies.1.title))</visible>
 						</item>
 						<item id="104">
 							<description>custom104</description>
@@ -272,11 +272,11 @@
 						</item>
 						<!-- ITEM 6 -->
 						<item id="105">
-							<description>3D</description>
-							<label>$LOCALIZE[32048]</label>
-							<icon>icons/home/movies/3dmovies.png</icon>
-							<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/3D Movies.xsp,return)</onclick>
-							<visible>![Skin.HasSetting(hide105) | Skin.HasSetting(custom105)]</visible>
+							<description>user folder 2</description>
+							<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.2.title)]</label>
+							<icon>icons/home/files.png</icon>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.2.path)]</onclick>
+							<visible>![Skin.HasSetting(hide105) | Skin.HasSetting(custom105)] + !IsEmpty(Window(Home).Property(xbmb3c.usr.movies.2.title))</visible>
 						</item>
 						<item id="105">
 							<description>custom105</description>
@@ -287,11 +287,11 @@
 						</item>
 						<!-- ITEM 7 -->
 						<item id="106">
-							<description>top rated</description>
-							<label>$LOCALIZE[32074]</label>
-							<icon>icons/home/movies/imdb.png</icon>
-							<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Top Rated Movies.xsp,return)</onclick>
-							<visible>![Skin.HasSetting(hide106) | Skin.HasSetting(custom106)]</visible>
+							<description>user folder 3</description>
+							<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.3.title)]</label>
+							<icon>icons/home/files.png</icon>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.3.path)]</onclick>
+							<visible>![Skin.HasSetting(hide106) | Skin.HasSetting(custom106)] + !IsEmpty(Window(Home).Property(xbmb3c.usr.movies.3.title))</visible>
 						</item>
 						<item id="106">
 							<description>custom106</description>
@@ -302,10 +302,10 @@
 						</item>
 						<!-- ITEM 8 -->
 						<item id="107">
-							<description>Kids</description>
-							<label>$LOCALIZE[32075]</label>
-							<icon>icons/home/movies/disney.png</icon>
-							<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Kids Movies.xsp,return)</onclick>
+							<description>favourite</description>
+							<label>$LOCALIZE[32074]</label>
+							<icon>icons/home/movies/imdb.png</icon>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.3.path)]</onclick>
 							<visible>![Skin.HasSetting(hide107) | Skin.HasSetting(custom107)]</visible>
 						</item>
 						<item id="107">
@@ -331,13 +331,13 @@
 							<visible>Skin.HasSetting(custom108)</visible>
 						</item>
 						<!-- ITEM 10 -->
-						<item id="109">
+					<!-- 	<item id="109">
 							<description>documentary</description>
 							<label>$LOCALIZE[32047]</label>
 							<icon>icons/home/movies/docus.png</icon>
 							<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Documentary.xsp,return)</onclick>
 							<visible>![Skin.HasSetting(hide109) | Skin.HasSetting(custom109)]</visible>
-						</item>
+						</item>  -->
 						<item id="109">
 							<description>custom109</description>
 							<label>$INFO[Skin.String(custom109label)]</label>
@@ -375,12 +375,12 @@
 							<visible>Skin.HasSetting(custom111)</visible>
 						</item>
 						<!-- ITEM 13 -->
-						<item id="112">
+					<!--  	<item id="112">
 							<label>344</label>
 							<icon>icons/home/movies/actors.png</icon>
 							<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.9.path)]</onclick>
 							<visible>![Skin.HasSetting(hide112) | Skin.HasSetting(custom112)]</visible>
-						</item>
+						</item> -->
 						<item id="112">
 							<description>custom112</description>
 							<label>$INFO[Skin.String(custom112label)]</label>
@@ -403,12 +403,12 @@
 							<visible>Skin.HasSetting(custom113)</visible>
 						</item>
 						<!-- ITEM 15 -->
-						<item id="114">
+						<!--  <item id="114">
 							<label>652</label>
 							<icon>icons/home/movies/years.png</icon>
 							<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
 							<visible>![Skin.HasSetting(hide114) | Skin.HasSetting(custom114)]</visible>
-						</item>
+						</item> -->
 						<item id="114">
 							<description>custom114</description>
 							<label>$INFO[Skin.String(custom114label)]</label>
@@ -417,12 +417,12 @@
 							<visible>Skin.HasSetting(custom114)</visible>
 						</item>
 						<!-- ITEM 16 -->
-						<item id="115">
+					<!--  	<item id="115">
 							<label>20348</label>
 							<icon>icons/home/movies/directors.png</icon>
 							<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
 							<visible>![Skin.HasSetting(hide115) | Skin.HasSetting(custom115)]</visible>
-						</item>
+						</item> -->
 						<item id="115">
 							<description>custom115</description>
 							<label>$INFO[Skin.String(custom115label)]</label>
@@ -544,7 +544,7 @@
 							<description>top rated</description>
 							<label>$LOCALIZE[32074]</label>
 							<icon>icons/home/tvshows/toprated.png</icon>
-							<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Top Rated TV Shows.xsp,return)</onclick>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.4.path)]</onclick>
 							<visible>![Skin.HasSetting(hide205) | Skin.HasSetting(custom205)]</visible>
 						</item>
 						<item id="205">
@@ -555,13 +555,13 @@
 							<visible>Skin.HasSetting(custom205)</visible>
 						</item>
 						<!-- ITEM 7 -->
-						<item id="206">
+					<!--  	<item id="206">
 							<description>documentary</description>
 							<label>$LOCALIZE[32083]</label>
 							<icon>icons/home/tvshows/broadcast.png</icon>
 							<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/TV Documentary.xsp,return)</onclick>
 							<visible>![Skin.HasSetting(hide206) | Skin.HasSetting(custom206)]</visible>
-						</item>
+						</item> -->
 						<item id="206">
 							<description>custom206</description>
 							<label>$INFO[Skin.String(custom206label)]</label>
@@ -570,13 +570,13 @@
 							<visible>Skin.HasSetting(custom206)</visible>
 						</item>
 						<!-- ITEM 8 -->
-						<item id="207">
+					<!--  	<item id="207">
 							<description>kids tv</description>
 							<label>$LOCALIZE[32075]</label>
 							<icon>icons/home/tvshows/kids.png</icon>
 							<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Kids TV Shows.xsp,return)</onclick>
 							<visible>![Skin.HasSetting(hide207) | Skin.HasSetting(custom207)]</visible>
-						</item>
+						</item> -->
 						<item id="207">
 							<description>custom207</description>
 							<label>$INFO[Skin.String(custom207label)]</label>
@@ -585,12 +585,11 @@
 							<visible>Skin.HasSetting(custom207)</visible>
 						</item>
 						<!-- ITEM 9 -->
-						<item id="208">
+					<!--  	<item id="208">
 							<label>344</label>
 							<icon>icons/home/tvshows/actors.png</icon>
 							<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.10.path)]</onclick>
-							<visible>![Skin.HasSetting(hide208) | Skin.HasSetting(custom208)]</visible>
-						</item>
+							<visi -->
 						<item id="208">
 							<description>custom208</description>
 							<label>$INFO[Skin.String(custom208label)]</label>
@@ -628,10 +627,11 @@
 						</item>
 						<!-- ITEM 12 -->
 						<item id="211">
-							<label>652</label>
-							<icon>icons/home/tvshows/years.png</icon>
-							<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
-							<visible>![Skin.HasSetting(hide211) | Skin.HasSetting(custom211)]</visible>
+							<description>user folder 1</description>
+							<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.title)]</label>
+							<icon>icons/home/files.png</icon>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.path)]</onclick>
+							<visible>![Skin.HasSetting(hide211) | Skin.HasSetting(custom211)] + !IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.1.title))</visible>
 						</item>
 						<item id="211">
 							<description>custom211</description>
@@ -642,9 +642,11 @@
 						</item>
 						<!-- ITEM 13 -->
 						<item id="212">
-							<label>32104</label>
-							<onclick>ActivateWindow(3001)</onclick>
-							<visible>![Skin.HasSetting(hide212) | Skin.HasSetting(custom212)]</visible>
+							<description>user folder 2</description>
+							<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.title)]</label>
+							<icon>icons/home/files.png</icon>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.path)]</onclick>
+							<visible>![Skin.HasSetting(hide212) | Skin.HasSetting(custom212)] + !IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.2.title))</visible>
 						</item>
 						<item id="212">
 							<description>custom212</description>
@@ -655,9 +657,11 @@
 						</item>
 						<!-- ITEM 14 -->
 						<item id="213">
-							<label>32104</label>
-							<onclick>ActivateWindow(3001)</onclick>
-							<visible>![Skin.HasSetting(hide213) | Skin.HasSetting(custom213)]</visible>
+							<description>user folder 2</description>
+							<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.3.title)]</label>
+							<icon>icons/home/files.png</icon>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.3.path)]</onclick>
+							<visible>![Skin.HasSetting(hide213) | Skin.HasSetting(custom213)] + !IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.3.title))</visible>
 						</item>
 						<item id="213">
 							<description>custom213</description>

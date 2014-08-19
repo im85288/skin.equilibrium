@@ -1286,6 +1286,18 @@ msgctxt "#32190"
 msgid "Finishes at"
 msgstr ""
 
+msgctxt "#32994"
+msgid "Random Movies"
+msgstr ""
+
+msgctxt "#32995"
+msgid "Suggested - "
+msgstr ""
+
+msgctxt "#32996"
+msgid "Information"
+msgstr ""
+
 msgctxt "#32997"
 msgid "Next Up"
 msgstr ""

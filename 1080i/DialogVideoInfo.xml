@@ -15,50 +15,7 @@
 			<itemgap>8</itemgap>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[13346]</label>
-				<visible>Container.Content(Movies)</visible>
-			</control>
-		</control>
-		<control type="grouplist">
-			<posx>98</posx>
-			<posy>55</posy>
-			<width>1500</width>
-			<height>70</height>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<itemgap>8</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[20351]</label>
-				<visible>Container.Content(TVShows)</visible>
-			</control>
-		</control>
-		<control type="grouplist">
-			<posx>98</posx>
-			<posy>55</posy>
-			<width>1500</width>
-			<height>70</height>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<itemgap>8</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[20351]</label>
-				<visible>Container.Content(Seasons)</visible>
-			</control>
-		</control>
-		<control type="grouplist">
-			<posx>98</posx>
-			<posy>55</posy>
-			<width>1500</width>
-			<height>70</height>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<itemgap>8</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[20352]</label>
-				<visible>Container.Content(Episodes)</visible>
+				<label>$INFO[ListItem.Property(ItemType),, $LOCALIZE[32996]]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -139,8 +96,7 @@
 			<control type="group">
 				<posx>0</posx>
 				<posy>600</posy>
-				<visible>Container.Content(Movies)</visible>
-				<visible>!substring(listitem.label,..,left)</visible>
+				<visible>stringcompare(ListItem.Property(ItemType),Movie)</visible>
 				<control type="grouplist">
 					<description>Flags Backgrounds</description>
 					<posx>0</posx>
@@ -299,8 +255,7 @@
 			<control type="group">
 				<posx>0</posx>
 				<posy>600</posy>
-				<visible>Container.Content(TVShows)</visible>
-				<visible>!substring(listitem.label,..,left)</visible>
+				<visible>stringcompare(ListItem.Property(ItemType),Series)</visible>
 				<control type="grouplist">
 					<description>Flags Backgrounds</description>
 					<posx>0</posx>
@@ -465,8 +420,8 @@
 			<control type="group">
 				<posx>0</posx>
 				<posy>600</posy>
-				<visible>Container.Content(Episodes)</visible>
-				<visible>!substring(listitem.label,..,left)</visible>
+				<visible>stringcompare(ListItem.Property(ItemType),Episode) | stringcompare(ListItem.Property(ItemType),Season)</visible>
+				
 				<control type="grouplist">
 					<description>Flags Backgrounds</description>
 					<posx>0</posx>
@@ -629,7 +584,7 @@
 			</control>
 			<!-- INFOS MOVIES -->
 			<control type="group">
-				<visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)] + ![Control.HasFocus(12) | Control.HasFocus(15)]</visible>
+				<visible>stringcompare(ListItem.Property(ItemType),Movie) + ![Control.HasFocus(12) | Control.HasFocus(15)]</visible>
 				<posy>135</posy>
 				<posx>315</posx>
 				<include>VisibleFadeEffect</include>
@@ -734,7 +689,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Container.Content(TVShows)</visible>
+				<visible>stringcompare(ListItem.Property(ItemType),Series)</visible>
 				<posy>135</posy>
 				<posx>315</posx>
 				<include>VisibleFadeEffect</include>
@@ -837,7 +792,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>container.content(episodes)</visible>
+				<visible>stringcompare(ListItem.Property(ItemType),Episode) | stringcompare(ListItem.Property(ItemType),Season)</visible>
+				
 				<posy>135</posy>
 				<posx>315</posx>
 				<include>VisibleFadeEffect</include>
@@ -943,7 +899,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>container.content(musicvideos)</visible>
+				<visible>stringcompare(ListItem.Property(ItemType),MusicVideo)</visible>
 				<posy>135</posy>
 				<posx>315</posx>
 				<include>VisibleFadeEffect</include>
@@ -1212,7 +1168,6 @@
 					<disabledcolor>grey3</disabledcolor>
 					<onclick>Dialog.Close(movieinformation)</onclick>
 					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.TVShowTitle] $INFO[ListItem.Label],return)</onclick>
-					<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
 				</control>
 				<control type="button" id="16">
 					<description>Youtube Search</description>
@@ -1221,7 +1176,7 @@
 					<disabledcolor>grey3</disabledcolor>
 					<onclick>Dialog.Close(movieinformation)</onclick>
 					<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Title] $INFO[ListItem.Label],return)</onclick>
-					<visible>Container.Content(MusicVideos)</visible>
+					<visible>stringcompare(ListItem.Property(ItemType),MusicVideo)</visible>
 				</control>
 				<!-- <control type="button" id="100"> <description>Fetch TvTunes stuff</description> <include>ButtonCommonValues2</include> <label>31127</label> <onclick>XBMC.RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick> <visible>Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes) + Container.Content(TVShows)</visible> </control> -->
 			</control>
