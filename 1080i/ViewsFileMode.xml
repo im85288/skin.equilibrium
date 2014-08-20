@@ -1,4 +1,4 @@
-					<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="CommonRootView">
 		<control type="group">
@@ -237,7 +237,7 @@
 					<height>791</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>$INFO[ListItem.Property(big_poster)]</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -251,7 +251,7 @@
 					<height>540</height>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>$INFO[ListItem.Property(big_poster)]</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -265,7 +265,7 @@
 					<height>791</height>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>$INFO[ListItem.Property(big_poster)]</texture>
 				</control>
 				<control type="image">
 					<posx>0</posx>

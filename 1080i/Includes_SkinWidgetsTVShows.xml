@@ -1758,7 +1758,7 @@
 				<posy>430</posy>
 				<width>444</width>
 				<height>330</height>
-				<onleft>noop</onleft>
+				<onleft>301</onleft>
 				<onright>8003</onright>
 				<onup>8001</onup>
 				<ondown>301</ondown>

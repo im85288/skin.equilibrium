@@ -83,7 +83,7 @@
 				<width>420</width>
 				<height>420</height>
 				<aspectratio align="center" aligny="top">scale</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture>$INFO[ListItem.Property(big_poster)]</texture>
 			</control>
 			<control type="group">
 				<visible>Control.HasFocus(12)</visible>
