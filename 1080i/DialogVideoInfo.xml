@@ -85,6 +85,15 @@
 				<aspectratio align="center" aligny="top">scale</aspectratio>
 				<texture>$INFO[ListItem.Property(big_poster)]</texture>
 			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>420</width>
+				<height>420</height>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<visible>isempty(ListItem.Property(big_poster))</visible>
+			</control>
 			<control type="group">
 				<visible>Control.HasFocus(12)</visible>
 				<posy>135</posy>
