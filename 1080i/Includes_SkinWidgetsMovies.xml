@@ -1766,7 +1766,7 @@
 				</focusedlayout>
 				<content>$INFO[Skin.String(custom108playlist)]</content>
 			</control>
-			<!-- DOCUMENTARY -->
+			<!-- Playlists -->
 			<control type="wraplist" id="8001">
 				<posx>340</posx>
 				<posy>130</posy>
@@ -1804,7 +1804,7 @@
 						<animation effect="fade" time="600" start="0" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
 					</control>
 				</focusedlayout>
-				<content target="video">special://skin/playlists/Documentary.xsp</content>
+				<content target="video">$INFO[Window(Home).Property(xbmb3c.std.playlists.0.content)]</content>
 			</control>
 			<!-- CUSTOM MOVIES WIDGETS 109 -->
 			<control type="wraplist" id="8001">

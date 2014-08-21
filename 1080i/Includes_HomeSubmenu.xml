@@ -331,13 +331,13 @@
 							<visible>Skin.HasSetting(custom108)</visible>
 						</item>
 						<!-- ITEM 10 -->
-					<!-- 	<item id="109">
-							<description>documentary</description>
-							<label>$LOCALIZE[32047]</label>
-							<icon>icons/home/movies/docus.png</icon>
-							<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Documentary.xsp,return)</onclick>
+					    <item id="109">
+							<description>playlists</description>
+							<label>$LOCALIZE[32993]</label>
+							<icon>icons/home/playlists.png</icon>
+							<onclick>$INFO[Window(Home).Property(xbmb3c.std.playlists.0.path)]</onclick>
 							<visible>![Skin.HasSetting(hide109) | Skin.HasSetting(custom109)]</visible>
-						</item>  -->
+						</item>  
 						<item id="109">
 							<description>custom109</description>
 							<label>$INFO[Skin.String(custom109label)]</label>
