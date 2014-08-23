@@ -1709,11 +1709,30 @@
 						<width>156</width>
 						<height>220</height>
 						<fadetime>IconCrossfadeTime</fadetime>
+						<texture>$INFO[ListItem.Property(small_poster)]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>156</width>
+						<height>220</height>
+						<fadetime>IconCrossfadeTime</fadetime>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>isEmpty(ListItem.Property(small_poster))</visible>
 						<aspectratio>stretch</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout width="176" height="350">
+				   <control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>156</width>
+						<height>220</height>
+						<texture background="true">$INFO[ListItem.Property(small_poster)]</texture>
+						<aspectratio>stretch</aspectratio>
+						<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
+					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -1721,6 +1740,7 @@
 						<height>220</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>stretch</aspectratio>
+						<visible>isEmpty(ListItem.Property(small_poster))</visible>
 						<animation effect="zoom" time="300" center="auto" start="60" end="100" tween="quadratic" easing="out" reversible="false">focus</animation>
 					</control>
 				</focusedlayout>

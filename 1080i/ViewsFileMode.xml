@@ -237,17 +237,7 @@
 					<height>791</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[ListItem.Property(big_poster)]</texture>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>540</width>
-					<height>791</height>
-					<aspectratio aligny="top">keep</aspectratio>
-					<fadetime>400</fadetime>
 					<texture>$INFO[ListItem.Icon]</texture>
-					<visible>isempty(ListItem.Property(big_poster))</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -261,17 +251,7 @@
 					<height>540</height>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[ListItem.Property(big_poster)]</texture>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>540</width>
-					<height>540</height>
-					<aspectratio align="center" aligny="top">scale</aspectratio>
-					<fadetime>400</fadetime>
 					<texture>$INFO[ListItem.Icon]</texture>
-					<visible>isempty(ListItem.Property(big_poster))</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -285,17 +265,7 @@
 					<height>791</height>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>400</fadetime>
-					<texture>$INFO[ListItem.Property(big_poster)]</texture>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>540</width>
-					<height>791</height>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>400</fadetime>
 					<texture>$INFO[ListItem.Icon]</texture>
-					<visible>isempty(ListItem.Property(big_poster))</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
